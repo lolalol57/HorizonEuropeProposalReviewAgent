@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "figure-visual-findings.schema.json",
+  "title": "Figure Visual Findings",
+  "description": "Written by the host model in step 6 after opening each extracted figure PNG. One entry per reviewed figure. Consumed by the Excellence/Impact passes (relevant figure findings) and report 04.",
+  "type": "object",
+  "properties": {
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "readability", "understandability"],
+        "properties": {
+          "id": {"type": "string", "description": "matches figure-map FIG-NN"},
+          "detected_number": {"type": ["integer", "null"]},
+          "image_file": {"type": "string"},
+          "figure_type": {
+            "type": "string",
+            "description": "e.g. project-at-a-glance, system-architecture, methodology, PERT/Gantt, impact-pathway, use-case"
+          },
+          "readability": {
+            "type": "object",
+            "description": "label readability, text size, arrow visibility/direction, resolution, pixelation, cropping, overcrowding, contrast, legend.",
+            "properties": {
+              "status": {"type": "string", "enum": ["adequate", "partial", "missing", "na"]},
+              "notes": {"type": "string"}
+            }
+          },
+          "understandability": {
+            "type": "object",
+            "description": "purpose, visual hierarchy, reading direction, inputs/outputs, layers, relationships, arrow meaning, overall message.",
+            "properties": {
+              "status": {"type": "string", "enum": ["adequate", "partial", "missing", "na"]},
+              "notes": {"type": "string"}
+            }
+          },
+          "content_consistency": {
+            "type": "object",
+            "description": "Key Technology / Key Innovation / objective names consistent with the text; architecture/methodology/validation relationships consistent.",
+            "properties": {
+              "status": {"type": "string", "enum": ["adequate", "partial", "missing", "na"]},
+              "notes": {"type": "string"}
+            }
+          },
+          "page_rendered": {
+            "type": "boolean",
+            "description": "true if the page had to be rendered (render_page) to recover a vector figure."
+          }
+        }
+      }
+    }
+  }
+}

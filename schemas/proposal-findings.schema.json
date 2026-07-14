@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "proposal-findings.schema.json",
+  "title": "Proposal Findings (per review pass)",
+  "description": "The host model writes one of these per criterion pass (excellence-findings.json, impact-findings.json, implementation-findings.json). build_report.py renders it to a PDF. Used by reports 01, 02, 03.",
+  "type": "object",
+  "required": ["criterion", "sections", "score"],
+  "properties": {
+    "criterion": {
+      "type": "string",
+      "enum": ["Excellence", "Impact", "Implementation"]
+    },
+    "executive_summary": {
+      "type": "string",
+      "description": "Short criterion-level overview (optional)."
+    },
+    "sections": {
+      "type": "array",
+      "description": "Review modules from the rubric, in rubric order.",
+      "items": {
+        "type": "object",
+        "required": ["title", "items"],
+        "properties": {
+          "title": {"type": "string"},
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "status"],
+              "properties": {
+                "label": {"type": "string"},
+                "status": {
+                  "type": "string",
+                  "enum": ["adequate", "partial", "missing", "na"],
+                  "description": "Rendered as ✅ / ⚠️ / ❌ / ➖."
+                },
+                "evidence": {
+                  "type": "string",
+                  "description": "Short quotation or precise section/page/table/figure reference. Required in practice for partial/missing items."
+                },
+                "assessment": {
+                  "type": "string",
+                  "description": "What is incomplete/unclear/inconsistent/insufficient and why it matters for this criterion."
+                },
+                "improvement": {
+                  "type": "string",
+                  "description": "Internal Improvement Report only. Concrete suggested improvement. MUST NOT appear in the final ESR (report 05)."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "strengths": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Only the most important criterion-level strengths."
+    },
+    "shortcomings": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Most important criterion-level shortcomings; do not duplicate one weakness."
+    },
+    "priority_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "priority": {"type": "string", "enum": ["Critical", "High", "Medium"]},
+          "issue": {"type": "string"},
+          "why": {"type": "string"},
+          "action": {"type": "string"}
+        }
+      }
+    },
+    "esr_comment": {
+      "type": "string",
+      "description": "Draft ESR-style comment for this criterion (evidence-based, no rewriting suggestions)."
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 5.0,
+      "multipleOf": 0.5,
+      "description": "Single criterion-level score. Must match the severity/number of shortcomings (see rubric score-comment consistency gate)."
+    }
+  }
+}

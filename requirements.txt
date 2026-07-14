@@ -1,0 +1,5 @@
+# Horizon Europe Proposal Review Agent — deterministic script dependencies
+# (The LLM reasoning runs inside the host harness; no LLM SDK is required here.)
+PyMuPDF>=1.24        # fitz: PDF text / tables / figure extraction + page rendering
+python-docx>=1.1     # DOCX proposals
+reportlab>=3.6,<4   # output PDFs 01..05 (reportlab 4.x needs Python 3.9+)

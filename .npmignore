@@ -1,0 +1,16 @@
+# Runtime artefacts and dev-only harness adapters — keep the published package lean.
+workspace/
+he-review-workspace/
+inbox/
+__pycache__/
+*.pyc
+
+# Codex/Cursor adapters are out of scope for the Claude Code npm package.
+AGENTS.md
+CLAUDE.md
+.cursor/
+.claude/
+
+# Repo/dev files
+.gitignore
+.DS_Store

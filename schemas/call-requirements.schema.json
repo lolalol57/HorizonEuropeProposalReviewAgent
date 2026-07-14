@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "call-requirements.schema.json",
+  "title": "Call Requirements Map",
+  "description": "Written by the host model in step 2 from the official topic/call. Used throughout the review, especially the Impact and Cross-Consistency passes.",
+  "type": "object",
+  "required": ["type_of_action", "scope", "expected_outcomes"],
+  "properties": {
+    "call_identifier": {"type": "string"},
+    "topic_identifier": {"type": "string"},
+    "topic_title": {"type": "string"},
+    "type_of_action": {
+      "type": "string",
+      "enum": ["RIA", "IA", "CSA", "Other"],
+      "description": "Inferred from the topic if not provided at intake."
+    },
+    "scope": {"type": "array", "items": {"type": "string"}},
+    "expected_outcomes": {"type": "array", "items": {"type": "string"}},
+    "expected_impacts": {"type": "array", "items": {"type": "string"}},
+    "specific_requirements": {"type": "array", "items": {"type": "string"}},
+    "required_stakeholders": {"type": "array", "items": {"type": "string"}},
+    "required_disciplines": {"type": "array", "items": {"type": "string"}},
+    "ssh_requirements": {"type": "array", "items": {"type": "string"}},
+    "international_cross_border_requirements": {"type": "array", "items": {"type": "string"}},
+    "trl_expectations": {"type": "string"},
+    "other_conditions": {"type": "array", "items": {"type": "string"}},
+    "source": {
+      "type": "string",
+      "description": "Where the call info came from (url / topic id / provided text / call document)."
+    }
+  }
+}

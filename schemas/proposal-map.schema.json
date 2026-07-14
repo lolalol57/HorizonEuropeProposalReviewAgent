@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "proposal-map.schema.json",
+  "title": "Internal Proposal Map",
+  "description": "Written by the host model after extraction. The shared evidence/traceability backbone every review pass reads. Not user-facing. The implementation.* block feeds pm_effort.py (deterministic).",
+  "type": "object",
+  "properties": {
+    "excellence": {
+      "type": "object",
+      "properties": {
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {"type": "string", "description": "e.g. O1"},
+              "title": {"type": "string"},
+              "description": {"type": "string"},
+              "page": {"type": ["integer", "null"]},
+              "kpis": {"type": "array", "items": {
+                "type": "object",
+                "properties": {
+                  "id": {"type": "string"},
+                  "metric": {"type": "string"},
+                  "baseline": {"type": "string"},
+                  "target": {"type": "string"},
+                  "unit": {"type": "string"}
+                }
+              }},
+              "key_technologies": {"type": "array", "items": {"type": "string"}},
+              "key_ri_developments": {"type": "array", "items": {"type": "string"}},
+              "key_innovations": {"type": "array", "items": {"type": "string"}},
+              "starting_trl": {"type": ["string", "integer", "null"]},
+              "target_trl": {"type": ["string", "integer", "null"]},
+              "work_packages": {"type": "array", "items": {"type": "string"}},
+              "validation_settings": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        },
+        "key_technologies": {"type": "array", "items": {"type": "object"}},
+        "validation_settings": {"type": "array", "items": {"type": "object"}},
+        "end_users": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "impact": {
+      "type": "object",
+      "properties": {
+        "expected_outcomes": {"type": "array", "items": {"type": "string"}},
+        "wider_impacts": {"type": "array", "items": {"type": "string"}},
+        "target_groups": {"type": "array", "items": {"type": "string"}},
+        "key_exploitable_results": {"type": "array", "items": {"type": "object"}},
+        "dissemination": {"type": "array", "items": {"type": "string"}},
+        "exploitation": {"type": "array", "items": {"type": "string"}},
+        "communication": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "description": "Read by pm_effort.py. Populate pm values from the effort tables.",
+      "properties": {
+        "declared_total_pm": {"type": ["number", "null"]},
+        "partners": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "pm": {"type": ["number", "null"]}
+            }
+          }
+        },
+        "work_packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": {"type": "string"},
+              "title": {"type": "string"},
+              "pm": {"type": ["number", "null"]},
+              "is_management": {"type": "boolean", "description": "true for the PM/coordination WP"},
+              "tasks": {"type": "array", "items": {"type": "string"}},
+              "deliverables": {"type": "array", "items": {"type": "string"}},
+              "milestones": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        },
+        "risks": {"type": "array", "items": {"type": "object"}}
+      }
+    }
+  }
+}

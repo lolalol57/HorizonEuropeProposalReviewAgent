@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "script-outputs.schema.json",
+  "title": "Deterministic script outputs (reference)",
+  "description": "Shapes produced automatically by scripts/. Documented so the host model knows what to read. The model does NOT write these.",
+  "type": "object",
+  "properties": {
+    "table_map": {
+      "description": "table-map.json (extract.py)",
+      "type": "object",
+      "properties": {
+        "tables": {"type": "array", "items": {
+          "type": "object",
+          "properties": {
+            "id": {"type": "string"},
+            "detected_number": {"type": ["integer", "null"]},
+            "detected_title": {"type": ["string", "null"]},
+            "page": {"type": ["integer", "null"]},
+            "column_headers": {"type": "array", "items": {"type": "string"}},
+            "row_count": {"type": "integer"},
+            "sample_rows": {"type": "array"}
+          }
+        }},
+        "detected_table_labels": {"type": "array"}
+      }
+    },
+    "figure_map": {
+      "description": "figure-map.json (extract.py)",
+      "type": "object",
+      "properties": {
+        "figures": {"type": "array", "items": {
+          "type": "object",
+          "properties": {
+            "id": {"type": "string"},
+            "detected_number": {"type": ["integer", "null"]},
+            "caption": {"type": ["string", "null"]},
+            "page": {"type": ["integer", "null"]},
+            "image_file": {"type": ["string", "null"]},
+            "surrounding_text": {"type": "string"}
+          }
+        }},
+        "unmatched_captions": {"type": "array"}
+      }
+    },
+    "structural_candidates": {
+      "description": "structural-candidates.json (structural_checks.py). Every item is a CANDIDATE the model must confirm.",
+      "type": "object"
+    },
+    "pm_effort_analysis": {
+      "description": "pm-effort-analysis.json (pm_effort.py)",
+      "type": "object",
+      "properties": {
+        "status": {"type": "string", "enum": ["OK", "INSUFFICIENT_DATA"]},
+        "totals": {"type": "object"},
+        "reconciliation": {"type": "array"},
+        "wp_effort": {"type": "array"},
+        "project_management_effort": {"type": ["object", "null"]}
+      }
+    }
+  }
+}

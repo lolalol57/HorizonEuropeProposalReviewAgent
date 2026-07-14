@@ -1,0 +1,32 @@
+---
+description: Review a Horizon Europe proposal and produce the 5 ESR-style PDF reports
+argument-hint: [proposal.pdf|.docx] [topic-url|topic-id|"topic text"] [RIA|IA|CSA]
+---
+
+Run the Horizon Europe proposal review (the `he-proposal-review` skill / `PLAYBOOK.md`).
+
+Arguments: `$ARGUMENTS`
+- 1st = path to the proposal (.pdf or .docx). **Optional** — if omitted, the newest file
+  in `./inbox/` is used.
+- 2nd = official topic URL, topic id, or topic text — strongly recommended (drives the
+  Call Requirements Map). Ask the user if not provided.
+- 3rd = Type of Action (RIA / IA / CSA / Other) — optional (inferred from the topic if
+  omitted).
+
+Then follow the `he-proposal-review` skill and `PLAYBOOK.md` end to end:
+
+1. `he-review intake "<proposal-or-empty>" --topic "<topic>" [--action <ToA>]` → capture the
+   printed `run_id`.
+2. Analyse the call/topic → write `internal/call-requirements.json`.
+3. `he-review extract <run-id>` then `he-review structural <run-id>`.
+4. Open `he-review-workspace/<run-id>/figures/*.png`, review the figures, and write
+   `internal/figure-visual-findings.json` (figures only — never bulk pages).
+5. Build `internal/proposal-map.json` (populate implementation PM fields), then
+   `he-review pm <run-id>`.
+6. Run the five passes (Excellence → Impact → Implementation → Cross-Consistency → ESR)
+   using the rubrics, writing each `internal/*-findings.json`. Confirm every structural
+   candidate first.
+7. `he-review report <run-id>`.
+
+Finally, report the five PDFs in `he-review-workspace/<run-id>/OUTPUT/` and a short scores
+summary.

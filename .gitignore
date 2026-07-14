@@ -1,0 +1,17 @@
+# Per-run working directories (proposals, extracted artefacts, generated reports)
+workspace/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# npm-package runtime
+he-review-workspace/
+inbox/
+!inbox/.gitkeep
+node_modules/

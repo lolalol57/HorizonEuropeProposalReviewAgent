@@ -1,0 +1,45 @@
+{
+  "name": "he-proposal-review",
+  "version": "0.1.0",
+  "description": "Horizon Europe proposal review agent for Claude Code — installs a Skill + /he-review command that produce five ESR-style PDF reports (Excellence, Impact, Implementation, Cross-Consistency, Final ESR).",
+  "keywords": [
+    "claude-code",
+    "claude",
+    "skill",
+    "horizon-europe",
+    "proposal",
+    "review",
+    "esr",
+    "grant"
+  ],
+  "license": "MIT",
+  "author": "lolalol57",
+  "homepage": "https://github.com/lolalol57/HorizonEuropeProposalReviewAgent#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolalol57/HorizonEuropeProposalReviewAgent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lolalol57/HorizonEuropeProposalReviewAgent/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "he-review": "bin/he-review.js"
+  },
+  "scripts": {
+    "postinstall": "node bin/he-review.js install --quiet || true"
+  },
+  "files": [
+    "bin/",
+    "skill/",
+    "commands/",
+    "scripts/",
+    "rubrics/",
+    "schemas/",
+    "PLAYBOOK.md",
+    "requirements.txt",
+    "README.md"
+  ]
+}
