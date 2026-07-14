@@ -13,6 +13,10 @@ Arguments: `$ARGUMENTS`
 - 3rd = Type of Action (RIA / IA / CSA / Other) — optional (inferred from the topic if
   omitted).
 
+If the `he-review` CLI is not on PATH (e.g. a project-local or `npx` install), run the
+bundled scripts directly instead: `python3 <this skill dir>/scripts/<intake|extract|
+structural_checks|pm_effort|build_report>.py …` — the same arguments apply.
+
 Then follow the `he-proposal-review` skill and `PLAYBOOK.md` end to end:
 
 1. `he-review intake "<proposal-or-empty>" --topic "<topic>" [--action <ToA>]` → capture the

@@ -25,9 +25,19 @@ const cp = require("child_process");
 
 const ASSET_DIR = path.resolve(__dirname, "..");
 const SKILL_NAME = "he-proposal-review";
-const CLAUDE_DIR = path.join(os.homedir(), ".claude");
-const SKILL_DEST = path.join(CLAUDE_DIR, "skills", SKILL_NAME);
-const CMD_DEST = path.join(CLAUDE_DIR, "commands", "he-review.md");
+
+// Install targets. Default = user scope (~/.claude, available in every Claude Code
+// project). With --local = project scope (./.claude, only the current project) — no
+// global npm, no sudo, no ~/.claude change.
+function targets(local) {
+  const base = path.join(local ? process.cwd() : os.homedir(), ".claude");
+  return {
+    base,
+    scope: local ? "proje-yerel (./.claude)" : "kullanıcı-geneli (~/.claude)",
+    skillDest: path.join(base, "skills", SKILL_NAME),
+    cmdDest: path.join(base, "commands", "he-review.md"),
+  };
+}
 
 // Map CLI verbs -> python script filenames.
 const STEP_SCRIPTS = {
@@ -101,19 +111,20 @@ function copyInto(srcName, destDir) {
   });
 }
 
-function install(quiet) {
+function install(quiet, local) {
+  const t = targets(local);
   // 1. Skill: SKILL.md at the skill root + a self-contained copy of the assets.
-  fs.mkdirSync(SKILL_DEST, { recursive: true });
+  fs.mkdirSync(t.skillDest, { recursive: true });
   fs.copyFileSync(path.join(ASSET_DIR, "skill", "SKILL.md"),
-    path.join(SKILL_DEST, "SKILL.md"));
+    path.join(t.skillDest, "SKILL.md"));
   for (const asset of ["PLAYBOOK.md", "rubrics", "scripts", "schemas",
     "requirements.txt"]) {
-    copyInto(asset, SKILL_DEST);
+    copyInto(asset, t.skillDest);
   }
 
   // 2. Slash command.
-  fs.mkdirSync(path.dirname(CMD_DEST), { recursive: true });
-  fs.copyFileSync(path.join(ASSET_DIR, "commands", "he-review.md"), CMD_DEST);
+  fs.mkdirSync(path.dirname(t.cmdDest), { recursive: true });
+  fs.copyFileSync(path.join(ASSET_DIR, "commands", "he-review.md"), t.cmdDest);
 
   // 3. Python dependencies (best-effort — never fail the whole install on this).
   const pip = pipExe();
@@ -133,48 +144,55 @@ function install(quiet) {
 
   if (!quiet) {
     log("");
-    log("✓ Installed the he-proposal-review skill:");
-    log("    " + SKILL_DEST);
-    log("✓ Installed the /he-review command:");
-    log("    " + CMD_DEST);
+    log("✓ Kurulum kapsamı: " + t.scope);
+    log("✓ Skill      : " + t.skillDest);
+    log("✓ /he-review : " + t.cmdDest);
     if (pipOk) {
-      log("✓ Python dependencies installed (PyMuPDF, python-docx, reportlab).");
+      log("✓ Python bağımlılıkları kuruldu (PyMuPDF, python-docx, reportlab).");
     } else {
-      warn("! Could not auto-install Python deps. Run manually:");
+      warn("! Python bağımlılıkları otomatik kurulamadı. Elle çalıştır:");
       warn("    pip3 install -r \"" + reqs + "\"");
     }
     log("");
-    log("Next: open Claude Code in your project and run");
-    log("    /he-review <proposal.pdf> \"<topic url|id|text>\" [RIA|IA|CSA]");
-    log("  (or drop a proposal in ./inbox and just run /he-review)");
-    log("Reports appear in ./he-review-workspace/<run-id>/OUTPUT/.");
+    if (local) {
+      log("Bu proje için kuruldu. Claude Code'u BU klasörde açıp çalıştır:");
+    } else {
+      log("Sonraki adım: Claude Code'u projende açıp çalıştır:");
+    }
+    log("    /he-review <oneri.pdf> \"<topic url|id|metin>\" [RIA|IA|CSA]");
+    log("  (veya öneriyi ./inbox'a bırakıp sadece /he-review)");
+    log("Raporlar ./he-review-workspace/<run-id>/OUTPUT/ içine düşer.");
   }
 }
 
-function uninstall() {
+function uninstall(local) {
+  const t = targets(local);
   let removed = false;
-  if (fs.existsSync(SKILL_DEST)) {
-    fs.rmSync(SKILL_DEST, { recursive: true, force: true });
-    log("Removed skill: " + SKILL_DEST);
+  if (fs.existsSync(t.skillDest)) {
+    fs.rmSync(t.skillDest, { recursive: true, force: true });
+    log("Removed skill: " + t.skillDest);
     removed = true;
   }
-  if (fs.existsSync(CMD_DEST)) {
-    fs.rmSync(CMD_DEST, { force: true });
-    log("Removed command: " + CMD_DEST);
+  if (fs.existsSync(t.cmdDest)) {
+    fs.rmSync(t.cmdDest, { force: true });
+    log("Removed command: " + t.cmdDest);
     removed = true;
   }
-  if (!removed) log("Nothing to remove.");
+  if (!removed) log("Nothing to remove at " + t.scope + ".");
 }
 
 function paths() {
+  const user = targets(false), local = targets(true);
   const ws = process.env.HE_REVIEW_WORKSPACE ||
     path.join(process.cwd(), "he-review-workspace");
   const inbox = process.env.HE_REVIEW_INBOX || path.join(process.cwd(), "inbox");
-  log("asset dir : " + ASSET_DIR);
-  log("skill dir : " + SKILL_DEST);
-  log("command   : " + CMD_DEST);
-  log("workspace : " + ws);
-  log("inbox     : " + inbox);
+  log("asset dir        : " + ASSET_DIR);
+  log("skill (user)     : " + user.skillDest);
+  log("command (user)   : " + user.cmdDest);
+  log("skill (--local)  : " + local.skillDest);
+  log("command (--local): " + local.cmdDest);
+  log("workspace        : " + ws);
+  log("inbox            : " + inbox);
 }
 
 function review(rest) {
@@ -200,11 +218,12 @@ function review(rest) {
 
 function main() {
   const [cmd, ...rest] = process.argv.slice(2);
+  const local = rest.includes("--local") || rest.includes("-l");
   switch (cmd) {
     case "install":
-      return install(rest.includes("--quiet"));
+      return install(rest.includes("--quiet"), local);
     case "uninstall":
-      return uninstall();
+      return uninstall(local);
     case "paths":
       return paths();
     case "review":
@@ -222,11 +241,14 @@ function main() {
       log("he-review — Horizon Europe proposal reviewer for Claude Code");
       log("");
       log("Usage:");
-      log("  he-review install [--quiet]     install the Skill + /he-review command");
-      log("  he-review uninstall             remove them");
-      log("  he-review paths                 show asset / workspace / inbox dirs");
-      log("  he-review review [path] ...     deterministic bookend (intake+extract+structural)");
+      log("  he-review install [--local] [--quiet]  install the Skill + /he-review command");
+      log("  he-review uninstall [--local]          remove them");
+      log("  he-review paths                        show install/workspace/inbox dirs");
+      log("  he-review review [path] ...            deterministic bookend (intake+extract+structural)");
       log("  he-review intake|extract|structural|pm|report [args]");
+      log("");
+      log("  --local : install into THIS project's ./.claude (only this project),");
+      log("            instead of the user-wide ~/.claude. No global npm / sudo needed.");
       log("");
       log("In Claude Code, use the /he-review command or ask to 'review this proposal'.");
       if (cmd && cmd !== "help" && cmd !== "--help" && cmd !== "-h") {

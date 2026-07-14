@@ -47,6 +47,22 @@ he-review install    # copies the Skill + /he-review command into ~/.claude
 `he-review install` runs automatically on global npm install; run it explicitly if you want
 to see the output or re-run it. Remove everything with `he-review uninstall`.
 
+### Project-local install (no global npm, no sudo, no `~/.claude`)
+
+By default the Skill + command are installed **user-wide** to `~/.claude/`, so `/he-review`
+is available in every Claude Code project. If you'd rather scope it to a **single project**,
+use `--local` — it installs into that project's `./.claude/` only:
+
+```bash
+cd ~/my-project
+npx github:lolalol57/HorizonEuropeProposalReviewAgent install --local
+```
+
+This avoids the global npm folder entirely (so no `EACCES`/sudo), and touches nothing
+outside the current project. `/he-review` then exists only in `~/my-project`. Remove it with
+`he-review uninstall --local` (or just delete `./.claude/skills/he-proposal-review` and
+`./.claude/commands/he-review.md`).
+
 The npm package name is **`he-proposal-review`**. It is not published to the public npm
 registry yet, so install from GitHub as shown above. To publish it yourself later, run
 `npm login` then `npm publish` from the repo — after that anyone could install it with
