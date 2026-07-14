@@ -14,7 +14,7 @@ scripts do only the deterministic work — extraction, Person-Month maths, and P
 
 ## Quick start (Claude Code)
 
-One command — this is the easiest install (**npm**, not brew):
+One command:
 
 ```bash
 npm install -g github:lolalol57/HorizonEuropeProposalReviewAgent
@@ -23,10 +23,6 @@ npm install -g github:lolalol57/HorizonEuropeProposalReviewAgent
 That's it. The package's `postinstall` automatically runs `he-review install`, which copies
 the Skill + `/he-review` command into `~/.claude/` and installs the Python deps. Then open
 Claude Code in your project and run `/he-review <proposal.pdf> "<topic>"`.
-
-> **Why npm and not brew?** This is a Node CLI that installs a Claude Code Skill, so npm is
-> the native, one-line path. A Homebrew formula would add a macOS-only tap to maintain for
-> no benefit — you don't need brew.
 
 ## Install — details & alternatives
 
@@ -56,7 +52,7 @@ to see the output or re-run it. Remove everything with `he-review uninstall`.
 Open Claude Code in the project where you want the reports, then either:
 
 ```
-/he-review ~/Desktop/HARMONY.pdf "MAGICIAN Open Call #1" RIA
+/he-review path/to/proposal.pdf "<topic URL, ID, or text>" RIA
 ```
 
 or drop a proposal into an `inbox/` folder and just run:
@@ -89,33 +85,7 @@ finishes with `he-review pm <run-id>` and `he-review report <run-id>`. Set
 `HE_REVIEW_WORKSPACE` / `HE_REVIEW_INBOX` to override the default `./he-review-workspace` and
 `./inbox` locations.
 
-## How it fits together
-
-```
-PLAYBOOK.md          <- single source of truth (the 13-step workflow)
-skill/SKILL.md       <- Claude Code Skill (installed to ~/.claude/skills/he-proposal-review/)
-commands/he-review.md<- /he-review slash command (installed to ~/.claude/commands/)
-bin/he-review.js     <- npm CLI: installer + deterministic-step runner
-rubrics/             <- the five authored review rubrics (full depth)
-scripts/             <- deterministic: intake, extract, structural, pm, report
-schemas/             <- JSON contracts for the internal files
-he-review-workspace/ <- per-run inputs, internal JSON, figures, OUTPUT PDFs (in your project)
-```
-
-**Division of labour:** scripts find *what exists and where* + do exact PM/effort maths +
-render PDFs; Claude does call analysis, the proposal map, figure visual review (reads
-extracted PNGs), the five review passes, and the ESR synthesis. The model writes *findings
-JSON*; a script renders it to PDF — so reports are reproducible.
-
 ## Status
 
 All five rubrics are authored at full depth (Excellence · Impact · Implementation ·
 Cross-Consistency · ESR). Reports 01–05 are produced at full fidelity.
-
-## Design principles
-
-Evaluate as submitted · evidence before judgement · confirm every structural candidate ·
-figures only to vision (never whole pages) · scripts calculate, the model interprets ·
-internal heuristics (e.g. PM ≤7%) are labelled internal, never presented as official HE
-rules · no double-penalisation · the Final ESR contains no rewriting suggestions. Single
-main workflow — no subagents.
