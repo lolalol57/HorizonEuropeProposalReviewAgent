@@ -52,6 +52,27 @@ registry yet, so install from GitHub as shown above. To publish it yourself late
 `npm login` then `npm publish` from the repo — after that anyone could install it with
 `npm install -g he-proposal-review`.
 
+### Permission error (`EACCES`) on `npm install -g`?
+
+`EACCES: permission denied, mkdir '/usr/local/lib/node_modules/...'` means your **global**
+npm folder is owned by root — it's a general npm permissions issue, not specific to this
+package. Easiest sudo-free fix (recommended): skip the global install and run the installer
+via npx —
+
+```bash
+npx github:lolalol57/HorizonEuropeProposalReviewAgent install
+```
+
+Or give npm a user-owned global prefix, then re-run the global install:
+
+```bash
+mkdir -p ~/.npm-global && npm config set prefix ~/.npm-global
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc && source ~/.zshrc
+npm install -g github:lolalol57/HorizonEuropeProposalReviewAgent
+```
+
+(Last resort: `sudo npm install -g …` — works but creates root-owned files.)
+
 ## Use
 
 Open Claude Code in the project where you want the reports, then either:
