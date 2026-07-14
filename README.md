@@ -47,6 +47,11 @@ he-review install    # copies the Skill + /he-review command into ~/.claude
 `he-review install` runs automatically on global npm install; run it explicitly if you want
 to see the output or re-run it. Remove everything with `he-review uninstall`.
 
+The npm package name is **`he-proposal-review`**. It is not published to the public npm
+registry yet, so install from GitHub as shown above. To publish it yourself later, run
+`npm login` then `npm publish` from the repo — after that anyone could install it with
+`npm install -g he-proposal-review`.
+
 ## Use
 
 Open Claude Code in the project where you want the reports, then either:
