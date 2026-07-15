@@ -997,22 +997,73 @@ shortcomings; contain no rewrite suggestions or replacement text; avoid
 double-penalisation; remain concise and criterion-specific; remain consistent with
 the assigned score.
 
+## 46A. Core Evaluation Expectations (Primary Scoring Basis)
+
+The Excellence score should primarily assess the quality, ambition, clarity and
+credibility of the proposed concept and methodology. These core expectations —
+together with the General Scoring Logic bands (`ESR_WRITING_RULES.md` §5) — determine
+the score. The numbered checkpoints elsewhere in this rubric are **enhancing/bonus
+coverage** for the internal report; their absence or partial status does not on its
+own lower the score.
+
+The review should consider:
+
+- Whether the project objectives are clear, relevant, consistent with the call, and sufficiently ambitious beyond the state of the art.
+- Whether the problem definition is precise and convincingly connected to the proposed solution.
+- Whether the proposal clearly explains the scientific, technical or methodological advance.
+- Whether the state of the art is well described and the proposal identifies a credible gap.
+- Whether the concept, architecture, models, assumptions and underlying logic are sound.
+- Whether the methodology is coherent, feasible, and sufficiently detailed.
+- Whether the project's KPIs are measurable, realistic and supported by baselines or justified thresholds.
+- Whether key innovations, outputs, technologies or research results are clearly identified and significant.
+- Whether the expected TRL is consistent with the action type and call expectations.
+- Whether the approach is interdisciplinary where needed, and whether the relevant disciplines are integrated convincingly.
+- Whether citizen, stakeholder, end-user or practitioner engagement is meaningful where relevant to the call.
+- Whether risks related to technology, data, AI, models, assumptions or validation are recognised and addressed.
+- Whether gender, social sciences and humanities, ethics, open science and research data management are properly addressed where relevant.
+- Whether figures, terminology and technical descriptions are consistent and help evaluators understand the proposal.
+
+Typical strengths:
+
+- Clear and well-structured objectives.
+- Strong alignment with the topic.
+- Convincing state-of-the-art analysis.
+- Well-defined methodology.
+- Credible innovation logic.
+- Relevant KPIs with realistic targets.
+- Clear validation pathway.
+- Strong interdisciplinary integration.
+
+Typical weaknesses:
+
+- Objectives are too broad or mixed with management/dissemination activities.
+- KPIs lack baselines.
+- State of the art is generic or does not prove novelty.
+- Methodology is vague or over-ambitious.
+- Terminology is inconsistent.
+- Key technologies are described as products rather than research advances.
+- Use cases or pilots are not sufficiently connected to the methodology.
+- Data sources, assumptions or validation methods are unclear.
+
 ## 47. Excellence Scoring
 
 Assign one official score to the complete Excellence criterion. Do not assign
 official 0–5 scores to individual sections or items (internal statuses are
 diagnostic only).
 
-- **0.0** — fails to address the criterion or cannot be assessed.
-- **1.0 — Poor** — inadequately addressed or serious inherent weaknesses.
-- **2.0 — Fair** — broadly addressed, but significant weaknesses.
-- **3.0 — Good** — addressed well, but a number of shortcomings.
-- **4.0 — Very Good** — addressed very well, a small number of shortcomings.
-- **5.0 — Excellent** — all relevant aspects successfully addressed; any
-  shortcomings minor.
+The score is a **holistic evaluator judgment** against the Core Evaluation
+Expectations (§46A) and the General Scoring Logic bands in `ESR_WRITING_RULES.md`
+§5 — **never** a tally of ✅/⚠️/❌ across the checklist. The numbered detailed
+checkpoints in this rubric are diagnostic coverage / improvement guidance
+(**enhancing / bonus**): the absence or `partial` status of an enhancing checkpoint
+does **not** on its own lower the score; record such an absent item as `na`
+("enhancing — not required"), not `missing`.
 
-Half-point increments allowed (0.0, 0.5, … 5.0). The final score must match the
-severity and number of identified shortcomings.
+Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
+`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
+allowed. The final score must reflect the **severity and materiality of shortcomings
+against the core expectations** — an excellent proposal that satisfies all core
+expectations, with only minor or enhancing gaps, scores at the top of the scale.
 
 ## 48. Score–Comment Consistency
 

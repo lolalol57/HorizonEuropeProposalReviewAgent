@@ -72,6 +72,11 @@ def _styles():
     ss.add(ParagraphStyle("Label", parent=ss["Normal"], fontSize=10, leading=13,
                           spaceBefore=4, spaceAfter=1,
                           textColor=colors.HexColor("#24292f")))
+    # Wrapping table-cell styles (so wide coverage matrices fit the page width).
+    ss.add(ParagraphStyle("Cell", parent=ss["Normal"], fontSize=7.5, leading=9,
+                          textColor=colors.HexColor("#24292f")))
+    ss.add(ParagraphStyle("CellH", parent=ss["Normal"], fontSize=7.5, leading=9,
+                          textColor=colors.white, fontName="Helvetica-Bold"))
     return ss
 
 
@@ -238,6 +243,58 @@ def _pm_effort_flowables(run_id):
     return _add
 
 
+# Usable content width on A4 with the 18 mm side margins used by _build().
+USABLE_WIDTH = 174 * mm
+
+
+def _matrix_table(ss, mtx):
+    """Render a coverage matrix as a page-fitting table whose cells wrap.
+
+    Cells are Paragraphs (so long text wraps inside its column) and the columns
+    are sized to the usable page width — otherwise wide matrices overflow the
+    page and become unreadable.
+    """
+    headers = mtx.get("headers", []) or []
+    body = mtx.get("rows", []) or []
+    ncols = len(headers) or max((len(r) for r in body), default=0)
+    if ncols == 0:
+        return None
+
+    rows = []
+    if headers:
+        rows.append([Paragraph(_esc(h), ss["CellH"]) for h in headers])
+    for row in body:
+        cells = [Paragraph(_esc(c), ss["Cell"]) for c in row]
+        cells = (cells + [Paragraph("", ss["Cell"])] * ncols)[:ncols]
+        rows.append(cells)
+    if not rows:
+        return None
+
+    # First (label) column wider; remaining columns split the rest evenly.
+    if ncols == 1:
+        col_widths = [USABLE_WIDTH]
+    else:
+        first = USABLE_WIDTH * 0.30
+        rest = (USABLE_WIDTH - first) / (ncols - 1)
+        col_widths = [first] + [rest] * (ncols - 1)
+
+    tbl = Table(rows, colWidths=col_widths, hAlign="LEFT",
+                repeatRows=1 if headers else 0)
+    style = [
+        ("FONTSIZE", (0, 0), (-1, -1), 7.5),
+        ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#c9d1d9")),
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 3),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 3),
+        ("ROWBACKGROUNDS", (0, 1 if headers else 0), (-1, -1),
+         [colors.white, colors.HexColor("#f6f8fa")]),
+    ]
+    if headers:
+        style.append(("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0b3d5c")))
+    tbl.setStyle(TableStyle(style))
+    return tbl
+
+
 def render_cross(run_id, data, out_path, ss):
     story = []
     _header(story, ss, "Cross-Consistency, Call Coverage & Document Audit",
@@ -245,19 +302,8 @@ def render_cross(run_id, data, out_path, ss):
     # Coverage matrices (list of {title, headers, rows}).
     for mtx in data.get("matrices", []):
         story.append(Paragraph(_esc(mtx.get("title", "Coverage Matrix")), ss["H2x"]))
-        rows = [[_esc(h) for h in mtx.get("headers", [])]]
-        rows += [[_esc(c) for c in row] for row in mtx.get("rows", [])]
-        if len(rows) > 1:
-            tbl = Table(rows, hAlign="LEFT")
-            tbl.setStyle(TableStyle([
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0b3d5c")),
-                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-                ("FONTSIZE", (0, 0), (-1, -1), 8),
-                ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#c9d1d9")),
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("ROWBACKGROUNDS", (0, 1), (-1, -1),
-                 [colors.white, colors.HexColor("#f6f8fa")]),
-            ]))
+        tbl = _matrix_table(ss, mtx)
+        if tbl is not None:
             story.append(tbl)
             story.append(Spacer(1, 6))
     _sections(story, ss, data)

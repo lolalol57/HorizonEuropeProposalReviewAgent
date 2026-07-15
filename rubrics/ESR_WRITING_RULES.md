@@ -22,6 +22,45 @@ It is the final evaluation output.
 
 ---
 
+# 1A. Scoring basis — how the score is decided (authoritative)
+
+Evaluation scoring follows standard Horizon Europe ESR logic. The score must **not**
+be based only on the presence of sections. It is based on:
+
+- how convincingly the proposal satisfies the **criterion-specific expectations**;
+- how well the **evidence** supports the claims;
+- how **serious** the identified shortcomings are.
+
+For each criterion, assess **both strengths and weaknesses**. A high score requires
+that the proposal is clear, credible, complete, well-evidenced, and aligned with the
+work programme. A lower score is justified when important aspects are vague, weakly
+evidenced, inconsistent, over-claimed, insufficiently quantified, or not clearly
+linked to implementation.
+
+## Core expectations vs enhancing (bonus) checkpoints
+
+Two layers feed the review, and they are treated differently for scoring:
+
+- **Core evaluation expectations (drive the score).** Each criterion has a defined set
+  of core expectations — the "review should consider" list at the top of that criterion's
+  rubric, plus the *typical strengths* and *typical weaknesses*. **These, together with the
+  General Scoring Logic bands (§5), determine the score.**
+- **Detailed rubric checkpoints (enhancing / bonus).** The many numbered checkpoints in
+  each rubric are diagnostic-coverage and improvement guidance. They are still written into
+  reports 01–04 as `adequate` / `partial` / `missing` / `na` so the applicant can improve
+  the proposal — but the **absence or partial status of an enhancing checkpoint does not,
+  on its own, lower the score.** Presence of enhancing material may reinforce an already
+  strong criterion; its absence is neutral. Record an absent enhancing item as `na`
+  ("enhancing — not required") rather than `missing`.
+
+The score is a holistic evaluator judgment against the core expectations and the band
+definitions. **Never compute the score by counting ✅/⚠️/❌ across the checklist.** An
+excellent proposal that satisfies all core expectations, with only minor or enhancing
+gaps, must score at the top of the scale; a genuinely weak proposal must score low —
+do not regress every proposal toward the middle.
+
+---
+
 # 2. Inputs
 
 The Final ESR synthesis should use:
@@ -155,47 +194,46 @@ They must not appear as substitute official scores.
 
 ---
 
-# 5. Scoring Scale
+# 5. General Scoring Logic
 
-Use:
+Scores are assigned in `0.5` steps. Use the following band interpretation, applied
+against the criterion's **core evaluation expectations** (§1A) — not against the count
+of checklist items.
 
-## 0.0
+## 5.0
 
-The proposal fails to address the criterion or cannot be assessed due to missing or incomplete information.
+The criterion is addressed excellently. Strengths are clear and convincing. Any
+weaknesses are minor and do not affect credibility.
 
-## 1.0 — Poor
+## 4.0–4.5
 
-The criterion is inadequately addressed or there are serious inherent weaknesses.
+The criterion is addressed very well. There are some shortcomings, but they are
+limited and do not seriously undermine the proposal.
 
-## 2.0 — Fair
+## 3.0–3.5
 
-The criterion is broadly addressed, but there are significant weaknesses.
+The criterion is broadly addressed, but there are meaningful weaknesses. The proposal
+is fundable only if the weaknesses are not critical. (This is the funding **threshold**
+band: the criterion is met, but with clear weaknesses.)
 
-## 3.0 — Good
+## 2.0–2.5
 
-The criterion is addressed well, but a number of shortcomings are present.
+The criterion is weakly addressed. There are significant shortcomings affecting
+credibility, feasibility or impact. (Below threshold.)
 
-## 4.0 — Very Good
+## 1.0–1.5
 
-The criterion is addressed very well, but a small number of shortcomings are present.
+The criterion is inadequately addressed. Major information is missing or the logic is
+not credible.
 
-## 5.0 — Excellent
+## 0–0.5
 
-All relevant aspects are successfully addressed. Any shortcomings are minor.
+The criterion is not addressed or cannot be assessed.
 
-Half-point increments may be used:
-
-- 0.0
-- 0.5
-- 1.0
-- 1.5
-- 2.0
-- 2.5
-- 3.0
-- 3.5
-- 4.0
-- 4.5
-- 5.0
+**Calibration guardrails.** A score of 5 requires almost no meaningful shortcomings.
+A score of 3 means the proposal meets the threshold but has clear weaknesses. A score
+below 3 means the criterion is below threshold or has serious weaknesses. Enhancing
+(bonus) gaps never pull a proposal below the band its core expectations earn.
 
 ---
 
@@ -588,49 +626,30 @@ Before writing the Final ESR:
 
 # 25. Final Score Calibration
 
-Before finalising:
+Before finalising each criterion, calibrate the score against the **General Scoring
+Logic bands (§5)** and the criterion's **core evaluation expectations (§1A)**:
 
-## For 5.0
+☐ Does the band match how convincingly the **core expectations** are satisfied, the
+quality of the evidence, and the severity of the weaknesses — **not** the number of
+checklist items?
 
-☐ Are all relevant aspects successfully addressed?
+☐ Are **enhancing/bonus** gaps excluded from the score (they never pull the criterion
+below the band its core expectations earn)?
 
-☐ Are any shortcomings genuinely minor?
+☐ **5.0** — all core expectations satisfied; only minor/enhancing gaps; credibility
+unaffected.
 
----
+☐ **4.0–4.5** — very well addressed; limited shortcomings that do not seriously
+undermine the proposal.
 
-## For 4.5
+☐ **3.0–3.5** (threshold) — broadly addressed but with meaningful weaknesses; fundable
+only if the weaknesses are not critical.
 
-☐ Is the criterion extremely strong?
+☐ **Below 3.0** — significant/serious weaknesses in the core expectations; the written
+assessment is clearly critical enough to justify the score.
 
-☐ Are shortcomings limited and non-fundamental?
-
----
-
-## For 4.0
-
-☐ Is the criterion very well addressed?
-
-☐ Is there only a small number of shortcomings?
-
----
-
-## For 3.5
-
-☐ Is the criterion generally strong but affected by several meaningful shortcomings?
-
----
-
-## For 3.0
-
-☐ Is the criterion addressed well overall but with a number of shortcomings?
-
----
-
-## For 2.5 or Lower
-
-☐ Are significant weaknesses clearly identified?
-
-☐ Is the written assessment sufficiently critical to justify the score?
+☐ Is the severity of the written comment consistent with the band (no 4.5 comment full
+of significant weaknesses; no 2.5 comment that is overwhelmingly positive)?
 
 ---
 

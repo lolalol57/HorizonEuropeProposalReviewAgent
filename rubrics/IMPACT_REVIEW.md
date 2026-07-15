@@ -2447,51 +2447,73 @@ The final ESR-style comment must:
 
 ---
 
+# 73A. Core Evaluation Expectations (Primary Scoring Basis)
+
+The Impact score should assess whether the proposal credibly explains how project
+results will lead to expected outcomes and wider impacts. These core expectations —
+together with the General Scoring Logic bands (`ESR_WRITING_RULES.md` §5) — determine
+the score. The numbered checkpoints elsewhere in this rubric are **enhancing/bonus
+coverage** for the internal report; their absence or partial status does not on its
+own lower the score.
+
+The review should consider:
+
+- Whether the proposal clearly addresses the expected outcomes of the topic.
+- Whether the pathway from project activities to results, outcomes and wider impacts is convincing.
+- Whether the scale and significance of the expected impact are realistic and quantified.
+- Whether impact claims are supported by baselines, assumptions, target groups and credible uptake mechanisms.
+- Whether target groups, users, beneficiaries and stakeholders are clearly identified.
+- Whether dissemination, exploitation and communication measures are appropriate and proportional.
+- Whether exploitation routes, ownership, IPR, licensing and sustainability are sufficiently defined.
+- Whether key exploitable results are clearly described.
+- Whether the proposal explains how results will be adopted after the project.
+- Whether regulatory, institutional, market, social or behavioural barriers are identified and mitigated.
+- Whether communication plans are suited to the intended audience.
+- Whether policy, societal, economic, environmental or scientific impacts are described where relevant.
+- Whether the proposal avoids over-claiming impact beyond what the project activities can realistically support.
+
+Typical strengths:
+
+- Clear topic outcome alignment.
+- Strong evidence-based impact logic.
+- Well-defined target groups.
+- Convincing dissemination and exploitation plans.
+- Realistic KPIs and uptake indicators.
+- Clear KERs and sustainability path.
+- Strong links to policy or stakeholder networks.
+
+Typical weaknesses:
+
+- Expected outcomes are addressed only implicitly.
+- Impact is over-claimed relative to pilot scale.
+- Uptake pathway is weak.
+- Exploitation strategy is vague.
+- IPR or licensing is underdeveloped.
+- Communication KPIs are vanity metrics.
+- Impact assumptions are not justified.
+- Long-term adoption is asserted but not supported by resources or governance.
+
+---
+
 # 74. Impact Scoring
 
-Assign one official score to the complete Impact criterion.
+Assign one official score to the complete Impact criterion. Do not assign official
+0–5 scores to individual sections or checklist items (internal statuses are
+diagnostic only).
 
-Do not assign official 0–5 scores to individual sections or checklist items.
+The score is a **holistic evaluator judgment** against the Core Evaluation
+Expectations (§73A) and the General Scoring Logic bands in `ESR_WRITING_RULES.md`
+§5 — **never** a tally of ✅/⚠️/❌ across the checklist. The numbered detailed
+checkpoints in this rubric are diagnostic coverage / improvement guidance
+(**enhancing / bonus**): the absence or `partial` status of an enhancing checkpoint
+does **not** on its own lower the score; record such an absent item as `na`
+("enhancing — not required"), not `missing`.
 
-Internal statuses are diagnostic only.
-
-## 0.0
-
-The proposal fails to address the criterion or cannot be assessed due to missing or incomplete information.
-
-## 1.0 — Poor
-
-The criterion is inadequately addressed or there are serious inherent weaknesses.
-
-## 2.0 — Fair
-
-The criterion is broadly addressed, but there are significant weaknesses.
-
-## 3.0 — Good
-
-The criterion is addressed well, but a number of shortcomings are present.
-
-## 4.0 — Very Good
-
-The criterion is addressed very well, but a small number of shortcomings are present.
-
-## 5.0 — Excellent
-
-All relevant aspects are successfully addressed. Any shortcomings are minor.
-
-Half-point increments may be used:
-
-- 0.0
-- 0.5
-- 1.0
-- 1.5
-- 2.0
-- 2.5
-- 3.0
-- 3.5
-- 4.0
-- 4.5
-- 5.0
+Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
+`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
+allowed. The final score must reflect the **severity and materiality of shortcomings
+against the core expectations** — a proposal that satisfies all core expectations,
+with only minor or enhancing gaps, scores at the top of the scale.
 
 ---
 

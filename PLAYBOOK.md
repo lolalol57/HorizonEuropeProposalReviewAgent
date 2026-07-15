@@ -222,6 +222,13 @@ Rules:
 - This is a **broad rubric-coverage review, not a top-N selection.** The selective
   fields — `strengths`, `shortcomings`, `priority_actions` — stay curated (only the
   most important), exactly as before. Breadth lives in `sections[].items`.
+- **Coverage ≠ score (firewall).** This per-checkpoint grid is **diagnostic coverage /
+  improvement guidance only** — it must **not** drive the criterion score. Most detailed
+  checkpoints are **enhancing (bonus)**: their absence or `partial` status must **not**
+  on its own lower the score. Record an absent enhancing checkpoint as `na`
+  ("enhancing — not required"), not `missing`, so it neither reads as a deficiency nor
+  drags the score. The score is decided separately and holistically against the
+  **Core Evaluation Expectations** + General Scoring Logic bands (see *Scoring* below).
 
 **Minimum coverage per report** (anchor on the rubric's numbered review checkpoints):
 
@@ -270,14 +277,27 @@ contains and never invents rubric coverage, so the breadth must be in
 
 ## Scoring
 
-- One official score per criterion, `0.0–5.0` in `0.5` steps. Internal item
-  statuses are diagnostic only — never score individual items.
-- `5` excellent (only minor shortcomings) · `4` very good · `3` good (several
-  shortcomings) · `2` significant weaknesses · `1` serious weaknesses ·
-  `0` fails/unassessable.
-- Total `/15.0`. Before finalising: does the written assessment justify the
-  score? Are important weaknesses reflected? Has any weakness been penalised
-  twice? (Score–comment consistency gate.)
+- One official score per criterion, `0.0–5.0` in `0.5` steps; total `/15.0`.
+- **The score is a holistic evaluator judgment** against each criterion's **Core
+  Evaluation Expectations** (the "review should consider" block + typical
+  strengths/weaknesses at the top of that rubric's scoring section) and the
+  **General Scoring Logic bands** in `rubrics/ESR_WRITING_RULES.md` §5
+  (`5.0` / `4.0–4.5` / `3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`).
+  It reflects how convincingly the core expectations are satisfied, how well the
+  evidence supports the claims, and how serious the shortcomings are — **not** the
+  presence of sections.
+- **Never back-compute the score from the checkpoint status grid.** Internal item
+  statuses (✅/⚠️/❌/➖) are diagnostic only — never score individual items, and never
+  sum them into the criterion score.
+- **Enhancing (bonus) checkpoints never move the score.** The many detailed rubric
+  checkpoints are diagnostic coverage / improvement guidance; the absence or `partial`
+  status of an enhancing checkpoint does not on its own lower the score (record it as
+  `na` "enhancing — not required", not `missing`). Only shortcomings against the core
+  expectations move the score.
+- Do not regress toward the middle: an excellent proposal satisfying all core
+  expectations (only minor/enhancing gaps) scores at the top; a genuinely weak one
+  scores low. Before finalising: does the written assessment justify the band? Are
+  material weaknesses reflected? Has any weakness been penalised twice?
 
 ## Output responsibilities (spec §18–19)
 

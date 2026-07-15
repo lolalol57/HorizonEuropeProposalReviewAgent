@@ -2211,51 +2211,77 @@ The final ESR-style comment must:
 
 ---
 
+# 75A. Core Evaluation Expectations (Primary Scoring Basis)
+
+The Implementation score should assess whether the project can realistically deliver
+what it promises, with an appropriate work plan, resources, risks, consortium and
+governance. These core expectations — together with the General Scoring Logic bands
+(`ESR_WRITING_RULES.md` §5) — determine the score. The numbered checkpoints elsewhere
+in this rubric are **enhancing/bonus coverage** for the internal report; their absence
+or partial status does not on its own lower the score.
+
+The review should consider:
+
+- Whether the work plan is coherent, complete and logically structured.
+- Whether work packages, tasks, deliverables and milestones are sufficiently detailed.
+- Whether the timing and sequence of activities are realistic.
+- Whether person-months and budget are proportionate to the activities.
+- Whether responsibilities are clearly assigned.
+- Whether partner roles match their expertise and resources.
+- Whether the consortium brings together the necessary disciplinary, technical, operational and stakeholder expertise.
+- Whether the management structure is clear and functional.
+- Whether risk management is credible, specific and linked to mitigation measures.
+- Whether technical integration, piloting, validation and quality assurance are sufficiently planned.
+- Whether resources are balanced and not over-concentrated in one partner without justification.
+- Whether non-EU partners, subcontracting, third parties or external services are justified where relevant.
+- Whether implementation supports the impact and exploitation claims.
+- Whether deliverables and milestones allow effective monitoring of progress.
+
+Typical strengths:
+
+- Clear WP structure.
+- Well-defined tasks and deliverables.
+- Realistic timeline.
+- Balanced effort distribution.
+- Strong consortium fit.
+- Clear governance.
+- Credible risk management.
+- Adequate resources and PM allocation.
+
+Typical weaknesses:
+
+- Work packages lack objectives or task descriptions.
+- Deliverables are vague.
+- Milestones do not measure progress.
+- Effort allocation is inconsistent with roles.
+- Budget assumptions are unclear.
+- Some partners have unclear responsibilities.
+- Risk table is generic.
+- Technical dependencies are not mitigated.
+- Pilot implementation is under-specified.
+- Consortium lacks key expertise for critical project areas.
+
+---
+
 # 76. Implementation Scoring
 
-Assign one official score to the complete Quality and Efficiency of the Implementation criterion.
+Assign one official score to the complete Quality and Efficiency of the Implementation
+criterion. Do not assign official 0–5 scores to individual sections or checklist items
+(internal statuses are diagnostic only).
 
-Do not assign official 0–5 scores to individual sections or checklist items.
+The score is a **holistic evaluator judgment** against the Core Evaluation
+Expectations (§75A) and the General Scoring Logic bands in `ESR_WRITING_RULES.md`
+§5 — **never** a tally of ✅/⚠️/❌ across the checklist. The numbered detailed
+checkpoints in this rubric are diagnostic coverage / improvement guidance
+(**enhancing / bonus**): the absence or `partial` status of an enhancing checkpoint
+does **not** on its own lower the score; record such an absent item as `na`
+("enhancing — not required"), not `missing`.
 
-Internal statuses are diagnostic only.
-
-## 0.0
-
-The proposal fails to address the criterion or cannot be assessed due to missing or incomplete information.
-
-## 1.0 — Poor
-
-The criterion is inadequately addressed or there are serious inherent weaknesses.
-
-## 2.0 — Fair
-
-The criterion is broadly addressed, but there are significant weaknesses.
-
-## 3.0 — Good
-
-The criterion is addressed well, but a number of shortcomings are present.
-
-## 4.0 — Very Good
-
-The criterion is addressed very well, but a small number of shortcomings are present.
-
-## 5.0 — Excellent
-
-All relevant aspects are successfully addressed. Any shortcomings are minor.
-
-Half-point increments may be used:
-
-- 0.0
-- 0.5
-- 1.0
-- 1.5
-- 2.0
-- 2.5
-- 3.0
-- 3.5
-- 4.0
-- 4.5
-- 5.0
+Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
+`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
+allowed. The final score must reflect the **severity and materiality of shortcomings
+against the core expectations** — a proposal that satisfies all core expectations,
+with only minor or enhancing gaps, scores at the top of the scale.
 
 ---
 

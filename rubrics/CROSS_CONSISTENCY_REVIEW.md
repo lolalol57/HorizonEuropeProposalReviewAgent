@@ -1268,3 +1268,9 @@ Its findings should be used to:
 - prevent contradictory comments;
 - prevent double penalisation;
 - support the Final ESR synthesis.
+
+Confirmed internal inconsistencies, broken traceability and over-claiming are part of
+a criterion's **credibility** and therefore feed the core-expectation scoring of the
+three scored criteria (see each rubric's *Core Evaluation Expectations*). Minor,
+purely presentational inconsistencies are enhancing/bonus findings and do not by
+themselves lower a score.

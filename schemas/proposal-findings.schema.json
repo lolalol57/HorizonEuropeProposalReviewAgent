@@ -83,7 +83,7 @@
       "minimum": 0.0,
       "maximum": 5.0,
       "multipleOf": 0.5,
-      "description": "Single criterion-level score. Must match the severity/number of shortcomings (see rubric score-comment consistency gate)."
+      "description": "Single criterion-level score, decided holistically against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §5). Reflects how convincingly the core expectations are satisfied, evidence quality, and severity of shortcomings — NOT the count of checkpoint statuses. Enhancing/bonus checkpoints (absent or partial) do not by themselves lower the score."
     }
   }
 }

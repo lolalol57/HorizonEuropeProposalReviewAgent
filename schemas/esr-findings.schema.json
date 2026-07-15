@@ -22,7 +22,7 @@
             "minimum": 0.0,
             "maximum": 5.0,
             "multipleOf": 0.5,
-            "description": "Official criterion score, 0.0–5.0 in 0.5 steps."
+            "description": "Official criterion score, 0.0–5.0 in 0.5 steps. Holistic HE-ESR judgment against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §5); reflects how convincingly the core expectations are satisfied, evidence quality, and severity of shortcomings — not a tally of checkpoint statuses. Enhancing/bonus gaps do not by themselves lower the score."
           },
           "strengths": {
             "type": "array",
