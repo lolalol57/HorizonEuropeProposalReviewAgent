@@ -17,3 +17,9 @@ call analysis, the proposal map, figure visual review (open
 `workspace/<run-id>/figures/*.png` — figures only), confirming structural
 candidates, the five review passes, and the ESR synthesis. Reports appear in
 `workspace/<run-id>/OUTPUT/`.
+
+Reports 01–04 must give **broad rubric coverage** — one `sections[].items` entry per
+meaningful rubric module/checkpoint (`na` with a reason where not applicable), not just
+a handful of findings (see the PLAYBOOK "Rubric coverage requirement"). The Final ESR
+(report 05) stays concise and bullet-structured (per criterion: score, Strengths,
+Weaknesses, Evaluator comment) with no rewriting suggestions or improvements.

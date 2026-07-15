@@ -69,6 +69,9 @@ def _styles():
                           textColor=colors.HexColor("#24292f")))
     ss.add(ParagraphStyle("Score", parent=ss["Normal"], fontSize=13,
                           textColor=colors.HexColor("#0b3d5c"), spaceBefore=6))
+    ss.add(ParagraphStyle("Label", parent=ss["Normal"], fontSize=10, leading=13,
+                          spaceBefore=4, spaceAfter=1,
+                          textColor=colors.HexColor("#24292f")))
     return ss
 
 
@@ -110,6 +113,25 @@ def _bullets(story, ss, title, items):
     if not items:
         return
     story.append(Paragraph(_esc(title), ss["H2x"]))
+    for it in items:
+        story.append(Paragraph("&bull; {}".format(_esc(it)), ss["Item"]))
+
+
+def _as_list(val):
+    """Normalise a bullet field that may be a list, a string, or None."""
+    if val is None:
+        return []
+    if isinstance(val, (list, tuple)):
+        return [v for v in val if v not in (None, "")]
+    return [val]
+
+
+def _labeled_bullets(story, ss, label, items):
+    """A light 'Label:' line followed by bullet Items (for the Final ESR)."""
+    items = _as_list(items)
+    if not items:
+        return
+    story.append(Paragraph("<b>{}:</b>".format(_esc(label)), ss["Label"]))
     for it in items:
         story.append(Paragraph("&bull; {}".format(_esc(it)), ss["Item"]))
 
@@ -267,24 +289,36 @@ def render_esr(run_id, data, out_path, ss):
     have_total = True
     for crit in data.get("criteria", []):
         story.append(Paragraph(_esc(crit.get("name", "Criterion")), ss["H2x"]))
-        story.append(Paragraph(_esc(crit.get("comment", "")), ss["Item"]))
         sc = crit.get("score")
         if sc is None:
             have_total = False
         else:
             total += float(sc)
         story.append(Paragraph("<b>Score: {} / 5.0</b>".format(sc), ss["Score"]))
-        story.append(Spacer(1, 4))
+        # Preferred bullet-structured shape.
+        strengths = crit.get("strengths")
+        weaknesses = crit.get("weaknesses")
+        evaluator_comment = crit.get("evaluator_comment")
+        if strengths or weaknesses or evaluator_comment:
+            _labeled_bullets(story, ss, "Strengths", strengths)
+            _labeled_bullets(story, ss, "Weaknesses", weaknesses)
+            _labeled_bullets(story, ss, "Evaluator comment", evaluator_comment)
+        elif crit.get("comment"):
+            # Backward compatibility with the legacy flat {name, comment, score} shape.
+            story.append(Paragraph(_esc(crit.get("comment", "")), ss["Item"]))
+        story.append(Spacer(1, 6))
     story.append(HRFlowable(width="100%", thickness=1,
                             color=colors.HexColor("#0b3d5c")))
     shown_total = data.get("total_score",
                            round(total, 1) if have_total else None)
     story.append(Paragraph("<b>Total Score: {} / 15.0</b>".format(shown_total),
                            ss["Score"]))
-    if data.get("overall"):
+    overall = _as_list(data.get("overall"))
+    if overall:
         story.append(Spacer(1, 6))
         story.append(Paragraph("Overall Assessment", ss["H2x"]))
-        story.append(Paragraph(_esc(data["overall"]), ss["Item"]))
+        for it in overall:
+            story.append(Paragraph("&bull; {}".format(_esc(it)), ss["Item"]))
     _build(out_path, story)
 
 

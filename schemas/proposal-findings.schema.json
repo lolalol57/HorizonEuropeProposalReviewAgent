@@ -16,7 +16,7 @@
     },
     "sections": {
       "type": "array",
-      "description": "Review modules from the rubric, in rubric order.",
+      "description": "Review modules from the rubric, in rubric order. Reports 01–04 must give BROAD coverage: include one item for every meaningful rubric module/checkpoint (numbered review sections), not just the most important findings. Not-applicable checkpoints are still included as `na` with a short reason; checkpoints that cannot be assessed from the proposal are `missing`/`partial` with an explanation.",
       "items": {
         "type": "object",
         "required": ["title", "items"],

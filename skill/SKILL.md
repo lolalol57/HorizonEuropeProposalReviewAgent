@@ -47,8 +47,12 @@ If `he-review` is not on PATH, run the same scripts directly:
    `internal/figure-visual-findings.json` (figures only — never bulk pages).
 4. Confirm every structural candidate before reporting it.
 5. Run the five passes using the rubrics → `internal/{excellence,impact,implementation,
-   cross-consistency,esr}-findings.json`.
-6. `he-review report <run-id>` → `OUTPUT/01..05_*.pdf`. Report 05 (Final ESR) contains no
-   rewriting suggestions.
+   cross-consistency,esr}-findings.json`. Reports 01–04 are **broad rubric-coverage**
+   reviews: walk each rubric top to bottom and write one `sections[].items` entry per
+   meaningful module/checkpoint (`na` with a reason where not applicable) — not just the
+   few most important findings (see PLAYBOOK "Rubric coverage requirement").
+6. `he-review report <run-id>` → `OUTPUT/01..05_*.pdf`. Report 05 (Final ESR) is concise
+   and bullet-structured (per criterion: score, Strengths, Weaknesses, Evaluator comment)
+   with **no rewriting suggestions or improvements**.
 
 Then tell the user where the five PDFs are and give a short scores summary.

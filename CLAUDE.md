@@ -21,6 +21,12 @@ python3 scripts/pm_effort.py <run-id>
 python3 scripts/build_report.py <run-id>
 ```
 
+Reports 01–04 must give **broad rubric coverage** — one `sections[].items` entry per
+meaningful rubric module/checkpoint (`na` with a reason where not applicable), not just
+a handful of findings (see the PLAYBOOK "Rubric coverage requirement"). The Final ESR
+(report 05) stays concise and bullet-structured (per criterion: score, Strengths,
+Weaknesses, Evaluator comment) with no rewriting suggestions or improvements.
+
 You can also invoke the `/he-review` slash command (see `.claude/commands/he-review.md`).
 
 Reports land in `workspace/<run-id>/OUTPUT/`.

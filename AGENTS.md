@@ -34,7 +34,11 @@ python3 scripts/build_report.py <run-id>       # after the review passes
    whole pages.
 4. Confirm every structural candidate before reporting it.
 5. Review passes → `internal/{excellence,impact,implementation,cross-consistency,
-   esr}-findings.json`.
+   esr}-findings.json`. Reports 01–04 must give **broad rubric coverage** — one
+   `sections[].items` entry per meaningful rubric module/checkpoint (`na` with a
+   reason where not applicable), not just a handful of findings (see the PLAYBOOK
+   "Rubric coverage requirement").
 
-Scripts calculate and render; you reason and judge. Final ESR (report 05) contains
-no rewriting suggestions.
+Scripts calculate and render; you reason and judge. Final ESR (report 05) is concise
+and bullet-structured (per criterion: score, Strengths, Weaknesses, Evaluator comment)
+and contains no rewriting suggestions or improvements.

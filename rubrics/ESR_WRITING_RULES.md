@@ -44,35 +44,65 @@ Only the most important criterion-level findings should be included.
 
 # 3. Final ESR Structure
 
-The Final ESR should contain:
+The Final ESR stays concise and evaluator-style, but is **bullet-structured** —
+short bullet points, not long dense paragraphs. Each criterion has a score,
+**Strengths**, **Weaknesses**, and an **Evaluator comment**. It contains **no
+suggested improvements**.
 
 ## Criterion 1 — Excellence
 
-Evaluator-style comment.
+Score: X.X / 5.0
 
-Score:
+Strengths:
 
-X.X / 5.0
+- ...
+- ...
+
+Weaknesses:
+
+- ...
+- ...
+
+Evaluator comment:
+
+- ...
+- ...
 
 ---
 
 ## Criterion 2 — Impact
 
-Evaluator-style comment.
+Score: X.X / 5.0
 
-Score:
+Strengths:
 
-X.X / 5.0
+- ...
+
+Weaknesses:
+
+- ...
+
+Evaluator comment:
+
+- ...
 
 ---
 
 ## Criterion 3 — Quality and Efficiency of the Implementation
 
-Evaluator-style comment.
+Score: X.X / 5.0
 
-Score:
+Strengths:
 
-X.X / 5.0
+- ...
+
+Weaknesses:
+
+- ...
+
+Evaluator comment:
+
+- ...
 
 ---
 
@@ -80,7 +110,23 @@ X.X / 5.0
 
 XX.X / 15.0
 
-Where required, an overall assessment may also be included.
+## Overall Assessment
+
+- ...
+- ...
+
+The `internal/esr-findings.json` the model writes to drive this report is:
+
+```json
+{"criteria": [{"name": "Criterion 1 — Excellence", "score": 0.0,
+               "strengths": ["..."], "weaknesses": ["..."],
+               "evaluator_comment": ["..."]}],
+ "total_score": 0.0, "overall": ["..."]}
+```
+
+`evaluator_comment` and `overall` may be a bullet list or a single string. The
+legacy flat shape `{criteria:[{name, comment, score}], total_score, overall}` is
+still accepted for backward compatibility, but the bullet shape above is preferred.
 
 ---
 
@@ -620,40 +666,62 @@ Before producing the Final ESR:
 
 ## Criterion 1 — Excellence
 
-### Assessment
+Score: X.X / 5.0
 
-[Final evaluator-style comment]
+Strengths:
 
-### Score
+- [most important strengths]
 
-X.X / 5.0
+Weaknesses:
+
+- [most important weaknesses]
+
+Evaluator comment:
+
+- [concise evaluator-style bullets — no suggested improvements]
 
 ---
 
 ## Criterion 2 — Impact
 
-### Assessment
+Score: X.X / 5.0
 
-[Final evaluator-style comment]
+Strengths:
 
-### Score
+- ...
 
-X.X / 5.0
+Weaknesses:
+
+- ...
+
+Evaluator comment:
+
+- ...
 
 ---
 
 ## Criterion 3 — Quality and Efficiency of the Implementation
 
-### Assessment
+Score: X.X / 5.0
 
-[Final evaluator-style comment]
+Strengths:
 
-### Score
+- ...
 
-X.X / 5.0
+Weaknesses:
+
+- ...
+
+Evaluator comment:
+
+- ...
 
 ---
 
 # Total Score
 
 XX.X / 15.0
+
+## Overall Assessment
+
+- ...

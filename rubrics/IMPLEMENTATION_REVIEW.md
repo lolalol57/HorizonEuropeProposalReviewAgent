@@ -1,5 +1,8 @@
 # Horizon Europe Implementation Review
 
+> **Coverage:** this is a broad-coverage internal review. Emit one findings item for
+> every numbered review module below (`na` with a short reason when not applicable).
+
 ## 1. Purpose
 
 This file defines the complete review framework for Criterion 3 — Quality and Efficiency of the Implementation.

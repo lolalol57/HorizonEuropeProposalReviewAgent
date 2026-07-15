@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "esr-findings.schema.json",
+  "title": "Final ESR Findings (report 05)",
+  "description": "The host model writes internal/esr-findings.json; build_report.py renders it to 05_Final_ESR.pdf. The Final ESR is concise, evaluator-style, and bullet-structured. It evaluates the proposal as submitted and MUST NOT contain rewriting suggestions, replacement text, or suggested improvements.",
+  "type": "object",
+  "required": ["criteria"],
+  "properties": {
+    "criteria": {
+      "type": "array",
+      "description": "One entry per criterion, in order: Excellence, Impact, Implementation.",
+      "items": {
+        "type": "object",
+        "required": ["name", "score"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. 'Criterion 1 — Excellence'."
+          },
+          "score": {
+            "type": ["number", "null"],
+            "minimum": 0.0,
+            "maximum": 5.0,
+            "multipleOf": 0.5,
+            "description": "Official criterion score, 0.0–5.0 in 0.5 steps."
+          },
+          "strengths": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Most important criterion-level strengths, as short bullets."
+          },
+          "weaknesses": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Most important criterion-level weaknesses, as short bullets."
+          },
+          "evaluator_comment": {
+            "type": ["array", "string"],
+            "items": {"type": "string"},
+            "description": "Concise evaluator-style comment as bullets (list) or a single string. No suggested improvements."
+          },
+          "comment": {
+            "type": "string",
+            "description": "LEGACY: flat evaluator-style paragraph. Still rendered for backward compatibility when the bullet fields (strengths/weaknesses/evaluator_comment) are absent. Prefer the bullet fields."
+          }
+        }
+      }
+    },
+    "total_score": {
+      "type": ["number", "null"],
+      "minimum": 0.0,
+      "maximum": 15.0,
+      "description": "Total across the three criteria, /15.0. If omitted, the renderer sums the criterion scores."
+    },
+    "overall": {
+      "type": ["array", "string"],
+      "items": {"type": "string"},
+      "description": "Concise overall assessment as bullets (list) or a single string (legacy)."
+    }
+  }
+}

@@ -1,5 +1,9 @@
 # Horizon Europe Cross-Consistency, Call Coverage and Document Audit
 
+> **Coverage:** this is a broad-coverage internal review. Emit one findings item for
+> every numbered check below (`na` with a short reason when not applicable); put coverage
+> matrices in `matrices[]` and confirmed inconsistencies in `inconsistencies[]`.
+
 ## 1. Purpose
 
 This file defines the proposal-wide review framework used after the separate Excellence, Impact and Implementation reviews have been completed.

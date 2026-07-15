@@ -139,9 +139,19 @@ and topic requirements not adequately covered. Include coverage matrices
 ### 12 — Final ESR Synthesis  *(you)* → `internal/esr-findings.json`
 Load `rubrics/ESR_WRITING_RULES.md`. Consolidate validated findings, remove
 duplicates, prevent double-penalisation, ensure score↔comment consistency.
-Produce `{criteria:[{name, comment, score}], total_score, overall}`. The ESR
-evaluates the proposal **as submitted** and contains **no rewriting suggestions
-or replacement text**.
+Keep the ESR **concise and evaluator-style**, but **bullet-structured** — produce
+```json
+{"criteria": [{"name": "...", "score": 0.0,
+               "strengths": ["..."], "weaknesses": ["..."],
+               "evaluator_comment": ["..."]}],
+ "total_score": 0.0, "overall": ["..."]}
+```
+one entry per criterion (Excellence, Impact, Implementation). `evaluator_comment`
+and `overall` may be a list of bullet strings or a single string. The legacy
+`{name, comment, score}` flat shape is still accepted for backward compatibility.
+The ESR evaluates the proposal **as submitted**, keeps only the most important
+points, and contains **no rewriting suggestions, replacement text, or suggested
+improvements**.
 
 ### 13 — PDF Report Generation  *(script)*
 ```bash
@@ -166,6 +176,81 @@ section/page/table/figure ref), **Reviewer Assessment** (what is wrong + why it
 matters for the criterion), and, in the Internal Improvement Report only,
 **Suggested Improvement**.
 
+## Rubric coverage requirement (reports 01–04)
+
+Reports 01–04 are **detailed internal review reports**, not a shortlist of the
+few most important issues. For each of the four review passes you must **work
+through its rubric file top to bottom** and, for **every meaningful review
+module/checkpoint**, write one item into that report's `sections[].items` with:
+
+- `label` — the module/checkpoint name;
+- `status` — `adequate` / `partial` / `missing` / `na`;
+- `evidence` — short quote or precise section/page/table/figure reference;
+- `assessment` — what is adequate/incomplete/unclear/inconsistent and why it matters;
+- `improvement` — concrete suggestion (internal reports 01–04 only; **never** in the
+  final ESR).
+
+Rules:
+
+- **"Meaningful review module"** = the numbered **review-checkpoint** sections of
+  the rubric only. Skip the scaffolding sections (Purpose, Inputs, Review Status,
+  Internal Improvement Report, Important Review Flags, Final Internal … Structure,
+  Scoring, Score–Comment Consistency, Final Output).
+- If a checkpoint is **not applicable**, still include it as `na` with a one-line
+  reason — do not silently drop it.
+- If a checkpoint **cannot be assessed** from the proposal, mark it `missing` or
+  `partial` and say why (e.g. section absent, figure unreadable).
+- **Type-of-Action conditional (Excellence):** cover §14 *Key R&I Developments*
+  for **RIA** and §15 *Key Innovations* for **IA**; mark the non-matching one `na`.
+- This is a **broad rubric-coverage review, not a top-N selection.** The selective
+  fields — `strengths`, `shortcomings`, `priority_actions` — stay curated (only the
+  most important), exactly as before. Breadth lives in `sections[].items`.
+
+**Minimum coverage per report** (anchor on the rubric's numbered review checkpoints):
+
+- **01 Excellence** — all major Excellence modules (`EXCELLENCE_REVIEW.md` §§6–39):
+  opening/first impression, problem/need/rationale, end users, objectives, SMART,
+  KPIs & baselines, objective traceability, key technologies, key R&I developments /
+  key innovations, technology↔innovation mapping, technology vs innovation, state of
+  the art, R&I maturity & TRLs, methodology, architecture, component methodology,
+  data & inputs, validation, European/transnational dimension, EU terminology,
+  interdisciplinarity, SSH, gender, inclusivity, open science, FAIR, DMP, GDPR,
+  linked activities, tables/structure, figures, coverage gate, internal consistency.
+- **02 Impact** — all major Impact modules (`IMPACT_REVIEW.md` §§5–67): impact logic,
+  SotA/market/practice + gap, needs, results, target groups, official & project
+  expected outcomes + alignment table + scale/significance, wider-impact hierarchy,
+  WP expected impact, destination/topic/EU alignment, impact dimensions, KIPs, time
+  horizons, impact KPIs, communication/dissemination/exploitation, barriers &
+  mitigation, regulation/standards/IP, KERs + portfolio, TRL/MRL/SRL, packaging,
+  exploitation model, market research/TAM-SAM-SOM/competitors, business model,
+  pricing/investment/ROI, IPR strategy, policy uptake, sustainability, timeline,
+  impact figures, internal consistency.
+- **03 Implementation** — all major Implementation modules (`IMPLEMENTATION_REVIEW.md`
+  §§5–69): implementation logic, WP structure & objective quality, objective/tech/
+  KI↔WP mappings, task structure, partner roles & contribution, PM WP, PM effort %,
+  requirements/DEC effort, PM reconciliation, WP & partner effort distribution,
+  budget credibility, consortium composition/complementarity/geography, WP & task
+  leadership, dependencies, Gantt, PERT, deliverables + naming/description/type/
+  level/timing, milestones + quality + deliverable↔milestone consistency, data
+  management, IPR/exploitation governance, quality mgmt, risk mgmt + categories +
+  probability/impact + response, lump-sum suitability & timing checks, governance/
+  decision-making/conflict/communication/advisory boards, implementation tables/
+  figures, internal consistency.
+- **04 Cross-Consistency** — must include, at minimum: **call coverage**, **expected
+  outcome coverage**, **expected impact coverage**, **traceability** along the whole
+  Problem → … → Impact chain, **terminology/naming consistency**, **numerical
+  consistency**, **structural/document consistency** (table + figure audits), and
+  **duplicated/contradictory claims** (double-penalisation / contradiction check) —
+  mapping to `CROSS_CONSISTENCY_REVIEW.md` §§5–57. Put coverage matrices in
+  `matrices[]`, confirmed inconsistencies in `inconsistencies[]`, and the
+  module-by-module checks in `sections[].items`.
+
+**Anti-thin-report rule.** Do not emit a very short report (only a handful of items)
+unless the proposal itself is extremely short or unreadable — in that case say so
+explicitly in the `executive_summary`. `build_report.py` renders only what the JSON
+contains and never invents rubric coverage, so the breadth must be in
+`internal/*-findings.json` before you run the builder.
+
 ## Scoring
 
 - One official score per criterion, `0.0–5.0` in `0.5` steps. Internal item
@@ -189,8 +274,10 @@ matters for the criterion), and, in the Internal Improvement Report only,
 - `04_Cross_Consistency_Call_and_Document_Audit.pdf` — call coverage matrices,
   full traceability, numerical/naming/terminology inconsistencies, figure/table
   structural findings, cross-section contradictions.
-- `05_Final_ESR.pdf` — **only** final per-criterion comment + score, total, and a
-  concise overall assessment. **No rewriting suggestions.**
+- `05_Final_ESR.pdf` — concise, evaluator-style, **bullet-structured**: per criterion
+  a score, **Strengths**, **Weaknesses**, and an **Evaluator comment** (bullets), then
+  the total and a bulleted overall assessment. **No rewriting suggestions or
+  improvements.** Reports 01–04 carry the detail; 05 stays short.
 
 ## Golden rules
 
@@ -202,9 +289,9 @@ internal, never presented as official HE rules. 7. No double-penalisation.
 
 ## Rubric availability
 
-`rubrics/EXCELLENCE_REVIEW.md` is complete. `IMPACT_REVIEW.md`,
+All five rubrics are fully authored: `EXCELLENCE_REVIEW.md`, `IMPACT_REVIEW.md`,
 `IMPLEMENTATION_REVIEW.md`, `CROSS_CONSISTENCY_REVIEW.md`, and
-`ESR_WRITING_RULES.md` are placeholders until authored — each pass already reads
-its rubric path, so dropping the final text in needs no code change. When a
-rubric is still a placeholder, run the pass at reduced depth using this playbook's
-generic guidance and note the limitation in the report's executive summary.
+`ESR_WRITING_RULES.md`. Each pass loads its rubric and must give it **full
+module coverage** per the *Rubric coverage requirement* above — do not run passes
+at reduced depth. If a specific rubric section genuinely does not apply to this
+proposal, record its checkpoints as `na` with a reason rather than omitting them.

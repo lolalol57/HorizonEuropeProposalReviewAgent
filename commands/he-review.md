@@ -29,7 +29,10 @@ Then follow the `he-proposal-review` skill and `PLAYBOOK.md` end to end:
    `he-review pm <run-id>`.
 6. Run the five passes (Excellence → Impact → Implementation → Cross-Consistency → ESR)
    using the rubrics, writing each `internal/*-findings.json`. Confirm every structural
-   candidate first.
+   candidate first. Reports 01–04 must give **broad rubric coverage** — one
+   `sections[].items` entry per meaningful rubric module/checkpoint (`na` with a reason
+   where not applicable), not just a handful of findings. The ESR (05) stays concise and
+   bullet-structured (score, Strengths, Weaknesses, Evaluator comment; no improvements).
 7. `he-review report <run-id>`.
 
 Finally, report the five PDFs in `he-review-workspace/<run-id>/OUTPUT/` and a short scores
