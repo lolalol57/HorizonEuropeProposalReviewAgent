@@ -82,8 +82,7 @@
       "type": "number",
       "minimum": 0.0,
       "maximum": 5.0,
-      "multipleOf": 0.5,
-      "description": "Single criterion-level score, decided holistically against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §5). Reflects how convincingly the core expectations are satisfied, evidence quality, and severity of shortcomings — NOT the count of checkpoint statuses. Enhancing/bonus checkpoints (absent or partial) do not by themselves lower the score."
+      "description": "Single criterion-level score (0.0–5.0), decided holistically against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §1A/§5). Finer increments than 0.5 are allowed (e.g. 4.7) — not restricted to half-points. Reflects proposal↔call fit and whether the core substance is present and credible — NOT the count of checkpoint statuses. Bonus/presentational checkpoints (missing tables/figures/MRL-SRL, formatting, market analysis for an RIA, unbaselined-but-defined KPIs) and ambition do not lower the score."
     }
   }
 }

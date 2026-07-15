@@ -2226,14 +2226,15 @@ The review should consider:
 - Whether work packages, tasks, deliverables and milestones are sufficiently detailed.
 - Whether the timing and sequence of activities are realistic.
 - Whether person-months and budget are proportionate to the activities.
-- Whether responsibilities are clearly assigned.
+- Whether responsibilities are clearly assigned. Note: reporting **effort per work package** (not per task), and "all partners contribute to a WP", is **normal HE practice and not a weakness** when the plan is otherwise properly written and WP leads/responsibilities are identifiable. This is a weakness **only when partner responsibilities are genuinely unclear or unattributable** — you cannot tell who leads or does the core work.
 - Whether partner roles match their expertise and resources.
 - Whether the consortium brings together the necessary disciplinary, technical, operational and stakeholder expertise.
 - Whether the management structure is clear and functional.
-- Whether risk management is credible, specific and linked to mitigation measures.
+- Whether risk management is credible, **detailed, categorised and project-specific** with mitigation measures — a generic, thin, few-item or uncategorised risk register is a core weakness, whereas a detailed, well-categorised, clearly-explained one is a strength.
 - Whether technical integration, piloting, validation and quality assurance are sufficiently planned.
-- Whether resources are balanced and not over-concentrated in one partner without justification.
-- Whether non-EU partners, subcontracting, third parties or external services are justified where relevant.
+- Whether the **work-package structure is clean and non-redundant** — a lump-sum-driven structure is acceptable, but needless duplication or repetition of work packages reduces work-plan clarity and is a weakness.
+- Whether resources are balanced and not over-concentrated in one partner **or one country** without justification — partner and budget/effort concentration in a single country is a weakness/risk.
+- Whether **subcontracting**, non-EU partners, third parties or external services are justified and limited — subcontracting of core project work, or heavy/unjustified subcontracting, is a negative.
 - Whether implementation supports the impact and exploitation claims.
 - Whether deliverables and milestones allow effective monitoring of progress.
 
@@ -2251,12 +2252,15 @@ Typical strengths:
 Typical weaknesses:
 
 - Work packages lack objectives or task descriptions.
+- Work packages are needlessly duplicated or repetitive, reducing work-plan clarity.
 - Deliverables are vague.
 - Milestones do not measure progress.
 - Effort allocation is inconsistent with roles.
-- Budget assumptions are unclear.
-- Some partners have unclear responsibilities.
-- Risk table is generic.
+- Budget assumptions are unclear, or budget/effort is over-concentrated in one country or partner without justification.
+- Partner responsibilities are genuinely unclear or unattributable — you cannot tell who leads or does the core work (note: WP-level effort reporting is normal and not itself this weakness).
+- Partners are over-concentrated in a single country (a delivery/dependency risk).
+- Core project work is subcontracted, or subcontracting is heavy or unjustified.
+- Risk register is generic, thin and uncategorised, and misses the project's central risks.
 - Technical dependencies are not mitigated.
 - Pilot implementation is under-specified.
 - Consortium lacks key expertise for critical project areas.
@@ -2277,11 +2281,24 @@ checkpoints in this rubric are diagnostic coverage / improvement guidance
 does **not** on its own lower the score; record such an absent item as `na`
 ("enhancing — not required"), not `missing`.
 
-Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
-`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
-allowed. The final score must reflect the **severity and materiality of shortcomings
-against the core expectations** — a proposal that satisfies all core expectations,
-with only minor or enhancing gaps, scores at the top of the scale.
+Use the General Scoring Logic bands in `ESR_WRITING_RULES.md` §5 (`0.0–5.0`, **finer
+increments than 0.5 allowed** — e.g. `4.7`; not restricted to half-points). Score on
+whether the **core substance is present and credible** — for Implementation especially:
+a **coherent, clean work plan with the integration approach explained**, person-months
+and budget proportionate and reconciled, a consortium covering the essential needs, and
+**risk management that addresses the project's real central risks**. Do **not** subtract
+for bonus/presentational gaps or for normal project practice: **integration and
+demonstrations placed in the final period is normal** (interim alpha demos are not full
+integration), and the **number** of pilots/demonstrations, deliverable granularity,
+"all-partners-listed" participation, and formatting are not weaknesses. A criterion
+strong on all core expectations scores at the top even with several correctable/bonus
+gaps; an incoherent plan, unexplained integration, or a risk register that misses the
+central risks are genuine core weaknesses that lower it. Core-quality shortfalls
+**compound**: where the detailed review shows several core-substance `partial`s (e.g. weak
+WP structure, unclear partner roles, thin budget credibility, missing risk categories),
+they accumulate and pull the score down further the more numerous and serious they are;
+weigh them holistically and set the score yourself (see `ESR_WRITING_RULES.md` §1A/§5)
+rather than naming only one.
 
 ---
 

@@ -23,7 +23,7 @@ import os
 import sys
 
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_LEFT
+from reportlab.lib.enums import TA_LEFT, TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm
@@ -77,7 +77,59 @@ def _styles():
                           textColor=colors.HexColor("#24292f")))
     ss.add(ParagraphStyle("CellH", parent=ss["Normal"], fontSize=7.5, leading=9,
                           textColor=colors.white, fontName="Helvetica-Bold"))
+    # Final-ESR referee prose + the standard "aspects taken into account" block.
+    ss.add(ParagraphStyle("Prose", parent=ss["Normal"], fontSize=9.5, leading=13.5,
+                          spaceAfter=6, alignment=TA_JUSTIFY,
+                          textColor=colors.HexColor("#24292f")))
+    ss.add(ParagraphStyle("Aspects", parent=ss["Normal"], fontSize=8.5, leading=11,
+                          spaceAfter=6, textColor=colors.HexColor("#57606a"),
+                          fontName="Helvetica-Oblique"))
     return ss
+
+
+# Standard Horizon Europe "aspects taken into account" per criterion (generic
+# work-programme text; shown in the Final ESR under each criterion, as in an
+# official Evaluation Summary Report). Matched by a keyword in the criterion name.
+ESR_ASPECTS = {
+    "excellence": (
+        "The following aspects are taken into account, to the extent that the proposed "
+        "work corresponds to the description in the work programme:<br/>"
+        "&bull; Clarity and pertinence of the project's objectives, and the extent to "
+        "which the proposed work is ambitious and goes beyond the state of the art.<br/>"
+        "&bull; Soundness of the proposed methodology, including the underlying concepts, "
+        "models, assumptions, inter-disciplinary approaches, appropriate consideration of "
+        "the gender dimension in research and innovation content, and the quality of open "
+        "science practices, including sharing and management of research outputs and "
+        "engagement of citizens, civil society and end users where appropriate."
+    ),
+    "impact": (
+        "The following aspects are taken into account, to the extent that the proposed "
+        "work corresponds to the description in the work programme:<br/>"
+        "&bull; Credibility of the pathways to achieve the expected outcomes and impacts "
+        "specified in the work programme, and the likely scale and significance of the "
+        "contributions from the project.<br/>"
+        "&bull; Suitability and quality of the measures to maximise expected outcomes and "
+        "impacts, as set out in the dissemination and exploitation plan, including "
+        "communication activities."
+    ),
+    "implementation": (
+        "The following aspects are taken into account, to the extent that the proposed "
+        "work corresponds to the description in the work programme:<br/>"
+        "&bull; Quality and effectiveness of the work plan, assessment of risks, and "
+        "appropriateness of the effort assigned to work packages, and the resources "
+        "overall.<br/>"
+        "&bull; Capacity and role of each participant, and the extent to which the "
+        "consortium as a whole brings together the necessary expertise."
+    ),
+}
+
+
+def _esr_aspects(name):
+    low = (name or "").lower()
+    for key, text in ESR_ASPECTS.items():
+        if key in low:
+            return text
+    return None
 
 
 def _status_tag(status):
@@ -329,42 +381,54 @@ def render_esr(run_id, data, out_path, ss):
     _header(story, ss, "Final Evaluation Summary Report (ESR)",
             "Horizon Europe Proposal Review — run {}".format(run_id))
     story.append(Paragraph(
-        "<i>This report evaluates the proposal as submitted. It contains no "
-        "rewriting suggestions or replacement text.</i>", ss["Sub"]))
-    total = 0.0
-    have_total = True
-    for crit in data.get("criteria", []):
+        "<i>This report evaluates the proposal as submitted, in the style of a European "
+        "Commission Evaluation Summary Report. It contains no rewriting suggestions or "
+        "replacement text.</i>", ss["Sub"]))
+
+    criteria = data.get("criteria", [])
+    total = sum(float(c["score"]) for c in criteria if c.get("score") is not None)
+    have_total = all(c.get("score") is not None for c in criteria) and criteria
+    shown_total = data.get("total_score", round(total, 1) if have_total else None)
+    story.append(Paragraph(
+        "<b>Total score: {} / 15.0</b> &nbsp;(Threshold: 10.0)".format(shown_total),
+        ss["Score"]))
+    story.append(Spacer(1, 4))
+    story.append(HRFlowable(width="100%", thickness=0.6,
+                            color=colors.HexColor("#8c959f")))
+
+    for crit in criteria:
         story.append(Paragraph(_esc(crit.get("name", "Criterion")), ss["H2x"]))
         sc = crit.get("score")
-        if sc is None:
-            have_total = False
+        story.append(Paragraph(
+            "<b>Score: {} / 5.0</b> &nbsp;(Threshold: 3.0)".format(sc), ss["Score"]))
+        aspects = _esr_aspects(crit.get("name"))
+        if aspects:
+            story.append(Paragraph(aspects, ss["Aspects"]))
+        # Preferred shape: `assessment` = flowing evaluator prose paragraphs.
+        assessment = _as_list(crit.get("assessment"))
+        if assessment:
+            for para in assessment:
+                story.append(Paragraph(_esc(para), ss["Prose"]))
         else:
-            total += float(sc)
-        story.append(Paragraph("<b>Score: {} / 5.0</b>".format(sc), ss["Score"]))
-        # Preferred bullet-structured shape.
-        strengths = crit.get("strengths")
-        weaknesses = crit.get("weaknesses")
-        evaluator_comment = crit.get("evaluator_comment")
-        if strengths or weaknesses or evaluator_comment:
-            _labeled_bullets(story, ss, "Strengths", strengths)
-            _labeled_bullets(story, ss, "Weaknesses", weaknesses)
-            _labeled_bullets(story, ss, "Evaluator comment", evaluator_comment)
-        elif crit.get("comment"):
-            # Backward compatibility with the legacy flat {name, comment, score} shape.
-            story.append(Paragraph(_esc(crit.get("comment", "")), ss["Item"]))
+            # Backward compatibility with the earlier bullet shape / legacy comment.
+            strengths = crit.get("strengths")
+            weaknesses = crit.get("weaknesses")
+            evaluator_comment = crit.get("evaluator_comment")
+            if strengths or weaknesses or evaluator_comment:
+                _labeled_bullets(story, ss, "Strengths", strengths)
+                _labeled_bullets(story, ss, "Weaknesses", weaknesses)
+                _labeled_bullets(story, ss, "Evaluator comment", evaluator_comment)
+            elif crit.get("comment"):
+                story.append(Paragraph(_esc(crit.get("comment", "")), ss["Prose"]))
         story.append(Spacer(1, 6))
-    story.append(HRFlowable(width="100%", thickness=1,
-                            color=colors.HexColor("#0b3d5c")))
-    shown_total = data.get("total_score",
-                           round(total, 1) if have_total else None)
-    story.append(Paragraph("<b>Total Score: {} / 15.0</b>".format(shown_total),
-                           ss["Score"]))
+
     overall = _as_list(data.get("overall"))
     if overall:
-        story.append(Spacer(1, 6))
+        story.append(HRFlowable(width="100%", thickness=0.6,
+                                color=colors.HexColor("#8c959f")))
         story.append(Paragraph("Overall Assessment", ss["H2x"]))
-        for it in overall:
-            story.append(Paragraph("&bull; {}".format(_esc(it)), ss["Item"]))
+        for para in overall:
+            story.append(Paragraph(_esc(para), ss["Prose"]))
     _build(out_path, story)
 
 

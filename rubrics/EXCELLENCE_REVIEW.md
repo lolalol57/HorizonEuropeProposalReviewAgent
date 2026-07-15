@@ -1059,11 +1059,27 @@ checkpoints in this rubric are diagnostic coverage / improvement guidance
 does **not** on its own lower the score; record such an absent item as `na`
 ("enhancing — not required"), not `missing`.
 
-Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
-`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
-allowed. The final score must reflect the **severity and materiality of shortcomings
-against the core expectations** — an excellent proposal that satisfies all core
-expectations, with only minor or enhancing gaps, scores at the top of the scale.
+Use the General Scoring Logic bands in `ESR_WRITING_RULES.md` §5 (`0.0–5.0`, **finer
+increments than 0.5 allowed** — e.g. `4.7`; not restricted to half-points). Score on
+whether the **core substance is present and credible** — for Excellence especially:
+key technologies / innovations **explicitly and coherently articulated** (a proposal
+with no named Key Technologies, or that leaves them scattered/implicit, has a core gap —
+do not credit technologies you had to infer/reconstruct), a claimed advance that is
+**credible and not over-claimed or self-contradictory**, and **use cases + a validation
+strategy clearly explained**, on top of clear call-aligned objectives, a real SotA gap,
+and a feasible methodology that explains how the components integrate. Do **not** subtract
+for bonus/presentational
+gaps (missing tables/figures, MRL/SRL, unbaselined-but-defined KPIs, formatting) or
+for **ambition** — appropriate ambition beyond the state of the art is a strength, and
+an ambitious but promise-able target is not a weakness. A criterion strong on all core
+expectations scores at the top even with several correctable/bonus gaps. But the
+**quality** of a core element is itself core: objectives that are not genuinely SMART,
+key technologies/innovations named but scattered or not credibly characterised, an
+unclear architecture, or a weakly-evidenced advance are **core-quality weaknesses that
+lower the score** (not enhancing) — and they **compound**: the more such shortfalls and
+the more serious they are, the further Excellence falls. Weigh them holistically and set
+the score yourself (see `ESR_WRITING_RULES.md` §1A/§5); do not name only the single worst
+issue while leaving the rest out of the score.
 
 ## 48. Score–Comment Consistency
 

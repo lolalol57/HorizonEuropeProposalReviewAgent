@@ -3,6 +3,14 @@
 > **Coverage:** this is a broad-coverage internal review. Emit one findings item for
 > every numbered check below (`na` with a short reason when not applicable); put coverage
 > matrices in `matrices[]` and confirmed inconsistencies in `inconsistencies[]`.
+>
+> **Readability — write a text-dense traceability narrative, not just tables.** The report
+> should *read*. In `sections[].items`, add one item per traced element whose `assessment`
+> states the chain in plain sentences with a status, e.g. *"Objective O1 → implemented by
+> WP2, WP3 → produces KER1 → contributes to Expected Outcome 2 → validated in Pilot A.
+> Consistent."* or *"O3 → no implementing WP (broken traceability)."* Do this for the
+> objectives, key technologies/innovations, KERs and Expected Outcomes. Keep the coverage
+> matrices as well, but the narrative is what makes report 04 understandable.
 
 ## 1. Purpose
 

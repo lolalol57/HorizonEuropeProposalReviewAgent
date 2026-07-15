@@ -152,23 +152,34 @@ technologies without R&I purpose, results claimed in Impact but not generated,
 and topic requirements not adequately covered. Include coverage matrices
 (Expected Outcome coverage, Expected Impact coverage) as `matrices` (each:
 `{title, headers, rows}`) and confirmed inconsistencies as `inconsistencies`.
+**Also write a text-dense traceability narrative** (report 04 should read, not just
+tabulate): in `sections[].items`, one item per traced element whose `assessment` spells
+out the chain in plain sentences with a status — e.g. *"O1 → addressed by WP2, WP3 →
+produces KER1 → contributes to Expected Outcome 2 → validated in Pilot A. Consistent."* or
+*"O3 → has no implementing WP (broken traceability)."* Cover the objectives, key
+technologies/innovations, KERs and Expected Outcomes this way. The matrices stay, but the
+narrative is what makes the report readable.
 
 ### 12 — Final ESR Synthesis  *(you)* → `internal/esr-findings.json`
 Load `rubrics/ESR_WRITING_RULES.md`. Consolidate validated findings, remove
-duplicates, prevent double-penalisation, ensure score↔comment consistency.
-Keep the ESR **concise and evaluator-style**, but **bullet-structured** — produce
+duplicates, prevent double-penalisation, ensure score↔comment consistency. Write the
+ESR **in the style of a real EC Evaluation Summary Report**: per criterion, flowing
+**evaluator prose** (not bullets) that **covers every aspect of the criterion**, weaves
+strengths and weaknesses, and tags each judgement with a **severity phrase**
+(*"This is very positive."* / *"… a minor shortcoming."* / *"… a shortcoming."* /
+*"… a significant (important) shortcoming."* / *"… a serious shortcoming."*). A bit more
+detailed than a few bullets, but **much shorter than reports 01–04**. Produce
 ```json
 {"criteria": [{"name": "...", "score": 0.0,
-               "strengths": ["..."], "weaknesses": ["..."],
-               "evaluator_comment": ["..."]}],
- "total_score": 0.0, "overall": ["..."]}
+               "assessment": ["<referee prose paragraph>", "<paragraph>", "..."]}],
+ "total_score": 0.0, "overall": ["<short overall prose>"]}
 ```
-one entry per criterion (Excellence, Impact, Implementation). `evaluator_comment`
-and `overall` may be a list of bullet strings or a single string. The legacy
-`{name, comment, score}` flat shape is still accepted for backward compatibility.
-The ESR evaluates the proposal **as submitted**, keeps only the most important
-points, and contains **no rewriting suggestions, replacement text, or suggested
-improvements**.
+one entry per criterion (Excellence, Impact, Implementation). `assessment` and `overall`
+are arrays of prose paragraphs. The earlier bullet shape
+(`strengths`/`weaknesses`/`evaluator_comment`) and the legacy `{name, comment, score}`
+shape are still accepted for backward compatibility, but the **prose `assessment` is
+preferred**. The ESR evaluates the proposal **as submitted** and contains **no rewriting
+suggestions, replacement text, or suggested improvements**.
 
 ### 13 — PDF Report Generation  *(script)*
 ```bash
@@ -277,27 +288,42 @@ contains and never invents rubric coverage, so the breadth must be in
 
 ## Scoring
 
-- One official score per criterion, `0.0–5.0` in `0.5` steps; total `/15.0`.
-- **The score is a holistic evaluator judgment** against each criterion's **Core
-  Evaluation Expectations** (the "review should consider" block + typical
-  strengths/weaknesses at the top of that rubric's scoring section) and the
-  **General Scoring Logic bands** in `rubrics/ESR_WRITING_RULES.md` §5
-  (`5.0` / `4.0–4.5` / `3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`).
-  It reflects how convincingly the core expectations are satisfied, how well the
-  evidence supports the claims, and how serious the shortcomings are — **not** the
-  presence of sections.
-- **Never back-compute the score from the checkpoint status grid.** Internal item
-  statuses (✅/⚠️/❌/➖) are diagnostic only — never score individual items, and never
-  sum them into the criterion score.
-- **Enhancing (bonus) checkpoints never move the score.** The many detailed rubric
-  checkpoints are diagnostic coverage / improvement guidance; the absence or `partial`
-  status of an enhancing checkpoint does not on its own lower the score (record it as
-  `na` "enhancing — not required", not `missing`). Only shortcomings against the core
-  expectations move the score.
-- Do not regress toward the middle: an excellent proposal satisfying all core
-  expectations (only minor/enhancing gaps) scores at the top; a genuinely weak one
-  scores low. Before finalising: does the written assessment justify the band? Are
-  material weaknesses reflected? Has any weakness been penalised twice?
+- One official score per criterion, `0.0–5.0`; total `/15.0`. **Finer increments than
+  0.5 are allowed** (e.g. `4.7`, `3.8`; totals like `13.8`, `14.9`) — use the value that
+  best fits the evidence; not restricted to half-points.
+- **The score reflects proposal↔call fit and whether the CORE substance is present and
+  credible** — judged holistically against each criterion's **Core Evaluation
+  Expectations** and the **General Scoring Logic bands** in `rubrics/ESR_WRITING_RULES.md`
+  §1A/§5. Not the presence of sections, and not a tally of ✅/⚠️/❌.
+- **"Present" means explicit and coherent in the proposal — do not infer.** Never credit a
+  core element (the official Expected Outcomes, a coherent set of key technologies, a
+  validation strategy, a KER portfolio) that you had to reconstruct from scattered text: a
+  genuinely absent, only-implicit, or scattered CORE element is a real weakness that lowers
+  the score. Judge what the proposal actually presents. (Assess KER sufficiency against the
+  project's budget/scope; all official Expected Outcomes must be explicitly addressed.)
+- **Presentation, format and ambition never lower a score.** Missing tables/matrices/
+  figures (when the content is present), MRL/SRL, template structure, unbaselined-but-
+  defined KPIs, market analysis for an RIA, final-period integration/demo timing, pilot
+  count, **effort reported per work-package rather than per task** ("all partners contribute
+  to a WP" is normal HE practice), and the **absence of Letters of Intent / signed
+  commitments** — all **bonus**: never a score-setting weakness. **Ambition is positive**: an
+  ambitious but promise-able target is never a shortcoming. Only genuine core-substance
+  failures move the score.
+- **Severity sets the weight.** A core weakness lowers the score in proportion to **how severe
+  and central** it is — a mild/limited issue in an otherwise strong, credible criterion barely
+  moves it (it stays in the top band); a severe core failure (a core element missing,
+  incoherent, self-contradictory/over-claimed, not credible, or grossly imbalanced) moves it
+  substantially, and several severe failures compound to a low score. You judge the severity;
+  no fixed thresholds.
+- **Do not subtract a point per listed weakness, and do not default to 3.5.** When all core
+  substance is present and credible and only bonus/format gaps remain, the criterion is in
+  the top bands. **Core weaknesses compound** — the quality of a core element is itself core,
+  and genuine core-quality shortfalls accumulate: the more of them and the more serious, the
+  further the score falls. There is **no fixed count→band formula and no automatic "pull it
+  to 3.x"** — you weigh the deficiencies holistically on the 0–5 scale and set the score. An
+  excellent proposal scores at the top; a genuinely weak one scores low — no regression to
+  the middle. Before finalising: does the assessment justify the score on core substance?
+  Has any weakness been penalised twice?
 
 ## Output responsibilities (spec §18–19)
 

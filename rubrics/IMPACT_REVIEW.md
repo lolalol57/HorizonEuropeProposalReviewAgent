@@ -2509,11 +2509,25 @@ checkpoints in this rubric are diagnostic coverage / improvement guidance
 does **not** on its own lower the score; record such an absent item as `na`
 ("enhancing — not required"), not `missing`.
 
-Use the band definitions in `ESR_WRITING_RULES.md` §5 (`5.0` / `4.0–4.5` /
-`3.0–3.5` threshold / `2.0–2.5` / `1.0–1.5` / `0–0.5`), half-point increments
-allowed. The final score must reflect the **severity and materiality of shortcomings
-against the core expectations** — a proposal that satisfies all core expectations,
-with only minor or enhancing gaps, scores at the top of the scale.
+Use the General Scoring Logic bands in `ESR_WRITING_RULES.md` §5 (`0.0–5.0`, **finer
+increments than 0.5 allowed** — e.g. `4.7`; not restricted to half-points). Score on
+whether the **core substance is present and credible** — for Impact especially: **all**
+of the call/topic's official **Expected Outcomes explicitly and substantively addressed**
+(not merely whether an alignment table exists — and do not credit outcome coverage you had
+to infer from scattered narrative; partial or implicit coverage of the official EOs is a
+core weakness), a credible pathway to impact, and a **KER portfolio commensurate with the
+project's budget and scope** (assess the number/ambition of KERs against the budget — too
+few KERs for a large-budget project is a core weakness) with defined exploitation/
+ownership/sustainability. Do **not** subtract for bonus/presentational gaps (no
+alignment/KIP table when the content is present, missing MRL/SRL, no market sizing /
+TAM-SAM-SOM for an RIA or non-commercial result, unbaselined-but-defined KPIs, formatting)
+or for **ambition**. A criterion strong on all core expectations scores at the top even
+with several correctable/bonus gaps; missing or only-implicit Expected Outcomes, or too
+few KERs for the budget, are genuine core weaknesses that lower it. Core weaknesses
+**compound** — several genuine Impact shortfalls together (e.g. implicit EO coverage, a
+thin KER portfolio, over-reached impact claims) pull the score down further than any one
+alone; weigh them holistically and set the score yourself (see `ESR_WRITING_RULES.md`
+§1A/§5).
 
 ---
 

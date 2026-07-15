@@ -37,27 +37,120 @@ work programme. A lower score is justified when important aspects are vague, wea
 evidenced, inconsistent, over-claimed, insufficiently quantified, or not clearly
 linked to implementation.
 
-## Core expectations vs enhancing (bonus) checkpoints
+## What moves the score vs what does not (authoritative)
 
-Two layers feed the review, and they are treated differently for scoring:
+The score reflects **the fit between the proposal and the call, and whether the core
+substantive elements are present and credible.** It must **not** be moved by presentation,
+document format, or by legitimate ambition. Two layers feed the review and are treated
+differently:
 
-- **Core evaluation expectations (drive the score).** Each criterion has a defined set
-  of core expectations — the "review should consider" list at the top of that criterion's
-  rubric, plus the *typical strengths* and *typical weaknesses*. **These, together with the
-  General Scoring Logic bands (§5), determine the score.**
-- **Detailed rubric checkpoints (enhancing / bonus).** The many numbered checkpoints in
-  each rubric are diagnostic-coverage and improvement guidance. They are still written into
-  reports 01–04 as `adequate` / `partial` / `missing` / `na` so the applicant can improve
-  the proposal — but the **absence or partial status of an enhancing checkpoint does not,
-  on its own, lower the score.** Presence of enhancing material may reinforce an already
-  strong criterion; its absence is neutral. Record an absent enhancing item as `na`
-  ("enhancing — not required") rather than `missing`.
+**CORE — drives the score (substance & proposal↔call fit).** Score on whether these are
+*present and credible*:
 
-The score is a holistic evaluator judgment against the core expectations and the band
-definitions. **Never compute the score by counting ✅/⚠️/❌ across the checklist.** An
-excellent proposal that satisfies all core expectations, with only minor or enhancing
-gaps, must score at the top of the scale; a genuinely weak proposal must score low —
-do not regress every proposal toward the middle.
+- objectives that are clear, relevant, aligned with the call, and appropriately ambitious
+  beyond the state of the art;
+- key technologies / innovations **explicitly and coherently articulated** — a proposal
+  that never names its key technologies, or leaves them scattered/implicit, has a core
+  Excellence gap — and a claimed advance that is **credible and not over-claimed or
+  self-contradictory**;
+- a state of the art that establishes a real gap; a feasible methodology that **explains how
+  the components integrate**, with **use cases and a validation strategy clearly explained**
+  (vague, scattered or unexplained use cases / validation are a core Excellence weakness);
+- **all** of the call/topic's official **Expected Outcomes explicitly and substantively
+  addressed** (not merely gestured at, and not left for the evaluator to infer); a credible
+  pathway to impact; a **Key Exploitable Result portfolio commensurate with the project's
+  budget and scope** — too few KERs for a large-budget / broad-scope project is a core
+  weakness; exploitation / ownership / sustainability defined;
+- a coherent, clean work plan with the **integration approach explained**; person-months /
+  budget proportionate and reconciled; a consortium that covers the essential needs; **risk
+  management that addresses the project's real central risks**;
+- evidence that supports the claims, and internal consistency of the *core* claims.
+
+**"Present and credible" means explicitly and coherently in the proposal — do not infer.**
+Judge what the proposal actually presents, not what a generous reading could assemble. Do
+**not** reconstruct a missing core element (the official Expected Outcomes, a coherent set of
+key technologies, a validation strategy, a KER portfolio) from scattered mentions and then
+credit it as satisfied. If a required core element is absent, only implicit, or scattered,
+that is a **core weakness that lowers the score**. (This is the opposite of the bonus rule:
+bonus/presentational gaps never lower a score, but a genuinely absent or incoherent *core*
+element always does.)
+
+**BONUS / presentational — must NEVER lower the score** (they may make a proposal more
+memorable to the evaluator, i.e. only add value; their absence is neutral). Write them into
+reports 01–04 as improvement items (`na`/`partial`), never as ESR score-setting weaknesses:
+
+- alignment / coverage / KIP **tables and matrices as a format**, *when the underlying
+  content is addressed in the narrative* (the table is presentational; the content is core);
+- **MRL / SRL** not stated; **figures / diagrams** missing; template / section structure /
+  formatting; presentational inconsistencies (acronym drift, figure cross-references,
+  placeholder text, un-tabulated-but-present mappings);
+- **KPI / impact baselines** missing where the KPI or metric itself is defined;
+- **market sizing / TAM-SAM-SOM / competitor / pricing** analysis for an RIA or a
+  non-commercial result;
+- **timing / sequencing** — integration and demonstrations placed in the final period is
+  normal project practice (interim alpha demos are not full integration); the **number** of
+  pilots or demonstrations;
+- deliverable granularity and "all-partners-listed" participation nuances;
+- **effort/participants reported at work-package level** rather than per task — this is
+  **normal HE practice** (effort is routinely given per WP, and "all partners contribute to a
+  WP" is standard); it is not a weakness when the plan is otherwise properly written and the
+  leads/responsibilities are identifiable;
+- **absence of Letters of Intent, signed commitments, procurement letters or co-investment
+  figures** — never mention or penalise these; post-project uptake credibility is judged on
+  the pathway's logic, target groups and resourcing, not on signed commitments.
+
+**Ambition is positive, never a weakness.** Appropriate ambition — aligned with the call and
+going beyond the state of the art — is a *strength*. An ambitious but legitimately
+promise-able target (for example a high target TRL) must **not** be penalised as a risk or a
+shortcoming; proposers are entitled to promise ambitious outcomes.
+
+The score is a holistic evaluator judgment against the CORE substance and the band
+definitions (§5). **Never compute the score by counting ✅/⚠️/❌ across the checklist, and
+never subtract for a bonus/presentational item or for ambition.** A proposal whose core
+substance is present and credible scores at the top even if it has several bonus/format
+gaps; a proposal missing or weak on core substance scores low. Do not regress proposals
+toward the middle.
+
+## Quality-of-articulation is core, and core weaknesses stack
+
+Two clarifications that decide how far a criterion drops:
+
+1. **The QUALITY of a core element is itself core — "present" is not the same as "done
+   well."** A core element that is named/mentioned but is **shallow, scattered, vague,
+   weakly evidenced, poorly characterised, inconsistent, or only partially developed** is a
+   **genuine (partial) core weakness that lowers the score** — it is **not** an enhancing
+   item. Examples that are core-quality (never "enhancing"): objectives that are not
+   genuinely SMART; key technologies/innovations named but not coherently or credibly
+   characterised, or scattered across the text; a key innovation not clearly identified; a
+   system architecture that is unclear; an advance whose strength over existing approaches is
+   not really shown; Expected-Outcome coverage that is only implicit; a KER portfolio thin
+   for the budget; a risk register that misses the central risks. The **bonus list above is
+   closed** — it is *only* the presentational/format/ambition items enumerated there; a
+   weakness in the *substance or quality* of a core element may **never** be reclassified as
+   bonus to keep it out of the score.
+
+2. **Core weaknesses compound — you decide how far they pull the score down.** Do **not**
+   collapse a criterion to a single named weakness, and do **not** apply any fixed
+   count→score formula. Core-substance shortfalls are not isolated: each genuine one lowers
+   the criterion further, and the more numerous and the more serious they are, the lower it
+   falls. Weigh the accumulated deficiencies **holistically on the 0–5 scale and decide the
+   score yourself** — a criterion whose review shows many genuine core-quality shortfalls
+   settles well below one that is strong and credible on all core elements.
+
+3. **Severity and centrality set the weight — a weakness is not a fixed deduction.** How far a
+   core weakness pulls the score depends on **how severe and how central** it is, not on the
+   mere fact that it exists. A **mild / limited** shortfall in a criterion that is otherwise
+   strong and credible on every core element (e.g. a slightly diluted objective structure, an
+   architecture described in prose, a few unquantified secondary KPIs) **barely moves the
+   score — such a criterion stays in the top band.** A **severe** core failure — a required
+   core element that is **missing, incoherent, self-contradictory / over-claimed, not
+   credible, or grossly imbalanced** (e.g. the official Expected Outcomes never addressed, a
+   flagship advance asserted but contradicted by the methodology, far too few exploitable
+   results for the budget, a generic risk register that misses the central risks, effort
+   heavily concentrated in one country) — moves the score **substantially**, and several such
+   severe failures compound to a genuinely low score. So a strong, credible proposal with only
+   a few mild issues remains near the top, while a proposal with several severe core failures
+   lands well down the scale — you judge the severity, no fixed thresholds.
 
 ---
 
@@ -83,89 +176,56 @@ Only the most important criterion-level findings should be included.
 
 # 3. Final ESR Structure
 
-The Final ESR stays concise and evaluator-style, but is **bullet-structured** —
-short bullet points, not long dense paragraphs. Each criterion has a score,
-**Strengths**, **Weaknesses**, and an **Evaluator comment**. It contains **no
-suggested improvements**.
+The Final ESR is written **in the style of a real European Commission Evaluation
+Summary Report (ESR)**: flowing **evaluator prose**, not bullet lists. Each criterion
+is assessed in a short sequence of paragraphs that reads like a referee's write-up. It
+is a bit more detailed than a few bullets, but **much shorter than the internal reports
+01–04**. It contains **no suggested improvements or rewriting**.
 
-## Criterion 1 — Excellence
+For each criterion the `assessment` prose must:
 
-Score: X.X / 5.0
+- **cover every aspect** of that criterion (the "aspects taken into account" — see §15–17
+  and the per-criterion Core Evaluation Expectations): for Excellence — objectives,
+  ambition beyond the state of the art, soundness of methodology/concepts/models, use
+  cases and validation, interdisciplinarity, gender dimension, open science, data
+  management, end-user/citizen engagement; for Impact — pathway credibility, scale and
+  significance, barriers and mitigation, dissemination/exploitation/communication, target
+  groups, exploitable results and sustainability; for Implementation — work-plan quality,
+  effort/resources, risk assessment, timeline, consortium capacity and roles, management
+  structure;
+- **weave strengths and weaknesses together** in evaluator language (not a strengths list
+  then a weaknesses list);
+- **tag each judgement with a severity phrase** where relevant, exactly as a real ESR does:
+  *"This is very positive."* / *"This is a strength."* for positives; and for shortcomings,
+  in ascending severity, *"This is a minor shortcoming."* / *"This is a shortcoming."* /
+  *"This is a significant (important) shortcoming."* / *"This is a serious shortcoming."*
+  (aligned with the Shortcoming Severity ladder in §7).
 
-Strengths:
+The renderer prints, per criterion, the score (with its threshold) and the standard
+work-programme "aspects taken into account", followed by this prose. Example paragraph
+style (generic, do not copy verbatim):
 
-- ...
-- ...
+> *"The objectives are clear and well-structured and fully align with the call, addressing
+> documented gaps in preparedness and coordination. This is very positive. The state of the
+> art focuses heavily on research and takes insufficient account of existing products,
+> especially in extended reality. This is a minor shortcoming. The methodology is detailed
+> and coherent, but for most pilots the data sources remain vague. This is a shortcoming."*
 
-Weaknesses:
-
-- ...
-- ...
-
-Evaluator comment:
-
-- ...
-- ...
-
----
-
-## Criterion 2 — Impact
-
-Score: X.X / 5.0
-
-Strengths:
-
-- ...
-
-Weaknesses:
-
-- ...
-
-Evaluator comment:
-
-- ...
-
----
-
-## Criterion 3 — Quality and Efficiency of the Implementation
-
-Score: X.X / 5.0
-
-Strengths:
-
-- ...
-
-Weaknesses:
-
-- ...
-
-Evaluator comment:
-
-- ...
-
----
-
-## Total Score
-
-XX.X / 15.0
-
-## Overall Assessment
-
-- ...
-- ...
+Structure per criterion (rendered): `Criterion N — <name>`, `Score: X.X / 5.0 (Threshold
+3.0)`, the standard aspects block, then the prose. Then `Total score: XX.X / 15.0
+(Threshold 10.0)` and a short prose `Overall Assessment`.
 
 The `internal/esr-findings.json` the model writes to drive this report is:
 
 ```json
 {"criteria": [{"name": "Criterion 1 — Excellence", "score": 0.0,
-               "strengths": ["..."], "weaknesses": ["..."],
-               "evaluator_comment": ["..."]}],
- "total_score": 0.0, "overall": ["..."]}
+               "assessment": ["<referee prose paragraph>", "<paragraph>", "..."]}],
+ "total_score": 0.0, "overall": ["<short overall prose>"]}
 ```
 
-`evaluator_comment` and `overall` may be a bullet list or a single string. The
-legacy flat shape `{criteria:[{name, comment, score}], total_score, overall}` is
-still accepted for backward compatibility, but the bullet shape above is preferred.
+`assessment` and `overall` are arrays of prose paragraphs. The earlier bullet shape
+(`strengths`/`weaknesses`/`evaluator_comment`) and the legacy flat `comment` shape are
+still accepted for backward compatibility, but the **prose `assessment` is preferred**.
 
 ---
 
@@ -196,44 +256,59 @@ They must not appear as substitute official scores.
 
 # 5. General Scoring Logic
 
-Scores are assigned in `0.5` steps. Use the following band interpretation, applied
-against the criterion's **core evaluation expectations** (§1A) — not against the count
-of checklist items.
+Score each criterion `0.0–5.0`, judged **holistically against its CORE substance and
+proposal↔call fit (§1A)** — not against the count of checklist items. **Finer increments
+than 0.5 are allowed** (e.g. `4.7`, `4.85`, `3.8`): use the value that best fits the
+evidence — you are not restricted to half-points, and the total need not be a multiple of
+`0.5` (e.g. `13.8`, `14.9`).
 
-## 5.0
+## ≈ 5.0
 
-The criterion is addressed excellently. Strengths are clear and convincing. Any
-weaknesses are minor and do not affect credibility.
+All core substance is present and credible and the proposal fits the call excellently.
+Remaining gaps are minor or purely presentational/bonus and do not affect credibility.
+**A strong proposal will still have some correctable/bonus gaps — these do not bar the top
+band.**
 
-## 4.0–4.5
+## ≈ 4.0–4.9
 
-The criterion is addressed very well. There are some shortcomings, but they are
-limited and do not seriously undermine the proposal.
+The core substance is present and credible on every core element; strong call fit. The
+criterion may still carry **one or a few mild, non-fundamental issues** (e.g. a diluted
+objective structure, prose-only architecture, a light secondary partner) — these keep it
+in this band, they do not drop it out. Bonus/presentational gaps and ambition are not
+counted here.
 
-## 3.0–3.5
+## ≈ 3.0–3.9
 
-The criterion is broadly addressed, but there are meaningful weaknesses. The proposal
-is fundable only if the weaknesses are not critical. (This is the funding **threshold**
-band: the criterion is met, but with clear weaknesses.)
+Broadly addressed but with a **genuine, more-than-mild core weakness** (or several) — a core
+element missing, weak, only implicit, over-claimed/self-contradictory, grossly imbalanced,
+or not credible. This is the funding **threshold** band: the criterion is met but with real
+substantive weakness.
 
-## 2.0–2.5
+## ≈ 2.0–2.9
 
-The criterion is weakly addressed. There are significant shortcomings affecting
-credibility, feasibility or impact. (Below threshold.)
+Weakly addressed: core substance is substantially weak or partly missing, or a core gap
+undermines credibility, feasibility or impact. Below threshold.
 
-## 1.0–1.5
+## ≈ 1.0–1.9
 
-The criterion is inadequately addressed. Major information is missing or the logic is
-not credible.
+Inadequately addressed. Core substance is largely missing or the logic is not credible.
 
-## 0–0.5
+## ≈ 0–0.9
 
 The criterion is not addressed or cannot be assessed.
 
-**Calibration guardrails.** A score of 5 requires almost no meaningful shortcomings.
-A score of 3 means the proposal meets the threshold but has clear weaknesses. A score
-below 3 means the criterion is below threshold or has serious weaknesses. Enhancing
-(bonus) gaps never pull a proposal below the band its core expectations earn.
+**Calibration guardrails (you, the evaluator, decide the exact score — there is no fixed
+count→band formula and no automatic "pull it to 3.x").**
+- Only genuine core weaknesses move the score down; **bonus/presentational items and ambition
+  never lower a score.** Do not subtract a point mechanically per listed item.
+- **No 3.5 default.** When all core substance is present and credible and only bonus/format
+  gaps remain, the criterion belongs in the top bands.
+- **Core weaknesses compound.** A core element that is present but shallow, scattered, vague,
+  weakly evidenced or only partially developed is a genuine core weakness (not "enhancing"),
+  and such weaknesses accumulate: the more of them and the more serious, the further the
+  score falls. Judge the overall weight holistically and set the score accordingly — a
+  criterion with many genuine core-quality shortfalls cannot sit in the top bands.
+- Ambition is positive — an ambitious but promise-able target is never a shortcoming.
 
 ---
 
@@ -681,66 +756,43 @@ Before producing the Final ESR:
 
 # 27. Final Output Template
 
-# Horizon Europe Proposal Evaluation
+# Horizon Europe Evaluation Summary Report
+
+Total score: XX.X / 15.0 (Threshold 10.0)
 
 ## Criterion 1 — Excellence
 
-Score: X.X / 5.0
+Score: X.X / 5.0 (Threshold 3.0)
 
-Strengths:
-
-- [most important strengths]
-
-Weaknesses:
-
-- [most important weaknesses]
-
-Evaluator comment:
-
-- [concise evaluator-style bullets — no suggested improvements]
+[Flowing evaluator prose covering every Excellence aspect — objectives, ambition beyond
+the state of the art, soundness of methodology/concepts/models, use cases and validation,
+interdisciplinarity, gender dimension, open science, data management, engagement — weaving
+strengths and weaknesses, each judgement tagged with a severity phrase, e.g. "This is very
+positive." / "This is a minor shortcoming." / "This is a shortcoming." / "This is a
+significant shortcoming." / "This is a serious shortcoming." No rewriting suggestions.]
 
 ---
 
 ## Criterion 2 — Impact
 
-Score: X.X / 5.0
+Score: X.X / 5.0 (Threshold 3.0)
 
-Strengths:
-
-- ...
-
-Weaknesses:
-
-- ...
-
-Evaluator comment:
-
-- ...
+[Flowing evaluator prose covering every Impact aspect — pathway credibility, scale and
+significance, barriers and mitigation, dissemination/exploitation/communication, target
+groups, exploitable results and sustainability — with severity-tagged judgements.]
 
 ---
 
 ## Criterion 3 — Quality and Efficiency of the Implementation
 
-Score: X.X / 5.0
+Score: X.X / 5.0 (Threshold 3.0)
 
-Strengths:
-
-- ...
-
-Weaknesses:
-
-- ...
-
-Evaluator comment:
-
-- ...
+[Flowing evaluator prose covering every Implementation aspect — work-plan quality, effort
+and resources, risk assessment, timeline, consortium capacity and roles, management
+structure — with severity-tagged judgements.]
 
 ---
 
-# Total Score
-
-XX.X / 15.0
-
 ## Overall Assessment
 
-- ...
+[A short prose paragraph or two summarising the overall evaluation.]

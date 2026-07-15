@@ -21,27 +21,31 @@
             "type": ["number", "null"],
             "minimum": 0.0,
             "maximum": 5.0,
-            "multipleOf": 0.5,
-            "description": "Official criterion score, 0.0–5.0 in 0.5 steps. Holistic HE-ESR judgment against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §5); reflects how convincingly the core expectations are satisfied, evidence quality, and severity of shortcomings — not a tally of checkpoint statuses. Enhancing/bonus gaps do not by themselves lower the score."
+            "description": "Official criterion score, 0.0–5.0. Finer increments than 0.5 are allowed (e.g. 4.7); not restricted to half-points. Holistic HE-ESR judgment against the criterion's Core Evaluation Expectations and the General Scoring Logic bands (ESR_WRITING_RULES.md §1A/§5): proposal↔call fit and whether the core substance is present and credible — not a tally of checkpoint statuses. Bonus/presentational gaps and ambition do not lower the score."
+          },
+          "assessment": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "PRIMARY: the criterion assessment as a sequence of flowing EC-referee prose paragraphs (not bullets), in the style of an official Evaluation Summary Report. Must cover every aspect of the criterion (see the standard 'aspects taken into account'), weave strengths and weaknesses, and tag each judgement with a severity phrase where relevant ('This is very positive.' / '... a minor shortcoming.' / '... a shortcoming.' / '... a significant (important) shortcoming.' / '... a serious shortcoming.'). Moderate length — more than a one-line comment, less than the internal reports 01–04. No rewriting suggestions."
           },
           "strengths": {
             "type": "array",
             "items": {"type": "string"},
-            "description": "Most important criterion-level strengths, as short bullets."
+            "description": "LEGACY (pre-prose): most important criterion-level strengths, as short bullets. Rendered only if `assessment` is absent."
           },
           "weaknesses": {
             "type": "array",
             "items": {"type": "string"},
-            "description": "Most important criterion-level weaknesses, as short bullets."
+            "description": "LEGACY (pre-prose): most important criterion-level weaknesses, as short bullets. Rendered only if `assessment` is absent."
           },
           "evaluator_comment": {
             "type": ["array", "string"],
             "items": {"type": "string"},
-            "description": "Concise evaluator-style comment as bullets (list) or a single string. No suggested improvements."
+            "description": "LEGACY (pre-prose): concise evaluator-style comment. Rendered only if `assessment` is absent."
           },
           "comment": {
             "type": "string",
-            "description": "LEGACY: flat evaluator-style paragraph. Still rendered for backward compatibility when the bullet fields (strengths/weaknesses/evaluator_comment) are absent. Prefer the bullet fields."
+            "description": "LEGACY: flat evaluator-style paragraph. Rendered only if `assessment` and the bullet fields are absent."
           }
         }
       }
