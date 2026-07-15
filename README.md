@@ -9,9 +9,6 @@ It installs as an **npm package**: a small CLI drops a Claude Code **Skill** + a
 the reviewing (call analysis, figure vision, the five passes, the ESR); bundled Python
 scripts do only the deterministic work — extraction, Person-Month maths, and PDF rendering.
 
-> The agent also works in Codex/Cursor via the in-repo `AGENTS.md` / `.cursor/rules`
-> after a plain `git clone`, but the npm install below targets **Claude Code**.
-
 ## Quick start (Claude Code)
 
 ```bash
@@ -158,4 +155,4 @@ does the reasoning passes and finishes with `he-review pm <run-id>` and
 default `./he-review-workspace` and `./inbox` locations.
 
 The full 13-step workflow, the rubrics, the status system and scoring live in `PLAYBOOK.md`,
-which is the single source of truth for every harness (Claude Code, Codex, Cursor).
+which is the single source of truth for the agent.

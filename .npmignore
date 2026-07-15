@@ -5,10 +5,8 @@ inbox/
 __pycache__/
 *.pyc
 
-# Codex/Cursor adapters are out of scope for the Claude Code npm package.
-AGENTS.md
+# Dev-repo files — not needed inside the published package (the Skill bundles its own copies).
 CLAUDE.md
-.cursor/
 .claude/
 
 # Repo/dev files
