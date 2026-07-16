@@ -1,0 +1,1653 @@
+{
+  "Excellence": [
+    {
+      "id": "EXC-01",
+      "num": 1,
+      "group": "▸ Opening & First Impression",
+      "checkpoint": "Opening Hook",
+      "description": "The Excellence section should open on the specific, quantified problem the project targets — a concrete figure or fact — rather than a generic statement. A strong opening immediately signals why the work matters and frames everything that follows."
+    },
+    {
+      "id": "EXC-02",
+      "num": 2,
+      "group": "▸ Opening & First Impression",
+      "checkpoint": "Early Project Ambition",
+      "description": "Within the first paragraphs the reader should grasp the project's core ambition: the transformation sought, the main user and why it is credible. The ambition is stated boldly yet remains believable given the state of the art."
+    },
+    {
+      "id": "EXC-03",
+      "num": 3,
+      "group": "▸ Opening & First Impression",
+      "checkpoint": "Project-at-a-Glance Figure",
+      "description": "An early concept or 'project-at-a-glance' figure should give the evaluator an informative overview of the idea and how its parts fit together. It must add understanding, not merely decorate the page."
+    },
+    {
+      "id": "EXC-04",
+      "num": 4,
+      "group": "▸ Opening & First Impression",
+      "checkpoint": "Narrative Flow",
+      "description": "The section should read as a coherent story from problem to methodology to validation, with terminology used consistently throughout. Objectives, technologies and validation settings are named the same way each time they appear."
+    },
+    {
+      "id": "EXC-05",
+      "num": 5,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "Problem Definition",
+      "description": "The central problem should be defined precisely, shown to be important, and scoped to what the project can realistically address. It is neither a vague societal theme nor so narrow that it looks trivial."
+    },
+    {
+      "id": "EXC-06",
+      "num": 6,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "Problem Evidence",
+      "description": "Claims about the scale or nature of the problem should be backed by numerical, scientific or market evidence with sufficiently recent references. The evidence justifies the need rather than simply asserting it."
+    },
+    {
+      "id": "EXC-07",
+      "num": 7,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "Citation & Footnote Presentation",
+      "description": "References and footnotes should be consistent, numbered and clearly tied to the specific claims they support. The reader can trace each important assertion back to a credible source."
+    },
+    {
+      "id": "EXC-08",
+      "num": 8,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "Specific Unresolved Gap",
+      "description": "Beyond the broad problem, the proposal should isolate a specific unresolved gap — narrower than the problem itself — that genuinely justifies this project. The gap is what current science, technology or practice cannot yet do."
+    },
+    {
+      "id": "EXC-09",
+      "num": 9,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "Problem–Solution Proportionality",
+      "description": "The scope of the proposed solution should be proportionate to the problem: ambitious enough to matter but achievable within the project's resources and duration. Both over-reach and under-reach are weaknesses."
+    },
+    {
+      "id": "EXC-10",
+      "num": 10,
+      "group": "▸ Problem, Need & Rationale",
+      "checkpoint": "End Users & Target Groups",
+      "description": "Primary and secondary end users, and their concrete needs, should be identified and explicitly linked to the objectives. The proposal is clear about who will use the results and why they care."
+    },
+    {
+      "id": "EXC-11",
+      "num": 11,
+      "group": "▸ Objectives",
+      "checkpoint": "Number of Major Objectives",
+      "description": "The proposal should present a manageable set of major objectives — typically four to six — rather than fragmenting into many small ones or lumping everything into a few broad ones. The count keeps the project focused and assessable."
+    },
+    {
+      "id": "EXC-12",
+      "num": 12,
+      "group": "▸ Objectives",
+      "checkpoint": "Objective Categorisation",
+      "description": "Objectives should be logically categorised with an appropriate balance between scientific and technical aims. The structure shows how research and development objectives complement one another."
+    },
+    {
+      "id": "EXC-13",
+      "num": 13,
+      "group": "▸ Objectives",
+      "checkpoint": "Objective Title Quality",
+      "description": "Objective titles should be action-oriented, specific and named consistently across the document. A good title says what will be achieved, not merely the topic area."
+    },
+    {
+      "id": "EXC-14",
+      "num": 14,
+      "group": "▸ Objectives",
+      "checkpoint": "Objective Description Quality",
+      "description": "Each objective description should cover the intended result, the user, the approach, the target, the baseline and the timing. Together these turn a heading into a verifiable commitment."
+    },
+    {
+      "id": "EXC-15",
+      "num": 15,
+      "group": "▸ Objectives",
+      "checkpoint": "Objective Description Completeness",
+      "description": "For every objective the text should make clear the gap addressed, the capability created, the user, the measurable change, how it is verified and the activities involved. Missing elements leave the objective ambiguous."
+    },
+    {
+      "id": "EXC-16",
+      "num": 16,
+      "group": "▸ Objectives",
+      "checkpoint": "Numerical Expressions",
+      "description": "Where objectives carry targets, each figure should have a metric, unit, baseline, comparison point and a rationale. Numbers without a baseline or justification are not convincing."
+    },
+    {
+      "id": "EXC-17",
+      "num": 17,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Specific",
+      "description": "The objective should describe a precise result with a clear scope and identifiable users, avoiding generic or open-ended wording. A specific objective leaves no doubt about what exactly will be delivered."
+    },
+    {
+      "id": "EXC-18",
+      "num": 18,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Measurable",
+      "description": "The objective should carry relevant KPIs with quantitative targets and an identifiable way to measure them. Measurability is what lets the evaluator judge success later."
+    },
+    {
+      "id": "EXC-19",
+      "num": 19,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Attainable",
+      "description": "The objective should be achievable within the project's duration, resources and starting maturity, including a realistic TRL progression. Ambition is welcome but must remain feasible."
+    },
+    {
+      "id": "EXC-20",
+      "num": 20,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Relevant",
+      "description": "The objective should address the identified gap, be pertinent to the call topic and contribute to the overall ambition. Irrelevant or tangential objectives dilute the proposal."
+    },
+    {
+      "id": "EXC-21",
+      "num": 21,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Time-Bound",
+      "description": "The objective should have a defined timeframe with identifiable points at which achievement and verification occur. It is clear when, not only whether, each objective is met."
+    },
+    {
+      "id": "EXC-22",
+      "num": 22,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "KPI Relevance",
+      "description": "Each objective should have at least one meaningful KPI that measures the effect or outcome, not merely an activity performed. A good KPI captures the change the objective promises."
+    },
+    {
+      "id": "EXC-23",
+      "num": 23,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "KPI Baseline",
+      "description": "Every KPI should state a baseline that is numerical and sourced, or explicitly established within the project. Without a baseline, a target has no reference and cannot show progress."
+    },
+    {
+      "id": "EXC-24",
+      "num": 24,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "KPI Target Rationale",
+      "description": "KPI targets should be justified by a benchmark or the literature rather than being arbitrary or trivially easy. The rationale explains why the target is both meaningful and reachable."
+    },
+    {
+      "id": "EXC-25",
+      "num": 25,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "KPI Measurement Completeness",
+      "description": "For each KPI the metric, baseline, target, unit, measurement method, setting, timing and responsible owner should be identifiable. A complete KPI can actually be tracked during the project."
+    },
+    {
+      "id": "EXC-26",
+      "num": 26,
+      "group": "▸ SMART Assessment & KPIs",
+      "checkpoint": "Objective Traceability",
+      "description": "Each objective should be traceable through the chain KPI → key technology → KRID/KI → work package → task → validation → result. This traceability shows the proposal is internally consistent, not a set of disconnected claims."
+    },
+    {
+      "id": "EXC-27",
+      "num": 27,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "Key Technology Identification",
+      "description": "The principal key technologies should be named explicitly, kept to a manageable number and linked to the objectives they enable. The reader should not have to infer the core technologies from scattered text."
+    },
+    {
+      "id": "EXC-28",
+      "num": 28,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "KT Naming Quality",
+      "description": "Key-technology names should be distinctive and project-specific rather than generic category labels. A precise name signals a concrete, well-understood technology."
+    },
+    {
+      "id": "EXC-29",
+      "num": 29,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "KT Name Credibility",
+      "description": "The methodology should justify the positioning each key-technology name claims, so the label matches what is actually developed. Impressive names without supporting substance are a weakness."
+    },
+    {
+      "id": "EXC-30",
+      "num": 30,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "KT Description",
+      "description": "Each key technology should be described in terms of its role, inputs and outputs, interactions with other components, maturity and how it is validated. The description makes the technology concrete and assessable."
+    },
+    {
+      "id": "EXC-31",
+      "num": 31,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "Key R&I Developments (RIA)",
+      "description": "For a research action, each key R&I development should identify the uncertainty addressed, the new knowledge generated, the advance beyond the state of the art and how it is validated. This is the heart of a research proposal's novelty."
+    },
+    {
+      "id": "EXC-32",
+      "num": 32,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "Key Innovations (IA)",
+      "description": "For an innovation action, each key innovation should state what exists today, what changes, the added value, the measurable improvement and how it is demonstrated. The innovation is framed as a concrete, evidenced step forward."
+    },
+    {
+      "id": "EXC-33",
+      "num": 33,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "KI Naming & Credibility",
+      "description": "Key-innovation names should be distinctive and project-specific, and any AI, autonomy or performance claims should be evidence-based rather than inflated. Credible naming avoids buzzwords the methodology cannot back up."
+    },
+    {
+      "id": "EXC-34",
+      "num": 34,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "KT ↔ KRID/KI Mapping",
+      "description": "Every research development or innovation should be linked to the enabling key technologies, consistently across sections. The mapping shows how technologies produce the claimed results."
+    },
+    {
+      "id": "EXC-35",
+      "num": 35,
+      "group": "▸ Key Technologies & Innovation",
+      "checkpoint": "Technology vs Innovation",
+      "description": "The proposal should clearly distinguish the underlying technology from the genuine novelty it delivers. Conflating the two hides whether anything is actually new."
+    },
+    {
+      "id": "EXC-36",
+      "num": 36,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Scientific SotA",
+      "description": "The scientific state of the art should cover recent and seminal literature, its limitations and how it supports the identified gap. It demonstrates command of the field, not a token reference list."
+    },
+    {
+      "id": "EXC-37",
+      "num": 37,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Technological SotA",
+      "description": "The technological state of the art should describe relevant technologies, their capabilities and limitations, and applicable standards. It shows what is already possible and where the frontier lies."
+    },
+    {
+      "id": "EXC-38",
+      "num": 38,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Commercial/Operational SotA",
+      "description": "Existing products and operational approaches should be described objectively, acknowledging what they already achieve. Ignoring commercial solutions and citing only research is a common weakness."
+    },
+    {
+      "id": "EXC-39",
+      "num": 39,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Previous R&I Projects",
+      "description": "Relevant prior R&I projects should be identified, distinguishing what is reused from what is newly advanced. This avoids duplication and shows the project builds on, rather than repeats, earlier work."
+    },
+    {
+      "id": "EXC-40",
+      "num": 40,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Patent & Publication Search",
+      "description": "A patent and publication search should be described with a credible scope, supporting the novelty claim. It signals due diligence on freedom to operate and prior art."
+    },
+    {
+      "id": "EXC-41",
+      "num": 41,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Existing Approach Comparison",
+      "description": "The proposal should compare existing approaches along capability, limitation, the advancement offered and the resulting advantage, ideally in measurable terms. The comparison makes the advance concrete and defensible."
+    },
+    {
+      "id": "EXC-42",
+      "num": 42,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Strength of Advancement",
+      "description": "The advance should be honestly classified along the incremental-to-ground-breaking spectrum, with the claimed level supported by evidence. Overstating the degree of novelty undermines credibility."
+    },
+    {
+      "id": "EXC-43",
+      "num": 43,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Overall Maturity",
+      "description": "The overall starting and ending maturity should be clear and appropriate to the action type. The reader understands where the project begins and how far it moves."
+    },
+    {
+      "id": "EXC-44",
+      "num": 44,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "Technology-Specific TRLs",
+      "description": "For each key technology the starting TRL should be evidenced, the target TRL realistic and the validation environment appropriate. Blanket TRL claims across different technologies are not convincing."
+    },
+    {
+      "id": "EXC-45",
+      "num": 45,
+      "group": "▸ State of the Art & Maturity",
+      "checkpoint": "TRL Consistency",
+      "description": "Component-level and system-level TRLs should be distinguished and the progression across the project should be realistic. Inconsistent or over-optimistic TRL jumps are a weakness."
+    },
+    {
+      "id": "EXC-46",
+      "num": 46,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Overall Methodology Logic",
+      "description": "The methodology should present a clear flow from requirements through to validation that explains how the objectives are actually achieved. The evaluator can follow why this approach delivers the promised results."
+    },
+    {
+      "id": "EXC-47",
+      "num": 47,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Concepts",
+      "description": "Principal concepts should be explained, used consistently and introduced before they are relied upon. Undefined or shifting concepts make the methodology hard to trust."
+    },
+    {
+      "id": "EXC-48",
+      "num": 48,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Models",
+      "description": "Important models should be explained with their role and assumptions made explicit. The reader understands what each model does and where its limits lie."
+    },
+    {
+      "id": "EXC-49",
+      "num": 49,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Assumptions",
+      "description": "Critical assumptions underlying the approach should be identifiable and credible. Hidden or implausible assumptions are a source of risk the proposal should own."
+    },
+    {
+      "id": "EXC-50",
+      "num": 50,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Methodological Challenges",
+      "description": "Major methodological challenges and data limitations should be recognised together with how they are mitigated. Acknowledging difficulty is a sign of maturity, not weakness."
+    },
+    {
+      "id": "EXC-51",
+      "num": 51,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "System/Solution Architecture",
+      "description": "The system or solution architecture should make components, key technologies, data flows and interfaces visible and consistent with the methodology. A clear architecture shows the pieces genuinely fit together."
+    },
+    {
+      "id": "EXC-52",
+      "num": 52,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Component-Level Methodology",
+      "description": "For each key technology, KRID or innovation, the methodology should specify inputs, processing, outputs, dependencies and validation. Component-level detail demonstrates real feasibility."
+    },
+    {
+      "id": "EXC-53",
+      "num": 53,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Data & Critical Inputs",
+      "description": "Datasets and other critical inputs should be identified with credible sources and access arrangements, and any gaps and fallbacks recognised. Data availability is often the make-or-break of feasibility."
+    },
+    {
+      "id": "EXC-54",
+      "num": 54,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Validation Purpose",
+      "description": "For each validation setting the proposal should explain why it is included and what it validates, giving it a distinct role. Redundant or unexplained pilots weaken the case."
+    },
+    {
+      "id": "EXC-55",
+      "num": 55,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Validation Context",
+      "description": "Each validation should describe its application context, environment, users and the need it responds to. Context makes the validation meaningful rather than abstract."
+    },
+    {
+      "id": "EXC-56",
+      "num": 56,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Current Situation",
+      "description": "The current process, tools and their limitations should be explained for each validation, establishing the challenge being tested. The baseline situation is what improvement is measured against."
+    },
+    {
+      "id": "EXC-57",
+      "num": 57,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Validation Procedure",
+      "description": "Each validation procedure should describe the scenario, inputs, baseline, participants, KPIs, success criteria and feedback loop. This detail lets the evaluator judge whether the claims can truly be tested."
+    },
+    {
+      "id": "EXC-58",
+      "num": 58,
+      "group": "▸ Methodology, Architecture & Validation",
+      "checkpoint": "Validation Complementarity",
+      "description": "The validation settings should be distinct yet collectively cover the project's results under a common logic. Together they should validate the whole, not overlap or leave gaps."
+    },
+    {
+      "id": "EXC-59",
+      "num": 59,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "European/Transnational Dimension",
+      "description": "The proposal should show real added value from working at European or transnational scale, beyond simply having partners in several countries. Cross-country transferability of the results is part of this value."
+    },
+    {
+      "id": "EXC-60",
+      "num": 60,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "EU-Favoured Terminology",
+      "description": "Relevant EU concepts and terminology should be present where they genuinely apply, without penalising the absence of terms irrelevant to the topic. It signals alignment with the policy context."
+    },
+    {
+      "id": "EXC-61",
+      "num": 61,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Interdisciplinarity",
+      "description": "Where the problem demands it, multiple disciplines should be identified and their methods genuinely integrated into the methodology. Naming disciplines without integrating them is not enough."
+    },
+    {
+      "id": "EXC-62",
+      "num": 62,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Social Sciences & Humanities",
+      "description": "Where relevant, the role of social sciences and humanities should be explained and embedded in the work rather than confined to dissemination. SSH should shape the research, not decorate it."
+    },
+    {
+      "id": "EXC-63",
+      "num": 63,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Gender — Participation & Equality",
+      "description": "Measures for gender balance, a gender equality plan and non-discrimination should be present as appropriate. These address who does the research and how the team is run."
+    },
+    {
+      "id": "EXC-64",
+      "num": 64,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Gender Dimension in R&I Content",
+      "description": "Where relevant, the proposal should assess whether sex and gender matter to the research content and reflect this in the R&I design. This concerns the substance of the work, not only team composition."
+    },
+    {
+      "id": "EXC-65",
+      "num": 65,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Sex/Gender-Related Differences",
+      "description": "Where the subject warrants it, material sex- or gender-related differences should be analysed and accounted for. Ignoring relevant differences can invalidate results."
+    },
+    {
+      "id": "EXC-66",
+      "num": 66,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Inclusivity & Accessibility",
+      "description": "Accessibility and the needs of vulnerable groups should be addressed where materially relevant to the users or results. Inclusive design widens the reach and legitimacy of the outcomes."
+    },
+    {
+      "id": "EXC-67",
+      "num": 67,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Open Science Strategy",
+      "description": "The open-science strategy should be project-specific and integrated into the work, going beyond open-access publication. It should read as a plan, not a boilerplate paragraph."
+    },
+    {
+      "id": "EXC-68",
+      "num": 68,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Open Science Concrete Outputs",
+      "description": "The concrete open-science outputs — datasets, software, models, protocols and other resources — should be identified. Naming the actual outputs makes the commitment real."
+    },
+    {
+      "id": "EXC-69",
+      "num": 69,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Dataset-Level Openness",
+      "description": "For each dataset the proposal should address its value, shareability, repository, metadata and licensing. Dataset-level detail is what makes FAIR and open data credible."
+    },
+    {
+      "id": "EXC-70",
+      "num": 70,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Software/Models/Knowledge Resources",
+      "description": "Software, models and knowledge resources should be shared where appropriate, with any restrictions justified. Openness is balanced against legitimate protection needs."
+    },
+    {
+      "id": "EXC-71",
+      "num": 71,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "FAIR",
+      "description": "The proposal should address how research outputs will be Findable, Accessible, Interoperable and Reusable. FAIR principles should be applied concretely, not merely cited."
+    },
+    {
+      "id": "EXC-72",
+      "num": 72,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Data Management Plan",
+      "description": "A data management plan should be foreseen with clear timing, typically tied to a deliverable. It shows data will be governed deliberately across the project."
+    },
+    {
+      "id": "EXC-73",
+      "num": 73,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "GDPR & Data Governance",
+      "description": "Handling of personal or sensitive data should address minimisation, security, governance and compatibility with open science under GDPR. Data protection is treated as a concrete obligation."
+    },
+    {
+      "id": "EXC-74",
+      "num": 74,
+      "group": "▸ Cross-cutting (EU dimension · SSH · gender · open science · data)",
+      "checkpoint": "Linked National/International R&I",
+      "description": "Relevant prior national or international results should be identified with a mechanism for reuse, avoiding duplication. It shows the project is positioned within a wider landscape."
+    },
+    {
+      "id": "EXC-75",
+      "num": 75,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Tables & Document Structure",
+      "description": "Tables should be numbered, titled, referenced from the text, consistent and genuinely informative. Good structure helps the evaluator navigate and remember the proposal."
+    },
+    {
+      "id": "EXC-76",
+      "num": 76,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Figure Structure",
+      "description": "Figures should be numbered, captioned, referenced and consistent across the document. Structured figures reinforce the narrative rather than floating loose."
+    },
+    {
+      "id": "EXC-77",
+      "num": 77,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Figure Readability",
+      "description": "Figures should be legible: labels, text, arrows, resolution and contrast must all be clear. An unreadable figure adds nothing, however good the underlying idea."
+    },
+    {
+      "id": "EXC-78",
+      "num": 78,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Figure Understandability",
+      "description": "Each figure should communicate its purpose, hierarchy, flow and the relationships it depicts. The reader should grasp the message without decoding it."
+    },
+    {
+      "id": "EXC-79",
+      "num": 79,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Figure–Text Consistency",
+      "description": "Names, architecture and components shown in figures should match the surrounding text. Discrepancies between figure and text erode trust in the detail."
+    },
+    {
+      "id": "EXC-80",
+      "num": 80,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Official Excellence Coverage Gate",
+      "description": "All official Excellence questions on objectives, ambition and methodology should be addressed. A gap here is a formal coverage failure, independent of quality."
+    },
+    {
+      "id": "EXC-81",
+      "num": 81,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Excellence Internal Consistency",
+      "description": "The full chain — problem, users, gap, objective, KPI, key technology, work package and validation — should be internally consistent. Inconsistency across this chain is a core weakness."
+    },
+    {
+      "id": "EXC-82",
+      "num": 82,
+      "group": "▸ Presentation & Internal Consistency",
+      "checkpoint": "Core Evaluation Expectations",
+      "description": "This is the holistic scoring basis for Excellence: clear ambitious objectives, a real gap, a credible advance, a sound methodology, meaningful KPIs, realistic TRLs and appropriate cross-cutting aspects. It is judged as a whole, not as a tally of ticks."
+    }
+  ],
+  "Impact": [
+    {
+      "id": "IMP-01",
+      "num": 1,
+      "group": "▸ Opening & Framing",
+      "checkpoint": "Impact Hook",
+      "description": "The Impact section should open on a specific change, beneficiary or result rather than a generic statement about importance. A concrete opening frames the impact case from the first line."
+    },
+    {
+      "id": "IMP-02",
+      "num": 2,
+      "group": "▸ Opening & Framing",
+      "checkpoint": "Opening Impact Figure",
+      "description": "An early impact figure should show the flow from results to outcomes to impacts in an informative, consistent way. It gives the evaluator a mental map of the impact logic."
+    },
+    {
+      "id": "IMP-03",
+      "num": 3,
+      "group": "▸ State of Art / Market / Practice",
+      "checkpoint": "State of the Art",
+      "description": "The scientific and technological frontier should be established together with the gap that remains. It grounds the impact claims in what is not yet possible."
+    },
+    {
+      "id": "IMP-04",
+      "num": 4,
+      "group": "▸ State of Art / Market / Practice",
+      "checkpoint": "State of the Market",
+      "description": "The commercial landscape, existing offerings, the market gap and unmet needs should be described. This shows that demand exists for what the project will produce."
+    },
+    {
+      "id": "IMP-05",
+      "num": 5,
+      "group": "▸ State of Art / Market / Practice",
+      "checkpoint": "State of the Practice",
+      "description": "Current workflows, tools and regulatory conditions should be described along with their limitations. The state of practice is what the project's results must improve upon."
+    },
+    {
+      "id": "IMP-06",
+      "num": 6,
+      "group": "▸ State of Art / Market / Practice",
+      "checkpoint": "Combined Gap Logic",
+      "description": "Across art, market and practice the remaining opportunity should be clear and coherent. The three views should converge on the same gap the project fills."
+    },
+    {
+      "id": "IMP-07",
+      "num": 7,
+      "group": "▸ Impact Logic, Needs & Results",
+      "checkpoint": "Overall Impact Logic",
+      "description": "The impact section should present a clear pathway that distinguishes results, outcomes and wider impacts. Each level should follow logically from the one before it."
+    },
+    {
+      "id": "IMP-08",
+      "num": 8,
+      "group": "▸ Impact Logic, Needs & Results",
+      "checkpoint": "Specific Needs",
+      "description": "Each need should be specific, evidenced and linked to a project result and an official expected outcome. Needs anchor the impact logic in something real."
+    },
+    {
+      "id": "IMP-09",
+      "num": 9,
+      "group": "▸ Impact Logic, Needs & Results",
+      "checkpoint": "Project Results",
+      "description": "Each result should be specific, generated within the project, exploitable and distinct from the key exploitable results. Results are the tangible things the work produces."
+    },
+    {
+      "id": "IMP-10",
+      "num": 10,
+      "group": "▸ Target Groups",
+      "checkpoint": "General Target Group Quality",
+      "description": "Target groups should be segmented and specific, each with a clear expected action. 'The public' or 'industry' without segmentation is too vague to drive impact."
+    },
+    {
+      "id": "IMP-11",
+      "num": 11,
+      "group": "▸ Target Groups",
+      "checkpoint": "Adopters",
+      "description": "The organisations expected to adopt, procure or license the results should be identified. Adopters are who actually takes the results into use."
+    },
+    {
+      "id": "IMP-12",
+      "num": 12,
+      "group": "▸ Target Groups",
+      "checkpoint": "Influencers",
+      "description": "Actors who shape policy, standards, procurement or investment should be identified. Influencers can accelerate or block uptake even if they are not users."
+    },
+    {
+      "id": "IMP-13",
+      "num": 13,
+      "group": "▸ Target Groups",
+      "checkpoint": "Beneficiaries",
+      "description": "Beneficiaries should be distinguished from direct users, with the benefit they receive defined. It clarifies who ultimately gains from the project."
+    },
+    {
+      "id": "IMP-14",
+      "num": 14,
+      "group": "▸ Target Groups",
+      "checkpoint": "Multipliers",
+      "description": "Networks, associations and clusters with a credible role in replicating results should be identified. Multipliers extend impact beyond the consortium's own reach."
+    },
+    {
+      "id": "IMP-15",
+      "num": 15,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Official Topic Expected Outcomes",
+      "description": "Every relevant Expected Outcome from the call topic should be explicitly addressed and linked to specific project contributions. Leaving official outcomes implicit or unaddressed is a serious impact weakness."
+    },
+    {
+      "id": "IMP-16",
+      "num": 16,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Project-Specific Expected Outcomes",
+      "description": "The proposal should define its own specific, measurable outcomes that its results enable. These complement, and are traceable to, the official outcomes."
+    },
+    {
+      "id": "IMP-17",
+      "num": 17,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Expected Outcome Alignment Table",
+      "description": "A clear table should map call outcome to project outcome to result to KER to KPI. The mapping demonstrates the impact chain at a glance."
+    },
+    {
+      "id": "IMP-18",
+      "num": 18,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Scale",
+      "description": "The scale of impact — users, organisations, sites, geography and replication — should be quantified and realistic. Scale claims must be grounded in the project's evidence."
+    },
+    {
+      "id": "IMP-19",
+      "num": 19,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Significance",
+      "description": "The significance of the change should be conveyed through magnitude, baseline, comparison and credibility, and tied to the call. Significance is about how much the change matters, not just that it happens."
+    },
+    {
+      "id": "IMP-20",
+      "num": 20,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Wider Impact Hierarchy",
+      "description": "The official impact levels should be distinguished, with the project's own claims separated and the chain kept understandable. Blurring outputs, outcomes and impacts is a common weakness."
+    },
+    {
+      "id": "IMP-21",
+      "num": 21,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Work Programme Expected Impact",
+      "description": "The contribution to the work programme's expected impact should be specific, traceable to outcomes and results, and proportionate. It links the project to the destination's ambition."
+    },
+    {
+      "id": "IMP-22",
+      "num": 22,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Destination Alignment",
+      "description": "The proposal should align with the Destination's intended transformation, traceable back to project results. Alignment shows the project serves the broader policy goal."
+    },
+    {
+      "id": "IMP-23",
+      "num": 23,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "Topic Alignment",
+      "description": "All topic-specific impact, target, uptake and replication requirements should be addressed. Topic requirements are non-negotiable coverage points."
+    },
+    {
+      "id": "IMP-24",
+      "num": 24,
+      "group": "▸ Expected Outcomes & Alignment",
+      "checkpoint": "EU/Commission-Level Alignment",
+      "description": "Links to EU and Commission policy should be specific, with real contributions rather than a generic list of strategies. Name-dropping frameworks without a concrete contribution adds nothing."
+    },
+    {
+      "id": "IMP-25",
+      "num": 25,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Key Impact Dimensions",
+      "description": "Three to five relevant, project-specific impact dimensions should be defined and linked to outcomes and KPIs. Focused dimensions are more convincing than an exhaustive list."
+    },
+    {
+      "id": "IMP-26",
+      "num": 26,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Key Impact Dimension Figure",
+      "description": "A clear, project-specific figure should visualise the impact dimensions and the project's contribution to each. It should be tailored, not a stock diagram."
+    },
+    {
+      "id": "IMP-27",
+      "num": 27,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Scientific Impact",
+      "description": "Scientific impact should cover new knowledge, methods, datasets or tools and their reuse pathway, going beyond counting publications. It shows how the science travels beyond the project."
+    },
+    {
+      "id": "IMP-28",
+      "num": 28,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Societal Impact",
+      "description": "Societal impact should identify the specific change, the affected groups, a measurable magnitude and baseline, kept proportionate. Vague societal benefit claims are not credible."
+    },
+    {
+      "id": "IMP-29",
+      "num": 29,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Environmental Impact",
+      "description": "Environmental impact should name the parameter, baseline and quantified improvement, with a credible scale. It converts green ambition into measurable terms."
+    },
+    {
+      "id": "IMP-30",
+      "num": 30,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Economic & Technological Impact",
+      "description": "Economic and technological impact should cover the value created, the adopters, quantified efficiency or cost effects and a credible uptake route. It connects the technology to real economic gains."
+    },
+    {
+      "id": "IMP-31",
+      "num": 31,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Policy & Institutional Impact",
+      "description": "Policy and institutional impact should identify the actors, the need, the evidence, the engagement route and the defined uptake. It shows how results influence decisions and institutions."
+    },
+    {
+      "id": "IMP-32",
+      "num": 32,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "Key Impact Pathways",
+      "description": "Only the relevant Horizon Europe Key Impact Pathways should be used, each linked to results and outcomes with measurable contributions. Selectivity is better than claiming every pathway."
+    },
+    {
+      "id": "IMP-33",
+      "num": 33,
+      "group": "▸ Impact Dimensions & Pathways",
+      "checkpoint": "KIP Figure",
+      "description": "A project-specific, readable figure should link results to the relevant Key Impact Pathways. It should clarify, not merely restate, the KIP framework."
+    },
+    {
+      "id": "IMP-34",
+      "num": 34,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Short-Term Impact",
+      "description": "Short-term impact should describe in-project outcomes with KPIs that lie within the project's influence. These are the effects the project can directly demonstrate."
+    },
+    {
+      "id": "IMP-35",
+      "num": 35,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Medium-Term Impact",
+      "description": "Medium-term impact should set out replication and uptake pathways with visible assumptions and responsible actors. It bridges project results to wider adoption."
+    },
+    {
+      "id": "IMP-36",
+      "num": 36,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Long-Term Impact",
+      "description": "Long-term impact should be presented as a contribution, supported by realistic intermediate outcomes. The project should claim its share, not the entire societal change."
+    },
+    {
+      "id": "IMP-37",
+      "num": 37,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Time-Horizon Consistency",
+      "description": "Results, outcomes and impacts should be assigned realistic time horizons and described in matching language. Misplacing effects in time undermines the whole logic."
+    },
+    {
+      "id": "IMP-38",
+      "num": 38,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Impact Statement Quality",
+      "description": "Strong impact statements should include the target group, the result, the change, its magnitude, the baseline, a KPI and the uptake mechanism. Complete statements are what make impact measurable."
+    },
+    {
+      "id": "IMP-39",
+      "num": 39,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Impact KPIs",
+      "description": "Each impact KPI should be linked to an outcome and carry a metric, baseline, target and method, measuring change rather than activity. They let impact be tracked, not just asserted."
+    },
+    {
+      "id": "IMP-40",
+      "num": 40,
+      "group": "▸ Time Horizon & Impact KPIs",
+      "checkpoint": "Cumulative KPI Structure",
+      "description": "Communication, dissemination and exploitation KPIs should be phased and cumulative, realistic rather than back-loaded to the final months. A credible profile shows steady build-up."
+    },
+    {
+      "id": "IMP-41",
+      "num": 41,
+      "group": "▸ Communication, Dissemination & Exploitation",
+      "checkpoint": "Comm/Dissem Activity Table",
+      "description": "A table should set out activities, target groups, channels and phased numerical KPIs. It turns intentions into a concrete, trackable plan."
+    },
+    {
+      "id": "IMP-42",
+      "num": 42,
+      "group": "▸ Communication, Dissemination & Exploitation",
+      "checkpoint": "Communication",
+      "description": "Communication should specify objective, audience, message, channel, timing and a reach-based KPI. It targets awareness among broad audiences."
+    },
+    {
+      "id": "IMP-43",
+      "num": 43,
+      "group": "▸ Communication, Dissemination & Exploitation",
+      "checkpoint": "Dissemination",
+      "description": "Dissemination should specify the result, audience, channel, intended use and a transfer or reuse KPI. It targets the uptake of knowledge by those who can use it."
+    },
+    {
+      "id": "IMP-44",
+      "num": 44,
+      "group": "▸ Communication, Dissemination & Exploitation",
+      "checkpoint": "Exploitation",
+      "description": "Exploitation should be understood as use in the broadest sense, not only sales, with a realistic route for each exploitable result. Every result should have a plausible path to use."
+    },
+    {
+      "id": "IMP-45",
+      "num": 45,
+      "group": "▸ Communication, Dissemination & Exploitation",
+      "checkpoint": "Exploitation KPIs",
+      "description": "Exploitation KPIs should be quantified, time-bound and KER-linked, distinguishing activity from actual uptake. They measure whether results are really taken up."
+    },
+    {
+      "id": "IMP-46",
+      "num": 46,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Barriers — Overview",
+      "description": "Major barriers to impact should be explicit, project-specific, linked to results and KERs, and categorised. Recognising barriers is a strength; ignoring them is the weakness."
+    },
+    {
+      "id": "IMP-47",
+      "num": 47,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Technical Barriers",
+      "description": "Technical barriers such as interoperability, scalability, integration and data quality should be identified. These are the engineering obstacles to uptake."
+    },
+    {
+      "id": "IMP-48",
+      "num": 48,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Market Barriers",
+      "description": "Market barriers such as procurement rules, willingness to pay, value-chain position, adoption cost and demand should be identified. They determine whether a good result actually sells."
+    },
+    {
+      "id": "IMP-49",
+      "num": 49,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Regulatory Barriers",
+      "description": "Regulatory barriers around certification, approvals, AI, data and the sector should be identified. Regulation often gates deployment more than technology does."
+    },
+    {
+      "id": "IMP-50",
+      "num": 50,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Behavioural/Organisational Barriers",
+      "description": "Behavioural and organisational barriers such as trust, acceptance, skills and resistance to change should be identified. Human factors frequently decide adoption."
+    },
+    {
+      "id": "IMP-51",
+      "num": 51,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "IP/Ownership Barriers",
+      "description": "Barriers around ownership conflicts, access rights, licensing and tension with open science should be identified. Unresolved IP issues can stall exploitation."
+    },
+    {
+      "id": "IMP-52",
+      "num": 52,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Post-Project Barriers",
+      "description": "Barriers to continuity after the project — maintenance, hosting, financing and ownership — should be identified. Sustainability fails when these are left unaddressed."
+    },
+    {
+      "id": "IMP-53",
+      "num": 53,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Barrier Mitigation",
+      "description": "For each barrier there should be a mitigating action, a responsible partner, timing and supporting evidence. Naming a barrier without a response is only half the job."
+    },
+    {
+      "id": "IMP-54",
+      "num": 54,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Regulation & Compliance",
+      "description": "Regulatory requirements, their effect on uptake and a compliance pathway with a responsible partner should be set out. It shows the route to market is understood."
+    },
+    {
+      "id": "IMP-55",
+      "num": 55,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "Standards & Interoperability",
+      "description": "Relevant standards and bodies should be identified with the specific contribution, partner, timing and evidence. Engagement with standards strengthens durable impact."
+    },
+    {
+      "id": "IMP-56",
+      "num": 56,
+      "group": "▸ Barriers, Regulation, Standards & IP",
+      "checkpoint": "IP & Access Rights",
+      "description": "Ownership, background and foreground, protection versus openness, and access rights should be defined. Clear IP arrangements make exploitation believable."
+    },
+    {
+      "id": "IMP-57",
+      "num": 57,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "Key Exploitable Results",
+      "description": "Each KER should be linked to a result with a value proposition, owner, user and route, and should not simply rename a key innovation. KERs are the concrete things that will be exploited."
+    },
+    {
+      "id": "IMP-58",
+      "num": 58,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "KER Portfolio Table",
+      "description": "A table should separate the KERs with their key technologies, owner, users, maturity and IPR or exploitation routes. The portfolio should be commensurate with the project's budget and scope."
+    },
+    {
+      "id": "IMP-59",
+      "num": 59,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "TRL / MRL / SRL",
+      "description": "For each KER the technology, market and societal readiness levels should be credible, with maturation activities where there are gaps. Maturity claims should match the evidence."
+    },
+    {
+      "id": "IMP-60",
+      "num": 60,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "KER Packaging Strategy",
+      "description": "The strategy for packaging KERs — individually, bundled or integrated — should be considered, including cross-market reuse. Packaging affects how value is captured."
+    },
+    {
+      "id": "IMP-61",
+      "num": 61,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "Exploitation Model",
+      "description": "A suitable exploitation model should be chosen per KER, distinguishing buyer from user with a clear revenue or utilisation logic. The model explains how the result creates value."
+    },
+    {
+      "id": "IMP-62",
+      "num": 62,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "Technology Push / Market Pull",
+      "description": "Both the technology capability and the evidenced customer need should be present. Impact is strongest where push and pull meet."
+    },
+    {
+      "id": "IMP-63",
+      "num": 63,
+      "group": "▸ Key Exploitable Results & Maturity",
+      "checkpoint": "Tech Push / Market Pull Figure",
+      "description": "A figure should visualise the flow from capability to need to value to segment to route. It makes the exploitation logic tangible."
+    },
+    {
+      "id": "IMP-64",
+      "num": 64,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Market Research",
+      "description": "Market research should identify the target market, segments, demand evidence and barriers, specific to each KER. Generic market statements do not support a business case."
+    },
+    {
+      "id": "IMP-65",
+      "num": 65,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "TAM / SAM / SOM",
+      "description": "For commercial KERs, market sizing should present TAM, SAM and SOM with clear assumptions and geography and a realistic obtainable share. Inflated SOM figures undermine credibility."
+    },
+    {
+      "id": "IMP-66",
+      "num": 66,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Competitor Analysis",
+      "description": "Direct competitors, indirect competitors and substitutes should be analysed on objective criteria, showing a specific advantage. It positions the result honestly against alternatives."
+    },
+    {
+      "id": "IMP-67",
+      "num": 67,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Opportunities & Threats",
+      "description": "Opportunities and threats should be identified and connected to exploitation planning. They shape how and when the result goes to market."
+    },
+    {
+      "id": "IMP-68",
+      "num": 68,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Business Model",
+      "description": "A business model — a canvas or equivalent — should cover segments, value proposition, revenue and the buyer-versus-user distinction. It shows how the result becomes a sustainable offer."
+    },
+    {
+      "id": "IMP-69",
+      "num": 69,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Pricing & Financial Projection",
+      "description": "Pricing logic, volumes, revenue and costs should be presented with transparent assumptions. Projections should be defensible, not aspirational."
+    },
+    {
+      "id": "IMP-70",
+      "num": 70,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Investment Requirements",
+      "description": "The post-project investment needed, its source and a realistic financing route should be stated. It shows the path from result to market is funded."
+    },
+    {
+      "id": "IMP-71",
+      "num": 71,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Partner Know-How & Post-Project Investment",
+      "description": "Partners' background assets, the foreground created, and credible commitments to post-project investment should be described. Commitment signals real intent to exploit."
+    },
+    {
+      "id": "IMP-72",
+      "num": 72,
+      "group": "▸ Market & Business Case (commercial KERs)",
+      "checkpoint": "Return on Investment",
+      "description": "Where the KER is mature enough, investment, return and timeframe should be transparent rather than speculative. ROI claims should match the maturity of the result."
+    },
+    {
+      "id": "IMP-73",
+      "num": 73,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "IPR Strategy",
+      "description": "The IPR strategy should choose an appropriate protection route per KER, consistent with exploitation and open-science commitments. Protection and openness should be reconciled, not contradictory."
+    },
+    {
+      "id": "IMP-74",
+      "num": 74,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "KER IPR Table",
+      "description": "A table should show, per KER, the ownership, utilisation route, IPR route and maturity. It makes the IP picture explicit and checkable."
+    },
+    {
+      "id": "IMP-75",
+      "num": 75,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "IP Research & Freedom to Operate",
+      "description": "Patent research, potential conflicts and freedom to operate should be addressed proportionately to the KER's maturity. It reduces the risk of exploitation being blocked."
+    },
+    {
+      "id": "IMP-76",
+      "num": 76,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "Policy Uptake",
+      "description": "For policy-oriented results, the target authority, need, evidence, product, engagement and defined uptake should be set out. It shows how results reach decision-makers."
+    },
+    {
+      "id": "IMP-77",
+      "num": 77,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "Post-Project Sustainability",
+      "description": "Sustainability should cover owner, maintenance, hosting, financing, continued exploitation and timeframe. It answers what happens to the results once funding ends."
+    },
+    {
+      "id": "IMP-78",
+      "num": 78,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "Post-Project Commitments",
+      "description": "Commitments such as investment, buyers, letters of intent, replication or follow-on funding should be identified where available. Concrete commitments strengthen the credibility of uptake."
+    },
+    {
+      "id": "IMP-79",
+      "num": 79,
+      "group": "▸ IPR Strategy & Sustainability",
+      "checkpoint": "Impact & Exploitation Timeline",
+      "description": "Exploitation should start early, market validation should precede strong claims, and IP decisions should be timely. Leaving exploitation to the final months is a weakness."
+    },
+    {
+      "id": "IMP-80",
+      "num": 80,
+      "group": "▸ Consistency & Core Basis",
+      "checkpoint": "Summary Canvas",
+      "description": "A summary canvas should test consistency across needs, results, communication, dissemination and exploitation, target groups and outcomes, aligned with sections 2.1 and 2.2. It is a coherence check on the whole impact case."
+    },
+    {
+      "id": "IMP-81",
+      "num": 81,
+      "group": "▸ Consistency & Core Basis",
+      "checkpoint": "Impact Figures",
+      "description": "Impact figures should be readable, consistent and non-misleading. They should reinforce the impact story accurately."
+    },
+    {
+      "id": "IMP-82",
+      "num": 82,
+      "group": "▸ Consistency & Core Basis",
+      "checkpoint": "Impact Internal Consistency",
+      "description": "The full chain from need to result to KER to exploitation to impact should be internally consistent. Breaks in this chain are core impact weaknesses."
+    },
+    {
+      "id": "IMP-83",
+      "num": 83,
+      "group": "▸ Consistency & Core Basis",
+      "checkpoint": "Core Evaluation Expectations",
+      "description": "This is the holistic scoring basis for Impact: full coverage of the expected outcomes, a credible impact pathway, a KER portfolio commensurate with the budget and realistic uptake. It is judged as a whole, weighing centrality and severity."
+    }
+  ],
+  "Implementation": [
+    {
+      "id": "IMPL-01",
+      "num": 1,
+      "group": "▸ Work-Plan Logic & Structure",
+      "checkpoint": "Overall Implementation Logic",
+      "description": "The work plan should follow a coherent progression from objectives through the work packages, remaining manageable with clear dependencies. The overall logic shows how the project will actually be delivered."
+    },
+    {
+      "id": "IMPL-02",
+      "num": 2,
+      "group": "▸ Work-Plan Logic & Structure",
+      "checkpoint": "Work Package Structure",
+      "description": "Each work package should be named, distinct, necessary, well scoped, linked to objectives or key technologies, and proportionate. Redundant or overlapping work packages reduce clarity."
+    },
+    {
+      "id": "IMPL-03",
+      "num": 3,
+      "group": "▸ Work-Plan Logic & Structure",
+      "checkpoint": "WP Objective Quality",
+      "description": "Work-package objectives should be action-oriented, specific, verifiable and consistent with their tasks. They should describe what the WP delivers, not just its theme."
+    },
+    {
+      "id": "IMPL-04",
+      "num": 4,
+      "group": "▸ Traceability (objectives ↔ WP ↔ KT/KI)",
+      "checkpoint": "Objective ↔ WP Mapping",
+      "description": "Each project objective should have a responsible work package, tasks, validation and deliverable evidence. The mapping shows every objective is actually resourced and delivered."
+    },
+    {
+      "id": "IMPL-05",
+      "num": 5,
+      "group": "▸ Traceability (objectives ↔ WP ↔ KT/KI)",
+      "checkpoint": "Key Technology ↔ WP Mapping",
+      "description": "Each key technology should have a development work package or task, a responsible partner, integration, validation and a deliverable. It shows the technologies are genuinely built and tested."
+    },
+    {
+      "id": "IMPL-06",
+      "num": 6,
+      "group": "▸ Traceability (objectives ↔ WP ↔ KT/KI)",
+      "checkpoint": "KI/KRID ↔ WP Mapping",
+      "description": "Each key innovation or research development should have a clear pathway through development, validation and result. Traceability confirms the novelty is implemented, not just promised."
+    },
+    {
+      "id": "IMPL-07",
+      "num": 7,
+      "group": "▸ Tasks, Roles & Partner Contribution",
+      "checkpoint": "Task Structure",
+      "description": "Each task should be named, scoped, distinct, timed, led by a partner, with defined outputs and dependencies. Well-formed tasks make the plan feasible and monitorable."
+    },
+    {
+      "id": "IMPL-08",
+      "num": 8,
+      "group": "▸ Tasks, Roles & Partner Contribution",
+      "checkpoint": "Partner Roles Within Tasks",
+      "description": "Within tasks, each partner's responsibilities should be specific rather than a vague 'support', with effort consistent with the role. It should be clear which partner does what."
+    },
+    {
+      "id": "IMPL-09",
+      "num": 9,
+      "group": "▸ Tasks, Roles & Partner Contribution",
+      "checkpoint": "Partner Contribution Clarity",
+      "description": "Each partner's unique role and the reason for their inclusion should be clear. Partners carrying effort but no discernible contribution are a weakness."
+    },
+    {
+      "id": "IMPL-10",
+      "num": 10,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Project Management WP",
+      "description": "The project-management work package should define coordination, technical, financial, quality and risk responsibilities. It shows the project will be run, not just performed."
+    },
+    {
+      "id": "IMPL-11",
+      "num": 11,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Partner Participation in PM",
+      "description": "Participation in governance and decision-making should be proportionate across partners. It indicates a genuinely shared project rather than a single-partner show."
+    },
+    {
+      "id": "IMPL-12",
+      "num": 12,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "PM Effort Percentage",
+      "description": "Management effort should be proportionate to the size, duration and complexity of the project, with roughly seven percent as a heuristic. Too little or too much management effort both warrant scrutiny."
+    },
+    {
+      "id": "IMPL-13",
+      "num": 13,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Requirements/Design Effort",
+      "description": "Effort on requirements, analysis and design should be proportionate — around fifteen percent as a heuristic — and should produce concrete inputs to development. Underspending here often causes later problems."
+    },
+    {
+      "id": "IMPL-14",
+      "num": 14,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Dissem/Exploit/Impact Effort",
+      "description": "Effort on dissemination, exploitation and impact should be proportionate — around ten percent as a heuristic — to the planned impact activities. It should match the ambition of the impact section."
+    },
+    {
+      "id": "IMPL-15",
+      "num": 15,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Person-Month Reconciliation",
+      "description": "Person-month totals should reconcile across partners, work packages and the declared total, with any discrepancies explained. Numbers that do not add up undermine confidence in the whole plan."
+    },
+    {
+      "id": "IMPL-16",
+      "num": 16,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "WP Effort Distribution",
+      "description": "Effort across work packages should be proportionate, with core technical, integration and validation work adequately resourced. Starving the core work packages is a red flag."
+    },
+    {
+      "id": "IMPL-17",
+      "num": 17,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Partner-Level Effort Distribution",
+      "description": "Effort per partner should be proportionate to their role, avoiding over- or under-resourcing and artificial balancing. Effort should follow the work, not internal politics."
+    },
+    {
+      "id": "IMPL-18",
+      "num": 18,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Task-Level Effort Credibility",
+      "description": "The person-month distribution across tasks should be credible, with contributions differentiated between partners. It shows the effort figures are considered, not guessed."
+    },
+    {
+      "id": "IMPL-19",
+      "num": 19,
+      "group": "▸ Management, Effort & Budget",
+      "checkpoint": "Budget Credibility",
+      "description": "The budget should be proportionate to effort, roles and activities rather than artificially equal across partners. A credible budget mirrors the real distribution of work."
+    },
+    {
+      "id": "IMPL-20",
+      "num": 20,
+      "group": "▸ Consortium & Geography",
+      "checkpoint": "Consortium Composition",
+      "description": "The consortium should cover all the competencies required, with any capability gaps identified. Missing essential expertise is a core implementation risk."
+    },
+    {
+      "id": "IMPL-21",
+      "num": 21,
+      "group": "▸ Consortium & Geography",
+      "checkpoint": "Consortium Complementarity",
+      "description": "Partners should be distinct and complementary, together forming a chain from research through to exploitation. Complementarity, not duplication, is what a strong consortium shows."
+    },
+    {
+      "id": "IMPL-22",
+      "num": 22,
+      "group": "▸ Consortium & Geography",
+      "checkpoint": "Country/Geographic Distribution",
+      "description": "Geographic distribution should add substantive value and not be artificial, while concentration of effort in one country is a delivery and dependency risk. Balance across countries strengthens resilience."
+    },
+    {
+      "id": "IMPL-23",
+      "num": 23,
+      "group": "▸ Consortium & Geography",
+      "checkpoint": "Work Package Leadership",
+      "description": "Work-package leaders should have relevant expertise and effort, and leadership should not be over-concentrated in one partner. Distributed, competent leadership signals a healthy consortium."
+    },
+    {
+      "id": "IMPL-24",
+      "num": 24,
+      "group": "▸ Consortium & Geography",
+      "checkpoint": "Task Leadership",
+      "description": "Task leaders should be technically appropriate and carry sufficient effort. Leadership without the expertise or time to exercise it is a weakness."
+    },
+    {
+      "id": "IMPL-25",
+      "num": 25,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Work Package Dependencies",
+      "description": "Work-package dependencies should follow a realistic predecessor-successor logic with no circular dependencies. The sequence should be genuinely executable."
+    },
+    {
+      "id": "IMPL-26",
+      "num": 26,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Gantt Chart",
+      "description": "The Gantt chart should show work packages, tasks, durations, dependencies and the timing of deliverables and milestones coherently. It is the visual test of whether the schedule holds together."
+    },
+    {
+      "id": "IMPL-27",
+      "num": 27,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "PERT/Dependency Diagram",
+      "description": "A PERT or dependency diagram should make the critical logic and the integration and validation dependencies visible and consistent. It reveals the project's critical path."
+    },
+    {
+      "id": "IMPL-28",
+      "num": 28,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverables",
+      "description": "Each deliverable should have an ID, name, description, work package, lead, type, dissemination level, due month and be verifiable. Complete deliverable definitions make progress checkable."
+    },
+    {
+      "id": "IMPL-29",
+      "num": 29,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable Naming Quality",
+      "description": "Deliverable names should communicate the actual output rather than a generic 'report'. A good name says what the deliverable is."
+    },
+    {
+      "id": "IMPL-30",
+      "num": 30,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable Description Quality",
+      "description": "Deliverable descriptions should explain the content and maturity rather than repeat the title. The reader should learn what the deliverable will actually contain."
+    },
+    {
+      "id": "IMPL-31",
+      "num": 31,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable Type",
+      "description": "The deliverable type should match the output, so software or demonstrators are not mislabelled as reports. Correct typing reflects what is truly produced."
+    },
+    {
+      "id": "IMPL-32",
+      "num": 32,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable Dissemination Level",
+      "description": "Dissemination levels should be appropriate, protecting sensitive content while staying consistent with open-science commitments. It balances openness against confidentiality."
+    },
+    {
+      "id": "IMPL-33",
+      "num": 33,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable Timing",
+      "description": "Due months should be realistic, support dependent activities and avoid over-concentration at the end. A smooth delivery profile reduces final-period risk."
+    },
+    {
+      "id": "IMPL-34",
+      "num": 34,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Milestones",
+      "description": "Each milestone should have an ID, a specific name, a work package, a month, a verification method and represent a meaningful decision point. Milestones should mark real progress, not calendar dates."
+    },
+    {
+      "id": "IMPL-35",
+      "num": 35,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Milestone Quality",
+      "description": "Each milestone should represent a critical achieved state that enables the next phase and can be verified. It is a maturity checkpoint, not a submission event."
+    },
+    {
+      "id": "IMPL-36",
+      "num": 36,
+      "group": "▸ Schedule · Dependencies · Deliverables · Milestones",
+      "checkpoint": "Deliverable ↔ Milestone Consistency",
+      "description": "Milestones should denote achievement rather than mere submission, with dates aligned to the related deliverables. Consistency here keeps the monitoring logic sound."
+    },
+    {
+      "id": "IMPL-37",
+      "num": 37,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "Data Management Implementation",
+      "description": "Data management should be assigned to a work package or task, with clear responsibilities and DMP timing. It operationalises the data commitments made under Excellence."
+    },
+    {
+      "id": "IMPL-38",
+      "num": 38,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "Data Management Milestone",
+      "description": "A meaningful data-governance checkpoint should be included where it is useful. It gives data management a verifiable moment, not just intentions."
+    },
+    {
+      "id": "IMPL-39",
+      "num": 39,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "IPR/Exploitation Governance",
+      "description": "Responsibility for IPR and KERs and the clarification of ownership should be handled, and not postponed too late in the project. Late IP decisions can block exploitation."
+    },
+    {
+      "id": "IMPL-40",
+      "num": 40,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "IPR Deliverable",
+      "description": "A specific IPR or exploitation-strategy deliverable should exist where relevant. It anchors the IP work in a concrete output."
+    },
+    {
+      "id": "IMPL-41",
+      "num": 41,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "IPR/KER Milestone",
+      "description": "KER ownership and routes should be agreed before final exploitation, in a verifiable way. It ensures exploitation is not left to chance at the end."
+    },
+    {
+      "id": "IMPL-42",
+      "num": 42,
+      "group": "▸ Data, IPR & Quality Governance",
+      "checkpoint": "Quality Management",
+      "description": "Quality management should cover the approach, reviews, acceptance criteria and change control, proportionate to the project. It shows outputs will be controlled for quality."
+    },
+    {
+      "id": "IMPL-43",
+      "num": 43,
+      "group": "▸ Risk Management",
+      "checkpoint": "Risk Management",
+      "description": "Risk management should be structured, project-specific and linked to work packages, with probability, impact, mitigation and an owner for each risk. A generic, thin risk table is a recognised weakness."
+    },
+    {
+      "id": "IMPL-44",
+      "num": 44,
+      "group": "▸ Risk Management",
+      "checkpoint": "Risk Categories",
+      "description": "The relevant risk categories — organisational, technical, integration, data and others — should be covered. Breadth of categories shows the risks have been thought through."
+    },
+    {
+      "id": "IMPL-45",
+      "num": 45,
+      "group": "▸ Risk Management",
+      "checkpoint": "Organisational & Managerial Risks",
+      "description": "Organisational and managerial risks such as conflicts, partner withdrawal, delays, coordination problems and geopolitical factors should be considered. These threaten delivery as much as technical risks."
+    },
+    {
+      "id": "IMPL-46",
+      "num": 46,
+      "group": "▸ Risk Management",
+      "checkpoint": "Technical & Scientific Risks",
+      "description": "Technical and scientific risks around performance, maturity, integration, interoperability and scalability should be considered. They go to the heart of feasibility."
+    },
+    {
+      "id": "IMPL-47",
+      "num": 47,
+      "group": "▸ Risk Management",
+      "checkpoint": "Validation & Demonstration Risks",
+      "description": "Risks to validation and demonstration — site delays, recruitment, data, equipment, acceptance and safety — should be considered. Pilots often carry the project's most concrete risks."
+    },
+    {
+      "id": "IMPL-48",
+      "num": 48,
+      "group": "▸ Risk Management",
+      "checkpoint": "Dissemination & Impact Risks",
+      "description": "Risks to dissemination and impact such as engagement, reach, uptake, replication, market, policy and standardisation should be considered. Impact can fail even when the technology succeeds."
+    },
+    {
+      "id": "IMPL-49",
+      "num": 49,
+      "group": "▸ Risk Management",
+      "checkpoint": "Risk Probability & Impact",
+      "description": "Risks should be rated for probability and impact on a consistent scale, with the critical ones prioritised. Rating focuses attention where it matters most."
+    },
+    {
+      "id": "IMPL-50",
+      "num": 50,
+      "group": "▸ Risk Management",
+      "checkpoint": "Risk Response Structure",
+      "description": "Each risk response should cover prevention, mitigation, monitoring, a responsible actor and a trigger. A structured response is more than a one-line mitigation."
+    },
+    {
+      "id": "IMPL-51",
+      "num": 51,
+      "group": "▸ Risk Management",
+      "checkpoint": "Call-Specific Risk Quality",
+      "description": "Risks should be tailored to the project's specific technology, validation and uptake rather than being generic. Boilerplate risks signal a superficial analysis."
+    },
+    {
+      "id": "IMPL-52",
+      "num": 52,
+      "group": "▸ Lump-Sum Structure & Reporting",
+      "checkpoint": "Lump-Sum Suitability",
+      "description": "The work-package structure should support assessment of objective completion, without artificial fragmentation. It should suit lump-sum reporting where that applies."
+    },
+    {
+      "id": "IMPL-53",
+      "num": 53,
+      "group": "▸ Lump-Sum Structure & Reporting",
+      "checkpoint": "Long WP Completion Risk",
+      "description": "For long or high-value work packages spanning periods, meaningful maturity stages should be separable. It reduces the risk of a large WP being unassessable until the end."
+    },
+    {
+      "id": "IMPL-54",
+      "num": 54,
+      "group": "▸ Lump-Sum Structure & Reporting",
+      "checkpoint": "Lump-Sum WP Completion Evidence",
+      "description": "The completion condition, outputs and criteria for each work package should be externally verifiable. Verifiable completion is essential under lump-sum funding."
+    },
+    {
+      "id": "IMPL-55",
+      "num": 55,
+      "group": "▸ Lump-Sum Structure & Reporting",
+      "checkpoint": "Reporting-Period Alignment",
+      "description": "Work-package completion points should align with the reporting logic. Alignment keeps payments and progress assessment coherent."
+    },
+    {
+      "id": "IMPL-56",
+      "num": 56,
+      "group": "▸ Lump-Sum Structure & Reporting",
+      "checkpoint": "Management WP Duration",
+      "description": "Management, coordination, risk and quality activities should run continuously across the full project duration. Management that stops mid-project is not credible."
+    },
+    {
+      "id": "IMPL-57",
+      "num": 57,
+      "group": "▸ Phase Timing",
+      "checkpoint": "Requirements/Architecture Timing",
+      "description": "Requirements should be defined early and baselined, and the architecture settled before dependent work begins. Getting these right early prevents costly rework."
+    },
+    {
+      "id": "IMPL-58",
+      "num": 58,
+      "group": "▸ Phase Timing",
+      "checkpoint": "Development Timing",
+      "description": "Development should start when its dependencies are available, produce intermediate versions and avoid being compressed into the end. A realistic development profile lowers risk."
+    },
+    {
+      "id": "IMPL-59",
+      "num": 59,
+      "group": "▸ Phase Timing",
+      "checkpoint": "Integration Timing",
+      "description": "Integration should be explicitly planned, resourced and started early enough. Leaving integration to the end is a frequent cause of failure."
+    },
+    {
+      "id": "IMPL-60",
+      "num": 60,
+      "group": "▸ Phase Timing",
+      "checkpoint": "Validation Timing",
+      "description": "Validation should follow maturity, leave time for refinement and not be scheduled too late. Late validation leaves no room to act on the findings."
+    },
+    {
+      "id": "IMPL-61",
+      "num": 61,
+      "group": "▸ Phase Timing",
+      "checkpoint": "Exploitation Timing",
+      "description": "Exploitation, KER, IP and market activities should begin before the final phase. Early exploitation work makes post-project uptake far more credible."
+    },
+    {
+      "id": "IMPL-62",
+      "num": 62,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Governance Structure",
+      "description": "The governance structure should define coordinator, technical, work-package-leader and decision-body roles clearly and proportionately. It shows the project has a functioning management backbone."
+    },
+    {
+      "id": "IMPL-63",
+      "num": 63,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Decision-Making",
+      "description": "Decision-making should set out responsibilities, voting or consensus rules, escalation and how urgent decisions are handled. Clear rules prevent deadlock."
+    },
+    {
+      "id": "IMPL-64",
+      "num": 64,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Conflict Resolution",
+      "description": "A conflict-resolution procedure with escalation levels and consortium-agreement mechanisms should be described. It shows disputes will be managed, not left to chance."
+    },
+    {
+      "id": "IMPL-65",
+      "num": 65,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Internal Consortium Communication",
+      "description": "Internal communication — meetings, tools and frequency — should be proportionate, neither excessive nor insufficient. Good communication keeps a distributed consortium aligned."
+    },
+    {
+      "id": "IMPL-66",
+      "num": 66,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Advisory Boards & External Governance",
+      "description": "Any advisory board should be justified, with relevant members and clear influence, not merely decorative. External governance should add real value."
+    },
+    {
+      "id": "IMPL-67",
+      "num": 67,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Implementation Tables",
+      "description": "The work-package, task, deliverable, milestone, effort, budget and risk tables should be numbered, consistent and referenced. They are the backbone of a checkable implementation."
+    },
+    {
+      "id": "IMPL-68",
+      "num": 68,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Implementation Figures",
+      "description": "Gantt, PERT and governance figures should be readable and consistent with the tables and text. They should aid comprehension of the plan."
+    },
+    {
+      "id": "IMPL-69",
+      "num": 69,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Implementation Internal Consistency",
+      "description": "The full chain from objective to work package to task to partner to effort to deliverable to budget should be internally consistent. Inconsistency across this chain is a core implementation weakness."
+    },
+    {
+      "id": "IMPL-70",
+      "num": 70,
+      "group": "▸ Governance & Consistency",
+      "checkpoint": "Core Evaluation Expectations",
+      "description": "This is the holistic scoring basis for Implementation: a coherent, clean work plan, proportionate effort and budget, a well-fitted consortium, genuine project-specific risks, and justified subcontracting and country concentration. It is judged as a whole, weighing centrality and severity."
+    }
+  ]
+}

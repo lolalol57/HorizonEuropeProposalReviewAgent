@@ -15,3 +15,9 @@ he-review-workspace/
 inbox/
 !inbox/.gitkeep
 node_modules/
+
+# Local branding overlay (skins the neutral checklist) — never shipped
+he-review-LTG/
+branding
+branding/
+LTG_Templates/

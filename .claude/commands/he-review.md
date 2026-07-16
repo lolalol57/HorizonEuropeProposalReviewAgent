@@ -29,7 +29,11 @@ Then follow the `he-proposal-review` skill and `PLAYBOOK.md` end to end:
    `sections[].items` entry per meaningful rubric module/checkpoint (`na` with a reason
    where not applicable), not just a handful of findings. The ESR (05) stays concise and
    bullet-structured (score, Strengths, Weaknesses, Evaluator comment; no improvements).
-7. `he-review report <run-id>`.
+7. `he-review report <run-id>` (or `python3 scripts/build_report.py <run-id>`).
+8. Map the completed review onto the fixed 235-checkpoint checklist → write
+   `internal/checklist-fill.json` (per checkpoint: `status`, `citation` = the finding's
+   evidence quote/ref, `note`), then `python3 scripts/build_checklist.py <run-id>` →
+   `OUTPUT/06_Proposal_Preparation_Checklist.xlsx`.
 
-Finally, report the five PDFs in `he-review-workspace/<run-id>/OUTPUT/` and a short scores
-summary.
+Finally, report the five PDFs **and the filled checklist** in
+`he-review-workspace/<run-id>/OUTPUT/` and a short scores summary.

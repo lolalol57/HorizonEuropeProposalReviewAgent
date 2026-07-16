@@ -58,7 +58,7 @@ its argument. Internal JSON files are described in `schemas/`.
 
 ---
 
-## The 13 steps
+## The 14 steps
 
 ### 1 — Proposal Intake  *(script)*
 ```bash
@@ -163,23 +163,27 @@ narrative is what makes the report readable.
 ### 12 — Final ESR Synthesis  *(you)* → `internal/esr-findings.json`
 Load `rubrics/ESR_WRITING_RULES.md`. Consolidate validated findings, remove
 duplicates, prevent double-penalisation, ensure score↔comment consistency. Write the
-ESR **in the style of a real EC Evaluation Summary Report**: per criterion, flowing
-**evaluator prose** (not bullets) that **covers every aspect of the criterion**, weaves
-strengths and weaknesses, and tags each judgement with a **severity phrase**
-(*"This is very positive."* / *"… a minor shortcoming."* / *"… a shortcoming."* /
+ESR **in the style of a real EC Evaluation Summary Report** and **bullet-structured
+("madde madde")**: per criterion, a short **Strengths** list, a short **Weaknesses** list,
+and a brief **Evaluator comment** — the bullets together **covering every aspect of the
+criterion**. **Every strength bullet closes with a positivity tag** (*"This is a strength."*
+/ *"This is a notable strength."* / *"This is very positive."*) and **every weakness bullet
+closes with a severity tag** (*"… a minor shortcoming."* / *"… a shortcoming."* /
 *"… a significant (important) shortcoming."* / *"… a serious shortcoming."*). A bit more
-detailed than a few bullets, but **much shorter than reports 01–04**. Produce
+detailed than a few lines, but **much shorter than reports 01–04**. Produce
 ```json
 {"criteria": [{"name": "...", "score": 0.0,
-               "assessment": ["<referee prose paragraph>", "<paragraph>", "..."]}],
- "total_score": 0.0, "overall": ["<short overall prose>"]}
+               "strengths": ["<referee bullet ... This is a strength.>", "..."],
+               "weaknesses": ["<referee bullet ... This is a shortcoming.>", "..."],
+               "evaluator_comment": ["<why the score sits here>", "..."]}],
+ "total_score": 0.0, "overall": ["<short overall bullet>", "..."]}
 ```
-one entry per criterion (Excellence, Impact, Implementation). `assessment` and `overall`
-are arrays of prose paragraphs. The earlier bullet shape
-(`strengths`/`weaknesses`/`evaluator_comment`) and the legacy `{name, comment, score}`
-shape are still accepted for backward compatibility, but the **prose `assessment` is
-preferred**. The ESR evaluates the proposal **as submitted** and contains **no rewriting
-suggestions, replacement text, or suggested improvements**.
+one entry per criterion (Excellence, Impact, Implementation). `strengths`, `weaknesses`,
+`evaluator_comment` and `overall` are arrays of referee bullets. The flowing-prose
+`assessment` shape and the legacy `{name, comment, score}` shape are still accepted for
+backward compatibility, but the **bullet shape is preferred**. The ESR evaluates the
+proposal **as submitted** and contains **no rewriting suggestions, replacement text, or
+suggested improvements**.
 
 ### 13 — PDF Report Generation  *(script)*
 ```bash
@@ -187,6 +191,23 @@ python3 scripts/build_report.py <run-id>          # all available reports
 python3 scripts/build_report.py <run-id> --only 01,05
 ```
 Renders `OUTPUT/01..05_*.pdf`. A report whose findings JSON is missing is skipped.
+
+### 14 — Filled Proposal-Preparation Checklist  *(you, then script)*
+Map the completed review onto the fixed **235-checkpoint** self-check checklist
+(`scripts/data/checklist.json` — 82 Excellence / 83 Impact / 70 Implementation).
+Write `internal/checklist-fill.json` (schema `schemas/checklist-fill.schema.json`): one
+entry per checkpoint `id` with `status` (`adequate`/`partial`/`missing`/`na`, mapped to the
+Durum dropdown), `citation` (the matched finding's **evidence** — a short quote or precise
+section/page/table ref, reused verbatim, for the *Kanıt / Bölüm ref.* column) and `note`
+(condensed assessment/action for *Notlar / Aksiyon*). Then:
+```bash
+python3 scripts/build_checklist.py <run-id>       # -> OUTPUT/06_Proposal_Preparation_Checklist.xlsx
+python3 scripts/build_checklist.py <run-id> --blank   # blank template (no fill file)
+```
+Renders the workbook (3 sheets, Durum dropdown + green/amber/red/grey conditional
+formatting + COUNTIF summary band). With no fill file it emits the blank self-check
+template. Branding (title/logo/filename) is neutral by default; an optional branding
+profile (`--branding PATH`, `$HE_REVIEW_BRANDING`, or `branding/branding.json`) can skin it.
 
 ---
 
@@ -341,6 +362,9 @@ contains and never invents rubric coverage, so the breadth must be in
   a score, **Strengths**, **Weaknesses**, and an **Evaluator comment** (bullets), then
   the total and a bulleted overall assessment. **No rewriting suggestions or
   improvements.** Reports 01–04 carry the detail; 05 stays short.
+- `06_Proposal_Preparation_Checklist.xlsx` — the 235-checkpoint self-check checklist
+  (3 sheets) **filled from the review**: each checkpoint's Durum, Kanıt/citation and Notlar
+  populated (filename/branding change when a branding profile is applied).
 
 ## Golden rules
 

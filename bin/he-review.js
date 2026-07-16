@@ -13,6 +13,7 @@
  *   he-review structural <run-id>
  *   he-review pm        <run-id>
  *   he-review report    <run-id>
+ *   he-review checklist <run-id>
  *   he-review review [path] ...   deterministic bookend: intake -> extract -> structural
  *
  * Claude does the reasoning passes between `structural` and `pm`/`report`.
@@ -46,6 +47,7 @@ const STEP_SCRIPTS = {
   structural: "structural_checks.py",
   pm: "pm_effort.py",
   report: "build_report.py",
+  checklist: "build_checklist.py",
 };
 
 function log(msg) {
@@ -213,7 +215,7 @@ function review(rest) {
   log("");
   log("Deterministic steps done for run: " + runId);
   log("Claude now: call analysis -> proposal map -> figure review -> 5 passes,");
-  log("then:  he-review pm " + runId + "   and   he-review report " + runId);
+  log("then:  he-review pm " + runId + "   report " + runId + "   checklist " + runId);
 }
 
 function main() {
@@ -232,7 +234,8 @@ function main() {
     case "extract":
     case "structural":
     case "pm":
-    case "report": {
+    case "report":
+    case "checklist": {
       const res = runStep(cmd, rest);
       process.exit(res.status || 0);
       break;
@@ -245,7 +248,7 @@ function main() {
       log("  he-review uninstall [--local]          remove them");
       log("  he-review paths                        show install/workspace/inbox dirs");
       log("  he-review review [path] ...            deterministic bookend (intake+extract+structural)");
-      log("  he-review intake|extract|structural|pm|report [args]");
+      log("  he-review intake|extract|structural|pm|report|checklist [args]");
       log("");
       log("  --local : install into THIS project's ./.claude (only this project),");
       log("            instead of the user-wide ~/.claude. No global npm / sudo needed.");

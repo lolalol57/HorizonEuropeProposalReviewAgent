@@ -42,7 +42,7 @@ each step, and where the reports land.
 
 ## What you get
 
-Five PDFs in `./he-review-workspace/<run-id>/OUTPUT/`:
+Five PDFs plus a filled checklist workbook in `./he-review-workspace/<run-id>/OUTPUT/`:
 
 - **`01_Excellence_Review.pdf`**, **`02_Impact_Review.pdf`**, **`03_Implementation_Review.pdf`**,
   **`04_Cross_Consistency_Call_and_Document_Audit.pdf`** — the **detailed internal reports**.
@@ -55,6 +55,10 @@ Five PDFs in `./he-review-workspace/<run-id>/OUTPUT/`:
   and short bullet lists of **Strengths**, **Weaknesses**, and an **Evaluator comment**, then
   the total `/ 15.0` and an overall assessment. It reads like a real ESR: it evaluates the
   proposal *as submitted* and deliberately contains **no rewriting suggestions**.
+- **`06_Proposal_Preparation_Checklist.xlsx`** — a 235-checkpoint self-check workbook
+  (Excellence / Impact / Implementation) **filled from the review**: for each checkpoint a
+  status (✅/⚠️/❌/➖), the evidence/section citation, and a short note. Title, filename and logo
+  are neutral by default and can be skinned via an optional branding profile.
 
 Everything — the reports and all intermediate artefacts — lands in your **current project
 directory**, never inside `~/.claude`.
@@ -154,5 +158,5 @@ does the reasoning passes and finishes with `he-review pm <run-id>` and
 `he-review report <run-id>`. Set `HE_REVIEW_WORKSPACE` / `HE_REVIEW_INBOX` to override the
 default `./he-review-workspace` and `./inbox` locations.
 
-The full 13-step workflow, the rubrics, the status system and scoring live in `PLAYBOOK.md`,
+The full 14-step workflow, the rubrics, the status system and scoring live in `PLAYBOOK.md`,
 which is the single source of truth for the agent.

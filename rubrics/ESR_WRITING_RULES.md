@@ -177,55 +177,65 @@ Only the most important criterion-level findings should be included.
 # 3. Final ESR Structure
 
 The Final ESR is written **in the style of a real European Commission Evaluation
-Summary Report (ESR)**: flowing **evaluator prose**, not bullet lists. Each criterion
-is assessed in a short sequence of paragraphs that reads like a referee's write-up. It
-is a bit more detailed than a few bullets, but **much shorter than the internal reports
-01–04**. It contains **no suggested improvements or rewriting**.
+Summary Report (ESR)**, and is deliberately **bullet-structured ("madde madde")** so it
+reads like a referee's marking sheet: per criterion, a short list of **Strengths**, a
+short list of **Weaknesses**, and a brief **Evaluator comment**. Each bullet is one
+self-contained referee judgement. It is a bit more detailed than a few lines, but
+**much shorter than the internal reports 01–04**, and it contains **no suggested
+improvements or rewriting**.
 
-For each criterion the `assessment` prose must:
+**Every bullet ends with a severity / positivity tag**, exactly as a real ESR does — this
+is the core of the referee voice:
 
-- **cover every aspect** of that criterion (the "aspects taken into account" — see §15–17
-  and the per-criterion Core Evaluation Expectations): for Excellence — objectives,
-  ambition beyond the state of the art, soundness of methodology/concepts/models, use
-  cases and validation, interdisciplinarity, gender dimension, open science, data
-  management, end-user/citizen engagement; for Impact — pathway credibility, scale and
-  significance, barriers and mitigation, dissemination/exploitation/communication, target
-  groups, exploitable results and sustainability; for Implementation — work-plan quality,
-  effort/resources, risk assessment, timeline, consortium capacity and roles, management
-  structure;
-- **weave strengths and weaknesses together** in evaluator language (not a strengths list
-  then a weaknesses list);
-- **tag each judgement with a severity phrase** where relevant, exactly as a real ESR does:
-  *"This is very positive."* / *"This is a strength."* for positives; and for shortcomings,
-  in ascending severity, *"This is a minor shortcoming."* / *"This is a shortcoming."* /
+- **Strengths** — each bullet closes with a positivity tag, in ascending strength:
+  *"This is a strength."* / *"This is a notable strength."* / *"This is very positive."*
+- **Weaknesses** — each bullet closes with a shortcoming tag, in ascending severity:
+  *"This is a minor shortcoming."* / *"This is a shortcoming."* /
   *"This is a significant (important) shortcoming."* / *"This is a serious shortcoming."*
   (aligned with the Shortcoming Severity ladder in §7).
+- **Evaluator comment** — 1–2 bullets synthesising why the score sits where it does
+  (why above threshold, and what holds it back); these may close with a tag where natural.
 
-The renderer prints, per criterion, the score (with its threshold) and the standard
-work-programme "aspects taken into account", followed by this prose. Example paragraph
-style (generic, do not copy verbatim):
+Across the Strengths + Weaknesses bullets the criterion must still **cover every aspect**
+of that criterion (the "aspects taken into account" — see §15–17 and the per-criterion
+Core Evaluation Expectations): for Excellence — objectives, ambition beyond the state of
+the art, soundness of methodology/concepts/models, use cases and validation,
+interdisciplinarity, gender dimension, open science, data management, end-user/citizen
+engagement; for Impact — pathway credibility, scale and significance, barriers and
+mitigation, dissemination/exploitation/communication, target groups, exploitable results
+and sustainability; for Implementation — work-plan quality, effort/resources, risk
+assessment, timeline, consortium capacity and roles, management structure.
 
-> *"The objectives are clear and well-structured and fully align with the call, addressing
-> documented gaps in preparedness and coordination. This is very positive. The state of the
-> art focuses heavily on research and takes insufficient account of existing products,
-> especially in extended reality. This is a minor shortcoming. The methodology is detailed
-> and coherent, but for most pilots the data sources remain vague. This is a shortcoming."*
+The renderer prints, per criterion, the score (with its threshold), the standard
+work-programme "aspects taken into account", then the **Strengths**, **Weaknesses** and
+**Evaluator comment** bullet blocks. Example bullet style (generic, do not copy verbatim):
+
+> **Strengths:**
+> &bull; The objectives are clear, well-structured and fully aligned with the call, addressing documented gaps. This is very positive.
+> **Weaknesses:**
+> &bull; The state of the art focuses on research and takes insufficient account of existing products. This is a minor shortcoming.
+> &bull; For most pilots the data sources remain vague. This is a shortcoming.
+> **Evaluator comment:**
+> &bull; The criterion is comfortably above threshold on substance, held below excellent by the maturity claims.
 
 Structure per criterion (rendered): `Criterion N — <name>`, `Score: X.X / 5.0 (Threshold
-3.0)`, the standard aspects block, then the prose. Then `Total score: XX.X / 15.0
-(Threshold 10.0)` and a short prose `Overall Assessment`.
+3.0)`, the standard aspects block, then the three bullet blocks. Then `Total score: XX.X /
+15.0 (Threshold 10.0)` and a short `Overall Assessment` (bullets).
 
 The `internal/esr-findings.json` the model writes to drive this report is:
 
 ```json
 {"criteria": [{"name": "Criterion 1 — Excellence", "score": 0.0,
-               "assessment": ["<referee prose paragraph>", "<paragraph>", "..."]}],
- "total_score": 0.0, "overall": ["<short overall prose>"]}
+               "strengths": ["<referee bullet ... This is a strength.>", "..."],
+               "weaknesses": ["<referee bullet ... This is a shortcoming.>", "..."],
+               "evaluator_comment": ["<why the score sits here>", "..."]}],
+ "total_score": 0.0, "overall": ["<short overall bullet>", "..."]}
 ```
 
-`assessment` and `overall` are arrays of prose paragraphs. The earlier bullet shape
-(`strengths`/`weaknesses`/`evaluator_comment`) and the legacy flat `comment` shape are
-still accepted for backward compatibility, but the **prose `assessment` is preferred**.
+`strengths`, `weaknesses`, `evaluator_comment` and `overall` are arrays of referee
+bullets. The flowing-prose `assessment` shape (an array of paragraphs) and the legacy
+flat `comment` shape remain accepted for backward compatibility, but the
+**bullet shape above is preferred**.
 
 ---
 
@@ -610,7 +620,8 @@ The Final ESR should not read like:
 - Open Science: good.
 - Gender: partial.
 
-Instead, synthesise findings into evaluator-style prose.
+Instead, write full referee **bullets** — each a complete evaluator judgement closing
+with a severity / positivity tag (see §3), never a terse `label: verdict` pair.
 
 ---
 
@@ -764,12 +775,19 @@ Total score: XX.X / 15.0 (Threshold 10.0)
 
 Score: X.X / 5.0 (Threshold 3.0)
 
-[Flowing evaluator prose covering every Excellence aspect — objectives, ambition beyond
-the state of the art, soundness of methodology/concepts/models, use cases and validation,
-interdisciplinarity, gender dimension, open science, data management, engagement — weaving
-strengths and weaknesses, each judgement tagged with a severity phrase, e.g. "This is very
-positive." / "This is a minor shortcoming." / "This is a shortcoming." / "This is a
-significant shortcoming." / "This is a serious shortcoming." No rewriting suggestions.]
+**Strengths:**
+- [Full referee bullet covering an Excellence aspect — objectives, ambition beyond the state
+  of the art, methodology/concepts/models, use cases and validation, interdisciplinarity,
+  gender, open science, data management, engagement — closing with a positivity tag, e.g.
+  "This is a strength." / "This is very positive."]
+
+**Weaknesses:**
+- [Full referee bullet on a shortcoming, closing with a severity tag, e.g. "This is a minor
+  shortcoming." / "This is a shortcoming." / "This is a significant shortcoming." / "This is
+  a serious shortcoming." No rewriting suggestions.]
+
+**Evaluator comment:**
+- [1–2 bullets on why the score sits where it does — above threshold on substance, held back by X.]
 
 ---
 
@@ -777,9 +795,10 @@ significant shortcoming." / "This is a serious shortcoming." No rewriting sugges
 
 Score: X.X / 5.0 (Threshold 3.0)
 
-[Flowing evaluator prose covering every Impact aspect — pathway credibility, scale and
-significance, barriers and mitigation, dissemination/exploitation/communication, target
-groups, exploitable results and sustainability — with severity-tagged judgements.]
+**Strengths / Weaknesses / Evaluator comment:** [referee bullets covering every Impact aspect
+— pathway credibility, scale and significance, barriers and mitigation,
+dissemination/exploitation/communication, target groups, exploitable results and
+sustainability — each closing with a severity / positivity tag.]
 
 ---
 
@@ -787,12 +806,12 @@ groups, exploitable results and sustainability — with severity-tagged judgemen
 
 Score: X.X / 5.0 (Threshold 3.0)
 
-[Flowing evaluator prose covering every Implementation aspect — work-plan quality, effort
-and resources, risk assessment, timeline, consortium capacity and roles, management
-structure — with severity-tagged judgements.]
+**Strengths / Weaknesses / Evaluator comment:** [referee bullets covering every Implementation
+aspect — work-plan quality, effort and resources, risk assessment, timeline, consortium
+capacity and roles, management structure — each closing with a severity / positivity tag.]
 
 ---
 
 ## Overall Assessment
 
-[A short prose paragraph or two summarising the overall evaluation.]
+- [Short referee bullets summarising the overall evaluation and threshold outcome.]

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "checklist fill",
+  "description": "Per-checkpoint fill for the proposal-preparation checklist workbook. Maps the completed review findings onto the canonical 235 rubric checkpoints (scripts/data/checklist.json). Consumed by scripts/build_checklist.py to populate the Durum / Kanit / Notlar columns.",
+  "type": "object",
+  "required": ["Excellence", "Impact", "Implementation"],
+  "properties": {
+    "Excellence": {"$ref": "#/definitions/fillList"},
+    "Impact": {"$ref": "#/definitions/fillList"},
+    "Implementation": {"$ref": "#/definitions/fillList"}
+  },
+  "definitions": {
+    "fillList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Canonical checkpoint id, e.g. EXC-01 / IMP-01 / IMPL-01 (must match scripts/data/checklist.json)."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["adequate", "partial", "missing", "na"],
+            "description": "Maps to Durum: adequate->✅ Addressed, partial->⚠️ Partially Addressed, missing->❌ Not Addressed, na->➖ N/A."
+          },
+          "citation": {
+            "type": "string",
+            "description": "Kanit / Bolum ref. column: a short quoted excerpt or precise section/page/table/figure reference from the proposal (reuse the finding's evidence, trimmed). Prefer a direct quote in double quotes plus a ref, e.g. \"...quote...\" (Sec 1.2.3, Table 8, p.14)."
+          },
+          "note": {
+            "type": "string",
+            "description": "Notlar / Aksiyon column: one short reviewer note (condensed assessment / action). Empty for clean 'adequate' checkpoints is acceptable."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "he-proposal-review",
   "version": "0.1.0",
-  "description": "Horizon Europe proposal review agent for Claude Code — installs a Skill + /he-review command that produce five ESR-style PDF reports (Excellence, Impact, Implementation, Cross-Consistency, Final ESR).",
+  "description": "Horizon Europe proposal review agent for Claude Code — installs a Skill + /he-review command that produce five ESR-style PDF reports (Excellence, Impact, Implementation, Cross-Consistency, Final ESR) plus a filled proposal-preparation checklist.",
   "keywords": [
     "claude-code",
     "claude",
